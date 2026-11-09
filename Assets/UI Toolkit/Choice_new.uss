@@ -1,0 +1,142 @@
+/* Center-screen choice preview. Shared Choice.uxml remains the default for other episodes. */
+.hidden { display: none; }
+
+.choice-new {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(7, 12, 16, 0.58);
+    color: #F2E8D1;
+    -unity-font-definition: url("../TextMesh Pro/Fonts/LiberationSans.ttf");
+}
+
+.choice-new .choice-card {
+    width: 760px;
+    max-width: 88%;
+    max-height: 86%;
+    flex-shrink: 1;
+    padding: 30px 34px 26px;
+    background-color: rgba(22, 30, 35, 0.98);
+    border-width: 1px;
+    border-color: #3C4548;
+    border-top-width: 2px;
+    border-top-color: #DBB36F;
+    border-radius: 8px;
+}
+
+.choice-new .choice-scroll { flex-shrink: 1; }
+.choice-new Label { padding: 0; margin: 0; white-space: normal; }
+.choice-new .choice-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #DBB36F;
+    margin-bottom: 12px;
+}
+.choice-new .choice-question {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 30px;
+    margin-bottom: 28px;
+}
+.choice-new .choice-option {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 62px;
+    padding: 13px 16px;
+    margin: 0 0 10px;
+    border-width: 1px;
+    border-color: #495054;
+    border-radius: 5px;
+    background-color: #202A30;
+    color: #F2E8D1;
+    -unity-text-align: middle-left;
+    white-space: normal;
+    transition-property: background-color, border-color;
+    transition-duration: 0.12s;
+}
+.choice-new .choice-option:hover, .choice-new .choice-option:focus {
+    border-color: #DBB36F;
+    background-color: #36332C;
+}
+.choice-new .choice-option:active { background-color: #494032; }
+.choice-new .choice-key {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    font-size: 15px;
+    border-width: 1px;
+    border-color: #62625A;
+    border-radius: 4px;
+    color: #DBB36F;
+    -unity-text-align: middle-center;
+}
+.choice-new .choice-text { flex-grow: 1; flex-shrink: 1; font-size: 19px; }
+.choice-new .choice-arrow {
+    width: 18px;
+    margin-left: 12px;
+    font-size: 26px;
+    color: #DBB36F;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.12s;
+}
+.choice-new .choice-option:hover .choice-arrow, .choice-new .choice-option:focus .choice-arrow { opacity: 1; }
+.choice-new .choice-hint { color: #B5B3A6; font-size: 12px; margin-top: 10px; }
+.choice-new .assessment-privacy-notice { color: #F2E8D1; font-size: 17px; margin-bottom: 18px; white-space: normal; }
+.choice-new .assessment-consent { color: #F2E8D1; font-size: 18px; margin-bottom: 16px; }
+.choice-new .choice-option:disabled { opacity: 0.5; }
+.choice-new.compact .choice-card { max-width: 92%; max-height: 90%; padding: 20px; }
+.choice-new.compact .choice-question { font-size: 25px; margin-bottom: 20px; }
+.choice-new.compact .choice-option { min-height: 54px; padding: 10px 12px; }
+.choice-new.compact .choice-text { font-size: 17px; }
+.choice-new.compact .choice-key { margin-right: 12px; }
+
+/* Stress check-in (AcademicEpisode.Choose with moods): the levels as a sideways-scrolling carousel of cards, each with
+   its number, a face (MoodFace) and the words. The coloured top edge runs from calm (green) to overwhelmed (red). */
+/* The check-in is a larger modal than a story choice, so the cards and faces read at a glance. */
+.choice-new.checkin .choice-card { width: 1040px; max-width: 94%; max-height: 92%; padding: 36px 40px 30px; }
+.choice-new.checkin .choice-title { font-size: 14px; margin-bottom: 14px; }
+.choice-new.checkin .choice-question { font-size: 36px; margin-bottom: 24px; }
+.choice-new.checkin .choice-hint { font-size: 14px; margin-top: 14px; }
+.choice-new .mood-carousel { flex-direction: row; align-items: center; }
+.choice-new .mood-scroll { flex-grow: 1; flex-shrink: 1; }
+.choice-new .mood-scroll .unity-scroll-view__content-container { flex-direction: row; padding: 8px 0; }
+.choice-new .mood-nav {
+    width: 48px; height: 48px; min-height: 0; flex-shrink: 0;
+    padding: 0 0 4px 0; margin: 0 6px;
+    font-size: 30px; color: #DBB36F; -unity-text-align: middle-center;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 1px; border-color: #495054; border-radius: 24px;
+}
+.choice-new .mood-nav:hover { border-color: #DBB36F; background-color: #36332C; }
+.choice-new .mood-card {
+    width: 176px; height: 240px; flex-shrink: 0;
+    margin: 0 7px; padding: 12px 10px 16px;
+    flex-direction: column; align-items: center; justify-content: space-between;
+    background-color: #202A30; color: #F2E8D1;
+    border-width: 1px; border-color: #495054; border-top-width: 4px; border-radius: 10px;
+    transition-property: translate, border-color, background-color;
+    transition-duration: 0.12s;
+}
+.choice-new .mood-1 { border-top-color: #7FC8A9; }
+.choice-new .mood-2 { border-top-color: #C6D27A; }
+.choice-new .mood-3 { border-top-color: #E8B65A; }
+.choice-new .mood-4 { border-top-color: #E58B4E; }
+.choice-new .mood-5 { border-top-color: #D8665A; }
+.choice-new .mood-card:hover { translate: 0 -4px; background-color: #36332C; border-color: #DBB36F; }
+.choice-new .mood-card:active { background-color: #494032; }
+.choice-new .mood-key {
+    position: absolute; left: 10px; top: 8px;
+    width: 28px; height: 28px; font-size: 15px; color: #DBB36F; -unity-text-align: middle-center;
+    border-width: 1px; border-color: #62625A; border-radius: 4px;
+}
+.choice-new .mood-face { width: 108px; height: 108px; margin-top: 26px; }
+.choice-new .mood-text { font-size: 21px; -unity-text-align: middle-center; }
+.choice-new.checkin.compact .choice-card { max-width: 96%; max-height: 96%; padding: 22px 20px 18px; }
+.choice-new.checkin.compact .choice-question { font-size: 27px; margin-bottom: 14px; }
+.choice-new.compact .mood-card { width: 138px; height: 188px; margin: 0 5px; }
+.choice-new.compact .mood-face { width: 80px; height: 80px; margin-top: 20px; }
+.choice-new.compact .mood-text { font-size: 17px; }
+.choice-new.compact .mood-nav { width: 38px; height: 38px; margin: 0 3px; border-radius: 19px; }

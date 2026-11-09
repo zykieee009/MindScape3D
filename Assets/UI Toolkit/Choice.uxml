@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Story choice panel (AcademicEpisode Choose, also the stress check-ins).
+         The title, question and options here are sample content for UI Builder: at runtime the episode fills in the text
+         and replaces everything inside "choice-options" with one .choice-option button per answer (same structure as below).
+         Elements with a name are looked up by code, so keep the names when editing. -->
+    <Style src="Choice.uss"/>
+    <ui:VisualElement name="choice-screen" picking-mode="Ignore" class="choice-screen">
+        <ui:VisualElement class="choice-card">
+            <ui:Label name="choice-title" text="STRESS CHECK-IN  ·  BEFORE" class="choice-title"/>
+            <ui:Label name="choice-question" text="The episode is over. How stressed do you feel now?" class="choice-question"/>
+            <ui:VisualElement name="choice-options" class="choice-options">
+                <ui:Button class="choice-option">
+                    <ui:Label text="1" picking-mode="Ignore" class="choice-key"/>
+                    <ui:Label text="Calm" picking-mode="Ignore" class="choice-text"/>
+                </ui:Button>
+                <ui:Button class="choice-option">
+                    <ui:Label text="2" picking-mode="Ignore" class="choice-key"/>
+                    <ui:Label text="A little tense" picking-mode="Ignore" class="choice-text"/>
+                </ui:Button>
+                <ui:Button class="choice-option">
+                    <ui:Label text="3" picking-mode="Ignore" class="choice-key"/>
+                    <ui:Label text="Stressed" picking-mode="Ignore" class="choice-text"/>
+                </ui:Button>
+                <ui:Button class="choice-option">
+                    <ui:Label text="4" picking-mode="Ignore" class="choice-key"/>
+                    <ui:Label text="Very stressed" picking-mode="Ignore" class="choice-text"/>
+                </ui:Button>
+                <ui:Button class="choice-option">
+                    <ui:Label text="5" picking-mode="Ignore" class="choice-key"/>
+                    <ui:Label text="Overwhelmed" picking-mode="Ignore" class="choice-text"/>
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:Label text="Click an option or press its number" class="choice-hint"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

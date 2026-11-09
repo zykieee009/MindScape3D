@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Windows
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfile
+  m_AssetVersion: 2
+  m_BuildTarget: 19
+  m_Subtarget: 2
+  m_PlatformId: 4e3c793746204150860bf175a9a41a05
+  m_PlatformBuildProfile:
+    rid: 5300093848574492677
+  m_ActivePlatformGuid: 
+  m_AdditionalPlatformBuildSettings: []
+  m_OverrideGlobalSceneList: 1
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/main_menu_new.unity
+    m_guid: 2b9b86ec0ce4a42b8a5b044b238fb10c
+  - m_enabled: 1
+    m_path: Assets/Scenes/MainMenu.unity
+    m_guid: d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2
+  - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
+    m_guid: b01d662b5140b4a82985c44092ba0764
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 1 - Episode 1.unity
+    m_guid: 921d31928ea7c4207bbd0c42eb9fdc2c
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 1 - Episode 2.unity
+    m_guid: f15070d8166b443d5ba83717d95fec7b
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 1 - Episode 3.unity
+    m_guid: 053a71795037a4a4e85e867f1780068a
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 1 - Episode 4.unity
+    m_guid: 2f558d89b88474db7b270dc601add52e
+  - m_enabled: 1
+    m_path: Assets/Scenes/Cutscene - Episode 1.unity
+    m_guid: b3e188a99286b4058968eea5439431b1
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 2 - Episode 1.unity
+    m_guid: 99c9720ab356a0642a771bea13969a05
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 2 - Episode 2.unity
+    m_guid: f7a70f46d43e8451ea7b246ee04bb798
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 2 - Episode 3.unity
+    m_guid: 89b11d97e72e841589e97f303a69f788
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 2 - Episode 4.unity
+    m_guid: a8713f03daedd4daca86c0410f090baa
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 2 - Episode 5.unity
+    m_guid: 70ebd6756c20c4e498052763f84232ad
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 1.unity
+    m_guid: cc57de4f2bc604c7a85d4d8934a50cbb
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 2.unity
+    m_guid: c987dd5ec7e0048bf957139326aae54a
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 3.unity
+    m_guid: 788e6739d7a324587915e3e469d761f2
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 4.unity
+    m_guid: 720056534b0234d6fb008baf2b16a09f
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 5.unity
+    m_guid: 6c652c640352741bda535d88e7bb8342
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 6.unity
+    m_guid: 939b4f9c6cb4c44f4837abbe189b2301
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 7.unity
+    m_guid: 2a56aabe4b85a40848adaddce39e70e8
+  - m_enabled: 1
+    m_path: Assets/Scenes/Chapter 3 - Episode 8.unity
+    m_guid: a5a607eb434234dcb8d5672a4275defa
+  m_HasScriptingDefines: 0
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
+  requiredComponents: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5300093848574492677
+      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
+      data:
+        m_Development: 0
+        m_ConnectProfiler: 0
+        m_BuildWithDeepProfilingSupport: 0
+        m_BuildWithCodeCoverage: 0
+        m_AllowDebugging: 0
+        m_WaitForManagedDebugger: 0
+        m_ManagedDebuggerFixedPort: 0
+        m_ExplicitNullChecks: 0
+        m_ExplicitDivideByZeroChecks: 0
+        m_ExplicitArrayBoundsChecks: 0
+        m_CompressionType: 0
+        m_InstallInBuildFolder: 0
+        m_InsightsSettingsContainer:
+          m_BuildProfileEngineDiagnosticsState: 2
+        m_AdaptivePerformanceEnabled: 0
+        m_WindowsBuildAndRunDeployTarget: 0
+        m_Architecture: 0
+        m_CreateSolution: 0
+        m_CopyPDBFiles: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 
+--- !u!114 &5387133774968914157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15012, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildAutomationSettings
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildAutomationSettings
+  m_OperatingSystemValue: 
+  m_OperatingSystemFamily: 
+  m_XcodeVersion: 
+  m_AndroidSdkVersion: 
+  m_UnityArchitecture: 
+  m_MachineTypeId: 
+  m_CredentialsId: 
+  m_BuildTarget: 19

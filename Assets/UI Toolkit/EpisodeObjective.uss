@@ -1,0 +1,40 @@
+/* Exploration objective box (EpisodeObjective.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings.
+   .mobile is added by code in mobile mode (MobileControls.Enabled). */
+
+.hidden { display: none; }
+
+/* Top-left; grows downward with its checklist. */
+.objective {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    position: absolute;
+    left: 21px; top: 21px;
+    width: 440px;
+    padding: 17px 23px 20px 23px;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+.objective.mobile { width: 507px; }
+
+/* pre-wrap keeps the double spaces the story text uses as gaps ("CHAPTER 1  /  EPISODE 01"). */
+.objective Label { padding: 0; margin-left: 0; margin-right: 0; white-space: pre-wrap; }
+
+.objective-chapter { color: var(--gold); font-size: 15px; letter-spacing: 0.6px; margin-bottom: 7px; }
+
+.objective-title {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    -unity-font-style: bold;
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+/* One line per item; paragraph spacing separates them. */
+.objective-checklist { font-size: 20px; -unity-paragraph-spacing: 6px; }
+
+.mobile .objective-chapter { font-size: 17px; }
+.mobile .objective-title { font-size: 29px; }
+.mobile .objective-checklist { font-size: 23px; }

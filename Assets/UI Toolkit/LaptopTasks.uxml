@@ -1,0 +1,69 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Chapter 1 · Episode 4 · the laptop at the desk: a laptop with a desktop, and a Tasks window on it. One small task is
+         picked from the list and finished. DormitoryEpisode adds a row to "laptop-tasks" for each task; keep the names
+         laptop-root, laptop-tasks, laptop-progress, laptop-status and laptop-start.
+         The text is sample text for UI Builder. -->
+    <Style src="EpisodeScreens.uss"/>
+    <Style src="LaptopTasks.uss"/>
+    <ui:VisualElement name="laptop-root" picking-mode="Ignore" class="screen hidden">
+        <ui:VisualElement class="laptop">
+        <ui:VisualElement class="laptop-lid">
+            <ui:VisualElement class="laptop-camera"/>
+            <ui:VisualElement class="laptop-display">
+
+                <!-- Menu bar -->
+                <ui:VisualElement class="menubar">
+                    <ui:VisualElement class="menubar-logo"/>
+                    <ui:Label text="Tasks" class="menubar-app"/>
+                    <ui:Label text="File" class="menubar-item"/>
+                    <ui:Label text="Edit" class="menubar-item"/>
+                    <ui:Label text="View" class="menubar-item"/>
+                    <ui:VisualElement class="menubar-spacer"/>
+                    <ui:Label text="Mon  9:40 PM" class="menubar-clock"/>
+                </ui:VisualElement>
+
+                <!-- Desktop with the Tasks window -->
+                <ui:VisualElement class="desktop">
+                    <ui:VisualElement class="window">
+                        <ui:VisualElement class="titlebar">
+                            <ui:VisualElement class="light light-close"/>
+                            <ui:VisualElement class="light light-min"/>
+                            <ui:VisualElement class="light light-max"/>
+                            <ui:Label text="Today's Tasks" class="titlebar-title"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="window-body">
+                            <ui:VisualElement class="removed">
+                                <ui:Label text="INSTEAD OF" class="removed-eyebrow"/>
+                                <ui:Label text="&lt;s&gt;Finish entire project&lt;/s&gt;" class="serif removed-text"/>
+                            </ui:VisualElement>
+                            <ui:Label text="Today's tasks" class="serif window-title"/>
+                            <ui:VisualElement name="laptop-tasks" class="laptop-tasks">
+                                <ui:Button class="task"><ui:VisualElement class="check"><ui:VisualElement class="tick"/></ui:VisualElement><ui:Label text="Finish introduction" class="task-label"/></ui:Button>
+                                <ui:Button class="task"><ui:VisualElement class="check"><ui:VisualElement class="tick"/></ui:VisualElement><ui:Label text="Review references" class="task-label"/></ui:Button>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="progress-track">
+                                <ui:VisualElement name="laptop-progress" class="progress-fill"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement class="window-footer">
+                                <ui:Label name="laptop-status" text="Pick one small task to finish tonight." class="laptop-status"/>
+                                <ui:Button name="laptop-start" text="Choose one task" class="btn laptop-start"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Dock -->
+                <ui:VisualElement class="dock">
+                    <ui:VisualElement class="dock-icon dock-a"/>
+                    <ui:VisualElement class="dock-icon dock-b"/>
+                    <ui:VisualElement class="dock-icon dock-c dock-open"/>
+                    <ui:VisualElement class="dock-icon dock-d"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- The keyboard half, seen edge-on: the hinge and the groove for lifting the lid -->
+        <ui:VisualElement class="laptop-base"><ui:VisualElement class="laptop-groove"/></ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

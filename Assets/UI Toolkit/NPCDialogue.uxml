@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- NPC conversation panel along the bottom (NPCInteractionManager; every scene with talkable NPCs, Tutorial included).
+         The speaker, line and replies here are sample content for UI Builder: at runtime the NPC's name and line are
+         filled in and "npc-choices" is rebuilt with one .npc-choice button per reply (same structure as below).
+         Elements with a name are looked up by code, so keep the names when editing. -->
+    <Style src="NPCDialogue.uss"/>
+    <ui:VisualElement name="npc-dialogue" class="npc-dialogue">
+        <ui:Label name="npc-speaker" text="MOM" class="npc-speaker"/>
+        <ui:Label name="npc-text" text="Hi, sweetheart. There's water in the fridge if you want some." class="npc-text"/>
+        <ui:VisualElement name="npc-choices" class="npc-choices">
+            <ui:Button text="What are you doing?" class="npc-choice"/>
+            <ui:Button text="See you later." class="npc-choice"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

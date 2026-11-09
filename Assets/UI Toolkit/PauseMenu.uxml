@@ -1,0 +1,78 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/PauseMenu.uss"/>
+    <ui:VisualElement name="pause-overlay" class="pause-overlay">
+        
+        <ui:VisualElement name="pause-panel" class="pause-panel">
+            <ui:VisualElement name="page-pause" class="page">
+                <ui:Label text="Paused" class="pause-title"/>
+                <ui:Label name="label-chapter" text="Chapter 1 · Episode 01" class="ribbon-text"/>
+                <ui:VisualElement class="action-row">
+                    <ui:Button name="btn-resume" class="icon-button primary"/>
+                    <ui:Button name="btn-save" class="icon-button"/>
+                    <ui:Button name="btn-journal" class="icon-button"/>
+                    <ui:Button name="btn-settings" class="icon-button"/>
+                    <ui:Button name="btn-mainmenu" class="icon-button"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Save Game Sub-Page: three slots, filled in by PauseMenu (story episodes only) -->
+            <ui:VisualElement name="page-save" class="page hidden">
+                <ui:VisualElement class="pause-header">
+                    <ui:VisualElement class="header-spacer"/>
+                    <ui:Label text="SAVE GAME" class="pause-title"/>
+                    <ui:Button name="btn-save-back" class="back-button"/>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="flourish-container">
+                    <ui:VisualElement class="flourish-line"/>
+                    <ui:Label text="◈" class="flourish-icon"/>
+                    <ui:VisualElement class="flourish-line"/>
+                </ui:VisualElement>
+
+                <ui:Label text="Choose a slot. Loading it continues from this moment." class="pause-subtitle save-help"/>
+
+                <ui:VisualElement class="button-column">
+                    <ui:Button name="save-slot-1" text="SLOT 1  ·  Empty" class="menu-button save-slot"/>
+                    <ui:Button name="save-slot-2" text="SLOT 2  ·  Empty" class="menu-button save-slot"/>
+                    <ui:Button name="save-slot-3" text="SLOT 3  ·  Empty" class="menu-button save-slot"/>
+                </ui:VisualElement>
+                <ui:Label name="save-status" text="" class="pause-hint"/>
+            </ui:VisualElement>
+
+            <!-- Audio Settings Sub-Page -->
+            <ui:VisualElement name="page-settings" class="page hidden">
+                <ui:VisualElement class="pause-header">
+                    <ui:VisualElement class="header-spacer"/>
+                    <ui:Label text="SETTINGS &amp; AUDIO" class="pause-title"/>
+                    <ui:Button name="btn-settings-back" class="back-button"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="flourish-container">
+                    <ui:VisualElement class="flourish-line"/>
+                    <ui:Label text="◈" class="flourish-icon"/>
+                    <ui:VisualElement class="flourish-line"/>
+                </ui:VisualElement>
+                
+                <ui:Label text="Adjust audio levels to your comfort." class="pause-subtitle"/>
+                
+                <ui:VisualElement class="settings-box">
+                    <ui:VisualElement class="setting-row">
+                        <ui:Label text="Music" class="setting-label"/>
+                        <ui:Slider name="slider-music" low-value="0" high-value="1" class="setting-slider"/>
+                        <ui:Label name="label-music-value" text="65%" class="setting-value"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="setting-row">
+                        <ui:Label text="SFX" class="setting-label"/>
+                        <ui:Slider name="slider-sfx" low-value="0" high-value="1" class="setting-slider"/>
+                        <ui:Label name="label-sfx-value" text="65%" class="setting-value"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Button name="btn-settings-done" text="Save &amp; Return" class="menu-button primary settings-done-btn"/>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

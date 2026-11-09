@@ -1,0 +1,355 @@
+.menu-root {
+    --ink: #382e25;
+    --paper: #e3d4b4;
+    --paper-light: #efe4cd;
+    --brass: #bda477;
+    --cream: #f0e4cc;
+    --wood: #302d28;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    color: var(--cream);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+    font-size: 17px;
+}
+Label { margin: 0; padding: 0; white-space: normal; }
+Button { margin: 0; padding: 6px 18px; min-height: 38px; border-width: 1px; border-color: var(--brass); border-radius: 3px; background-color: var(--wood); color: var(--cream); font-size: 16px; -unity-text-align: middle-center; transition-property: background-color, border-color; transition-duration: 0.12s; }
+Button:hover { background-color: #63523a; border-color: #f3d698; }
+Button:focus { border-color: #ffe4a5; border-width: 2px; }
+Button:active { background-color: #8b7047; }
+Button:disabled { opacity: 0.5; }
+.veil { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(13,20,24,0.77); }
+.home-veil { background-color: rgba(13,20,24,0.08); }
+.stage { flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-items: center; }
+.page { width: 92%; max-width: 1120px; height: 92%; max-height: 660px; align-items: center; justify-content: center; }
+.hidden { display: none; }
+.header { width: 100%; height: 68px; flex-shrink: 0; align-items: center; justify-content: center; flex-direction: row; margin-bottom: 8px; }
+.back { position: absolute; left: 0; width: 92px; height: 38px; background-color: rgba(37,34,29,0.85); }
+.page-title { font-size: 30px; -unity-font-definition: resource("MainMenuNew/StorySerif"); letter-spacing: 2px; }
+.flourish { width: 80px; height: 24px; margin: 0 20px; }
+.subtitle { color: #d2c4a7; font-size: 17px; -unity-text-align: middle-center; margin-bottom: 14px; flex-shrink: 0; }
+/* Home (the mockup in MenuArt/Background3D): title with a soft dark glow, three large buttons in the middle, the other
+   pages as icon tiles, three down each side, quiet captions in the corners. The page fills the screen so those sit at its edges. */
+.home { width: 100%; height: 100%; max-width: none; max-height: none; justify-content: center; align-items: center; padding-bottom: 24px; }
+.logo { width: 55%; max-width: 520px; max-height: 175px; aspect-ratio: 2.89; margin-top: 6px; margin-bottom: 6px; flex-shrink: 1; background-image: resource("MenuArt/title"); -unity-background-scale-mode: scale-to-fit; align-self: center; }
+/* The 3D title (TitleModelView) is a wider picture than title.png. */
+.logo.logo-3d { max-width: 560px; max-height: 195px; aspect-ratio: 2.4; }
+.icon { width: 22px; height: 22px; flex-shrink: 0; }
+.title { width: 600px; max-width: 62%; max-height: 240px; aspect-ratio: 2.4; margin-bottom: 18px; flex-shrink: 1; }
+.title > .logo.title-art { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: auto; max-width: none; max-height: none; aspect-ratio: auto; margin: 0; }
+/* The same picture behind the title, black and blurred: a soft dark halo that follows the letters (and the 3D title's animation). */
+.logo-glow { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: resource("MenuArt/title"); -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgb(0, 0, 0); filter: blur(12px); opacity: 0.85; scale: 1.03 1.04; }
+.home-buttons { width: 300px; max-width: 80%; flex-shrink: 0; }
+.play-row { flex-direction: row; align-items: center; margin-bottom: 14px; }
+.play-sprig { position: absolute; left: -46px; width: 44px; height: 54px; }
+.play-sprig.mirrored { left: auto; right: -46px; scale: -1 1; }
+.home-button { height: 60px; min-height: 0; margin-bottom: 14px; padding: 0 24px; flex-direction: row; align-items: center; background-color: rgba(48,33,22,0.95); border-width: 2px; border-color: #d8b46c; border-radius: 12px; }
+.play-row > .home-button { flex-grow: 1; margin-bottom: 0; }
+.home-button:hover { background-color: rgba(88,61,37,0.98); border-color: #ffe2a0; }
+.home-button.primary { background-color: #eac36a; border-color: #fff0c6; }
+.home-button.primary:hover { background-color: #f6d483; }
+.home-button Label { flex-grow: 1; padding-right: 28px; -unity-text-align: middle-center; font-size: 30px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #f7e8c8; }
+.home-button.primary Label { color: #2c1c0e; }
+.home-button .icon { width: 28px; height: 28px; }
+.home-caption { font-size: 23px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #fff3dc; -unity-text-align: middle-center; text-shadow: 0 1px 4px rgba(0,0,0,0.9); }
+.caption-flourish { width: 150px; height: 16px; margin-top: 6px; }
+.home-rail { position: absolute; top: 0; bottom: 0; justify-content: center; align-items: center; }
+.home-rail.left { left: 22px; }
+.home-rail.right { right: 22px; }
+.rail-button { width: 100px; min-height: 0; padding: 0; margin: 16.5px 0; flex-direction: column; align-items: center; background-color: rgba(0,0,0,0); border-width: 0; }
+.rail-button:hover, .rail-button:active { background-color: rgba(0,0,0,0); }
+.rail-button:focus { border-width: 0; }
+.rail-tile { width: 58px; height: 58px; align-items: center; justify-content: center; background-color: rgba(48,33,22,0.95); border-width: 2px; border-color: #d8b46c; border-radius: 12px; }
+.rail-button:hover .rail-tile { background-color: rgba(88,61,37,0.98); border-color: #ffe2a0; }
+.rail-button:focus .rail-tile { border-color: #ffe2a0; }
+.rail-icon { width: 30px; height: 30px; }
+/* A tile's name shows only while it is hovered (or focused): it fades in above the icon, rising into place. */
+.rail-label { position: absolute; left: 50%; bottom: 100%; margin-bottom: 6px; padding: 4px 12px; font-size: 16px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #fff3dc; white-space: nowrap; -unity-text-align: middle-center; background-color: rgba(36,25,16,0.92); border-width: 1px; border-color: #d8b46c; border-radius: 6px; opacity: 0; translate: -50% 8px; transition-property: opacity, translate; transition-duration: 0.18s; transition-timing-function: ease-out; }
+.rail-button:hover .rail-label, .rail-button:focus .rail-label { opacity: 1; translate: -50% 0; }
+.version { position: absolute; left: 22px; top: 18px; font-size: 14px; letter-spacing: 2px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #f3e6cc; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+.footer-note { position: absolute; bottom: 20px; width: 340px; max-width: 30%; }
+.footer-left { left: 22px; }
+.footer-right { right: 22px; align-items: flex-end; }
+.footer-title { padding-bottom: 5px; font-size: 14px; letter-spacing: 3px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #f5e6c8; border-bottom-width: 1px; border-bottom-color: rgba(245,230,200,0.55); text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+.footer-copy { margin-top: 6px; font-size: 14px; color: rgba(240,232,214,0.85); text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+.footer-right .footer-copy { -unity-text-align: upper-right; }
+.book { width: 100%; flex-grow: 1; min-height: 0; max-height: 520px; flex-direction: row; background-color: #332b22; border-color: #746249; border-width: 3px; border-bottom-width: 7px; border-radius: 5px; padding: 7px; }
+.paper { flex-grow: 1; min-width: 0; background-color: var(--paper); color: var(--ink); padding: 22px 28px; border-width: 1px; border-color: #a08a64; border-radius: 3px; }
+.paper-title { font-size: 25px; -unity-font-definition: resource("MainMenuNew/StorySerif"); margin-bottom: 14px; padding-bottom: 10px; border-bottom-width: 1px; border-bottom-color: #b6a383; }
+.body { font-size: 17px; color: var(--ink); margin-bottom: 16px; }
+.small { font-size: 13px; color: #73624c; }
+.eyebrow { font-size: 12px; letter-spacing: 2px; color: #87704c; margin-bottom: 8px; }
+.sidebar { width: 220px; max-width: 30%; flex-shrink: 0; padding: 8px; margin-right: 6px; background-color: #292925; border-width: 1px; border-color: #77694f; }
+.tab { min-height: 52px; margin-bottom: 4px; -unity-text-align: middle-left; background-color: rgba(255,255,255,0.025); border-color: #585244; padding-left: 16px; }
+.tab.selected { background-color: #715c3e; border-color: #bf9f69; }
+/* Journal: a heading above each chapter's episode tabs; an episode not reached yet is dimmed. */
+.journal-chapter { margin: 12px 4px 4px 4px; font-size: 12px; color: #d9bd84; -unity-font-style: bold; white-space: normal; }
+.tab.journal-episode { white-space: normal; }
+.tab.journal-episode:disabled { opacity: 0.4; }
+.paper-scroll { flex-grow: 1; }
+.paper-scroll > .unity-scroll-view__content-viewport > .unity-scroll-view__content-container { padding-right: 12px; }
+.row { flex-direction: row; align-items: center; }
+.spread { justify-content: space-between; }
+.grow { flex-grow: 1; }
+.setting-row { height: 56px; flex-direction: row; align-items: center; border-bottom-width: 1px; border-bottom-color: rgba(102,80,48,0.13); }
+.setting-label { width: 190px; max-width: 45%; font-size: 16px; }
+.now-playing { flex-grow: 1; flex-shrink: 1; font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -unity-font-style: italic; }
+.music-button { min-width: 84px; margin-left: 8px; }
+.setting-value { width: 52px; -unity-text-align: middle-right; font-size: 14px; }
+Slider { flex-grow: 1; margin-left: 0; margin-right: 18px; }
+.unity-base-slider__tracker { height: 4px; background-color: #a89674; border-width: 0; }
+.unity-base-slider__dragger { background-color: #5a503f; border-color: #ded0ae; border-width: 2px; width: 18px; height: 18px; margin-top: -7px; border-radius: 9px; }
+.unity-base-slider__dragger-border { display: none; }
+Toggle { min-height: 40px; }
+.unity-toggle__input { background-color: transparent; }
+.actions { flex-direction: row; justify-content: flex-end; margin-top: 16px; }
+.actions Button { margin-left: 10px; }
+.chapter-row { flex-direction: row; justify-content: center; flex-grow: 1; max-height: 445px; width: 100%; min-height: 0; }
+.chapter-card { width: 290px; max-width: 31%; height: 100%; max-height: 424px; padding: 0; margin: 0 10px; flex-shrink: 1; background-color: var(--paper); color: var(--ink); border-width: 2px; border-color: #c7af80; border-bottom-width: 6px; border-radius: 3px; }
+.chapter-card:hover { background-color: var(--paper-light); }
+.chapter-art { width: 100%; flex-grow: 1; min-height: 120px; max-height: 280px; background-size: cover; background-position: center; }
+.chapter-heading { font-size: 21px; -unity-font-definition: resource("MainMenuNew/StorySerif"); margin: 12px 0 4px; -unity-text-align: middle-center; }
+.chapter-sub { font-size: 16px; -unity-text-align: middle-center; }
+.chapter-bottom { font-size: 13px; -unity-text-align: middle-center; margin: 8px 10px; }
+.locked-card { opacity: 0.6; }
+.lock-overlay { flex-grow: 1; align-items: center; justify-content: center; background-color: rgba(37,32,24,0.6); }
+.large-icon { width: 52px; height: 52px; align-self: center; margin-bottom: 12px; }
+.progress-caption { font-size: 13px; margin: 4px 0 8px; color: #dbc79e; }
+.progress-track { width: 500px; max-width: 90%; height: 8px; background-color: #272822; border-width: 1px; border-color: #7a705b; border-radius: 4px; }
+.progress-fill { height: 6px; background-color: #d3aa5f; border-radius: 3px; }
+.episode-book { width: 850px; max-width: 100%; height: auto; max-height: 522px; flex-grow: 1; }
+.episode-paper { padding: 12px 18px; }
+.episode-row { height: 72px; padding: 6px 10px; margin-bottom: 6px; flex-direction: row; align-items: center; background-color: #d5c7ab; border-color: #b4a384; color: var(--ink); }
+.episode-row:hover { background-color: #f0e1bb; }
+.episode-row.available { background-color: #f0e2c3; border-color: #c4a263; }
+/* The next unfinished episode: where a returning player picks up (the only resume point when offline). */
+.episode-row.next { border-width: 2px; border-color: #a8803a; }
+.episode-row.next .episode-state { color: #7a5520; -unity-font-style: bold; }
+.episode-row:disabled { opacity: 0.5; }
+.thumbnail { width: 105px; height: 56px; margin-right: 14px; background-size: cover; background-position: center; border-width: 1px; border-color: #8c7857; flex-shrink: 0; }
+.episode-index { font-size: 12px; margin-bottom: 4px; }
+.episode-name { font-size: 19px; -unity-font-definition: resource("MainMenuNew/StorySerif"); }
+.episode-state { margin-left: auto; font-size: 12px; }
+.save-list { width: 710px; max-width: 100%; flex-shrink: 1; }
+.save-slot { height: 135px; padding: 12px; margin-bottom: 8px; border-width: 1px; border-color: #bca887; background-color: #ede0c4; flex-direction: row; align-items: center; }
+.save-slot .thumbnail { width: 160px; height: 100px; }
+.save-actions { flex-direction: row; }
+.save-resume { flex-grow: 1; }
+.save-delete { margin-left: 8px; width: 150px; background-color: rgba(0,0,0,0); border-color: #a35d4b; color: #8a3f2f; }
+.save-delete:hover { background-color: rgba(163,93,75,0.15); border-color: #8a3f2f; }
+.save-delete.armed { background-color: #a35d4b; color: #f6ead0; }
+.empty-slot { height: 95px; background-color: rgba(130,110,78,0.08); color: #7e6f55; }
+.margin-top { margin-top: 10px; }
+.aside { width: 310px; max-width: 35%; justify-content: center; padding: 22px; margin-left: 20px; border-left-width: 1px; border-left-color: #9c885f; flex-shrink: 1; }
+.aside Label { font-size: 18px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #e5d6b9; }
+.journal-input { flex-grow: 1; min-height: 220px; font-size: 20px; -unity-font-definition: resource("MainMenuNew/StorySerif"); }
+.journal-input > .unity-text-field__input { background-color: rgba(255,255,255,0.06); border-width: 0; color: #514330; padding: 12px 2px; white-space: normal; }
+.journal-status { font-size: 12px; color: #796346; height: 20px; margin-top: 6px; }
+.key-grid { flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.key-tile { width: 31%; height: 110px; align-items: center; justify-content: center; }
+.keycap { min-width: 62px; height: 40px; background-color: #3e3a30; color: #f1e6cd; border-width: 1px; border-color: #ab9670; border-bottom-width: 4px; border-radius: 4px; -unity-text-align: middle-center; padding: 5px 10px; margin-bottom: 6px; font-size: 17px; }
+.callout { padding: 16px; margin-top: 12px; border-width: 1px; border-color: #b6a180; background-color: rgba(250,244,225,0.3); font-size: 16px; color: #5b4b33; }
+.hotline { font-size: 38px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #624c2a; margin-bottom: 10px; }
+.provider-card { padding: 14px 16px; margin-bottom: 12px; border-width: 1px; border-color: #b6a180; background-color: rgba(250,244,225,0.35); }
+.provider-card .eyebrow { margin-bottom: 5px; }
+.provider-name { font-size: 21px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #4d3b25; margin-bottom: 7px; white-space: normal; }
+.provider-contact { font-size: 16px; color: var(--ink); margin-bottom: 9px; white-space: normal; }
+.provider-card Button { align-self: flex-start; }
+.art-panel { width: 49%; background-size: cover; background-position: center; margin-right: 8px; justify-content: flex-end; padding: 20px; }
+.art-caption { font-size: 24px; -unity-font-definition: resource("MainMenuNew/StorySerif"); color: #fff0ce; background-color: rgba(22,29,30,0.75); padding: 16px; }
+.about-paper { width: 50%; }
+.quit-paper { width: 520px; max-width: 90%; flex-grow: 0; padding: 32px; align-items: center; }
+.quit-paper .body { -unity-text-align: middle-center; }
+.quit-paper .actions { justify-content: center; }
+.leaf-decoration { position: absolute; bottom: 20px; right: 20px; width: 112px; height: 128px; opacity: 0.3; }
+.toast { position: absolute; bottom: 20px; align-self: center; padding: 10px 20px; background-color: #302d27; border-width: 1px; border-color: #bea171; color: #f2e0bd; }
+/* The Options "Menu shade" dimmer. Transparent by default; the menu sets its opacity from the saved setting. */
+.brightness-shade { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: black; opacity: 0; }
+
+/* Responsive adjustments for compact heights (< 680px) */
+.compact-height .logo { max-height: 105px; margin-top: 2px; margin-bottom: 2px; }
+.compact-height .title { max-height: 170px; margin-bottom: 8px; }
+.compact-height .home-button { height: 50px; margin-bottom: 10px; }
+.compact-height .play-row { margin-bottom: 10px; }
+.compact-height .home-button Label { font-size: 25px; }
+.compact-height .rail-tile { width: 48px; height: 48px; }
+.compact-height .rail-icon { width: 25px; height: 25px; }
+.compact-height .rail-button { margin: 16.5px 0; }
+.compact-height .footer-note { display: none; }
+.compact-height .header { height: 48px; margin-bottom: 4px; }
+.compact-height .page-title { font-size: 22px; }
+.compact-height .flourish { height: 16px; width: 50px; margin: 0 10px; }
+.compact-height .paper { padding: 12px 18px; }
+.compact-height .setting-row { height: 46px; }
+.compact-height .episode-row { height: 60px; }
+
+/* Responsive adjustments for portrait and narrow screens (< 960px) */
+.portrait .page { width: 95%; max-width: 680px; height: 96%; }
+.portrait .home { width: 100%; max-width: none; height: 100%; }
+.portrait .home-rail { position: relative; left: auto; right: auto; top: auto; bottom: auto; width: 360px; max-width: 96%; margin-top: 10px; flex-direction: row; justify-content: center; }
+.portrait .rail-button { width: 110px; }
+.portrait .footer-note { display: none; }
+.portrait .chapter-row { flex-direction: row; flex-wrap: wrap; justify-content: center; max-height: none; overflow: scroll; }
+.portrait .chapter-card { width: 46%; max-width: 260px; height: 210px; margin: 4px; }
+.portrait .chapter-art { height: 110px; min-height: 80px; }
+.portrait .sidebar { width: 150px; }
+.portrait .paper { padding: 14px; }
+.portrait .setting-label { width: 120px; font-size: 14px; }
+.portrait .save-list { width: 100%; }
+.portrait .aside { display: none; }
+.portrait .about-paper { width: 100%; }
+.portrait .art-panel { display: none; }
+.episode-row Label { -unity-text-align: middle-left; }
+.episode-row:disabled { opacity: 0.72; }
+.portrait .page-title { font-size: 22px; letter-spacing: 0; }
+.portrait .flourish { width: 34px; margin: 0 8px; }
+.portrait .episode-book { width: 100%; }
+.portrait .key-tile { width: 48%; height: 90px; }
+
+/* Account: login page and the signed-in badge on the home page. */
+.account { position: absolute; right: 24px; top: 14px; flex-direction: row; align-items: center; }
+.account-name { font-size: 15px; color: #e6dac3; margin-right: 10px; }
+.account Button { min-height: 32px; padding: 2px 14px; font-size: 15px; }
+.login-paper { width: 560px; max-width: 94%; }
+.auth-card { height: 405px; max-height: 100%; min-height: 0; flex-grow: 0; flex-shrink: 1; align-items: stretch; padding: 18px 24px; border-width: 2px; border-color: #bda477; background-color: var(--paper-light); }
+.auth-login-card { height: 470px; }
+.auth-register-card { height: 560px; }
+.auth-scroll { width: 100%; flex-grow: 1; min-height: 0; }
+.auth-scroll > .unity-scroll-view__content-viewport > .unity-scroll-view__content-container { align-items: stretch; padding-right: 6px; }
+.auth-card .paper-title { align-self: center; margin-bottom: 10px; padding-bottom: 8px; }
+.auth-card .body { -unity-text-align: middle-center; margin-bottom: 14px; font-size: 15px; color: #594a36; }
+.auth-page .login-logo { width: 270px; height: 76px; max-height: 76px; aspect-ratio: auto; flex-shrink: 0; margin: 0 0 8px; }
+.login-field { width: 100%; margin: 8px 0 0 0; flex-direction: column; align-items: stretch; flex-shrink: 0; }
+.login-field > .unity-base-field__label { min-width: 0; margin-bottom: 5px; color: #51412e; font-size: 14px; }
+.login-field > .unity-text-field__input { min-height: 40px; padding: 5px 11px; font-size: 17px; color: var(--ink); background-color: #f8f1e2; border-width: 1px; border-color: #a7916d; border-radius: 2px; }
+.login-field:focus > .unity-text-field__input { border-color: #79603d; border-width: 2px; }
+.login-status { height: auto; min-height: 22px; margin-top: 6px; -unity-text-align: middle-center; }
+.auth-actions { width: 100%; flex-shrink: 0; justify-content: center; flex-wrap: wrap; margin-top: 10px; padding-top: 8px; border-top-width: 1px; border-top-color: #c8b693; }
+.auth-actions Button { min-height: 42px; margin: 4px 5px 0; }
+.auth-primary { background-color: #ae8e59; border-color: #80623c; color: #211c18; -unity-font-style: bold; }
+.auth-primary:hover { background-color: #c6a873; border-color: #715435; }
+.auth-primary:active { background-color: #947548; }
+.auth-primary:disabled { background-color: #b9aa8d; color: #504637; opacity: 0.62; }
+.auth-secondary { background-color: #39332b; border-color: #ab926a; color: var(--cream); }
+.auth-secondary:hover { background-color: #5b4b37; }
+.login-submit { min-width: 100px; }
+.login-submit.loading { min-width: 144px; padding-left: 32px; }
+.login-submit.loading:disabled { opacity: 1; background-color: #c3a36d; border-color: #80623c; color: #211c18; }
+.auth-spinner { position: absolute; left: 12px; top: 50%; width: 18px; height: 18px; translate: 0 -50%; border-width: 3px; border-color: rgba(33,28,24,0.25); border-top-color: #211c18; border-radius: 50%; }
+.login-error-paper { width: 430px; max-width: 90%; min-height: 176px; flex-grow: 0; flex-shrink: 0; padding: 24px 28px; align-items: stretch; }
+.login-error-paper .paper-title { align-self: center; margin-bottom: 16px; }
+.login-error-paper .body { -unity-text-align: middle-center; color: var(--ink); margin-bottom: 8px; }
+.login-error-actions { justify-content: center; flex-wrap: wrap; }
+.login-error-actions Button { min-height: 42px; margin: 4px 5px 0; }
+.privacy-notice { max-height: 140px; min-height: 95px; margin-top: 12px; padding: 8px 10px; border-width: 1px; border-color: #a08a64; background-color: rgba(255,255,255,0.28); }
+.privacy-title { color: var(--ink); font-size: 13px; -unity-font-style: bold; margin-bottom: 5px; }
+.privacy-body { color: var(--ink); font-size: 13px; white-space: normal; }
+.privacy-notice-full { max-height: 300px; min-height: 160px; }
+.privacy-notice-full .privacy-body { font-size: 15px; }
+.privacy-choice { margin-top: 10px; }
+/* Registration consent: the box opens the privacy notice; it is ticked only by agreeing there. */
+.consent-toggle { margin-top: 16px; min-height: 44px; flex-shrink: 0; align-items: center; padding: 7px 9px; border-width: 1px; border-color: #c1ad87; background-color: #e9ddc4; }
+.consent-toggle .unity-toggle__text { color: var(--ink); font-size: 14px; white-space: normal; flex-shrink: 1; }
+.consent-toggle .unity-toggle__checkmark { width: 20px; height: 20px; border-width: 1px; border-color: #8d7450; background-color: #f8f1e2; }
+.mobile .consent-toggle .unity-toggle__checkmark { width: 28px; height: 28px; }
+.link-button { align-self: center; margin-top: 8px; min-height: 0; padding: 2px 8px; font-size: 14px; color: #6a4f28; background-color: rgba(0,0,0,0); border-width: 0; }
+.link-button:hover { color: #3d2c12; }
+#login-recover { margin-top: 0; }
+/* Options > Account: the delete section and its deep red button. */
+.paper-subtitle { font-size: 19px; -unity-font-definition: resource("MainMenuNew/StorySerif"); margin-bottom: 6px; }
+.danger-button { background-color: #6e2a22; border-color: #c27a5c; }
+.danger-button:hover { background-color: #873429; border-color: #e6a07f; }
+.danger-button:active { background-color: #9c3f31; }
+/* The account modal (sign-up code, password reset) sits over whatever page is open. */
+.modal-backdrop { position: absolute; left: 0; right: 0; top: 0; bottom: 0; align-items: center; justify-content: center; background-color: rgba(10,9,7,0.72); }
+
+/* Mobile mode (MainMenuNewController.ApplyMobileMode): the panel is drawn 1.6x larger, so a landscape phone is about
+   890 x 400 logical pixels. Every touch target is at least 44px; these rules come last so they win over compact-height. */
+.mobile Button { min-height: 44px; }
+.mobile .version { top: 10px; left: 14px; font-size: 12px; }
+.mobile .account { top: 6px; right: 12px; }
+.mobile .home { max-height: 100%; }
+.mobile .logo { max-height: 64px; margin: 0 0 6px 0; }
+.mobile .title { max-height: 110px; margin-bottom: 6px; }
+.mobile .home { padding-bottom: 0; }
+.mobile .home-buttons { width: 260px; }
+.mobile .home-button { height: 48px; margin-bottom: 8px; padding: 0 16px; }
+.mobile .play-row { margin-bottom: 8px; }
+.mobile .home-button Label { font-size: 22px; padding-right: 22px; }
+.mobile .home-button .icon { width: 22px; height: 22px; }
+.mobile .play-sprig { display: none; }
+.mobile .home-caption { display: none; }
+.mobile .caption-flourish { display: none; }
+.mobile .home-rail.left { left: 8px; }
+.mobile .home-rail.right { right: 8px; }
+.mobile .rail-button { width: 80px; margin: 4px 0; }
+.mobile .rail-tile { width: 46px; height: 46px; }
+.mobile .rail-icon { width: 24px; height: 24px; }
+/* Touch has no hover, so on phones the names stay under the icons. */
+.mobile .rail-label { position: relative; left: auto; bottom: auto; margin: 4px 0 0 0; padding: 0; font-size: 13px; background-color: rgba(0,0,0,0); border-width: 0; opacity: 1; translate: 0 0; text-shadow: 0 1px 3px rgba(0,0,0,0.95); }
+.mobile .footer-note { display: none; }
+.mobile .page { width: 96%; height: 96%; max-height: none; }
+.mobile .header { height: 50px; margin-bottom: 4px; }
+.mobile .back { width: 100px; height: 44px; }
+.mobile .subtitle { margin-bottom: 6px; font-size: 15px; }
+.mobile .book { max-height: none; }
+.mobile .paper { padding: 12px 16px; }
+.mobile .paper-title { font-size: 21px; margin-bottom: 8px; padding-bottom: 6px; }
+.mobile .tab { min-height: 48px; }
+.mobile .sidebar { width: 190px; }
+.mobile .episode-row { height: 64px; }
+.mobile .setting-row { height: 52px; }
+.mobile .journal-input { min-height: 90px; }
+.mobile .save-slot { height: auto; min-height: 120px; }
+.mobile .save-slot .thumbnail { width: 120px; height: 75px; }
+.mobile .empty-slot { display: none; }
+.mobile .aside { display: none; }
+.mobile .art-panel { display: none; }
+.mobile .about-paper { width: 100%; }
+.mobile .leaf-decoration { display: none; }
+.mobile .quit-paper { padding: 16px 24px; }
+.mobile .login-logo { display: none; }
+.mobile .login-field > .unity-text-field__input { min-height: 44px; }
+.mobile .toast { bottom: 8px; }
+
+/* Progression: locked chapters and episodes stay visible but muted. */
+.episode-row.locked { opacity: 0.55; background-color: #cdbf9f; }
+.episode-row.locked:hover { background-color: #d5c7ab; }
+.episode-row.locked .episode-state { color: #6b5d45; -unity-font-style: bold; }
+.chapter-card.locked { opacity: 0.6; }
+.chapter-card.locked:hover { background-color: var(--paper); }
+/* Show / hide password: place the button over the field without using TextField's internal hierarchy. */
+.password-row { position: relative; width: 100%; min-height: 74px; flex-shrink: 0; }
+.password-row .login-field > .unity-text-field__input { padding-right: 44px; }
+.password-eye { position: absolute; right: 3px; bottom: 2px; width: 36px; height: 36px; min-height: 0; padding: 0; border-width: 0; border-radius: 3px; background-color: rgba(0,0,0,0); justify-content: center; align-items: center; }
+.password-eye:hover { background-color: rgba(160,138,100,0.22); }
+.password-eye:active { background-color: rgba(160,138,100,0.36); }
+.password-eye-icon { width: 22px; height: 22px; }
+.mobile .password-eye { width: 44px; height: 44px; }
+.mobile .password-row .login-field > .unity-text-field__input { padding-right: 52px; }
+.mobile .password-eye-icon { width: 26px; height: 26px; }
+
+/* Continue with Google, under the login fields: a white button with a multicolour G, after an "or" rule. */
+.auth-divider { flex-direction: row; align-items: center; margin-top: 10px; flex-shrink: 0; }
+.auth-divider-line { flex-grow: 1; height: 1px; background-color: #c8b693; }
+.auth-divider-text { margin: 0 10px; font-size: 14px; color: #7a6649; }
+.google-button { flex-direction: row; align-self: center; align-items: center; justify-content: center; min-height: 44px; margin-top: 8px; padding: 4px 18px; flex-shrink: 0; background-color: #ffffff; border-color: #a7916d; border-radius: 4px; }
+.google-button:hover { background-color: #f3eee4; border-color: #79603d; }
+.google-button:active { background-color: #e6dfd1; }
+.google-button:focus { border-color: #79603d; }
+.google-mark { width: 26px; height: 26px; margin-right: 10px; font-size: 22px; -unity-font-style: bold; -unity-text-align: middle-center; color: #4285f4; }
+.google-text { font-size: 16px; color: #3c3a37; }
+
+/* Sign-up: a message under a field (username taken, email not Gmail/Yahoo, ...). Empty ones take no space. */
+.field-status { margin-top: 3px; font-size: 13px; color: #a3392b; flex-shrink: 0; }
+.field-status.ok { color: #3d7a3a; }
+
+/* Password strength: a bar that fills and changes colour as the rules are met, with what is still missing. */
+.strength { width: 100%; margin-top: 6px; flex-shrink: 0; }
+.strength-track { width: 100%; height: 7px; background-color: #d9cbb0; border-radius: 4px; overflow: hidden; }
+.strength-fill { width: 0; height: 100%; border-radius: 4px; background-color: #b8432f; transition-property: width, background-color; transition-duration: 0.18s; }
+.strength-fill.fair { background-color: #c98a2c; }
+.strength-fill.good { background-color: #9a9a2e; }
+.strength-fill.strong { background-color: #3d8a3a; }
+.strength-label { margin-top: 4px; font-size: 13px; color: #594a36; }
+.mobile .strength-track { height: 9px; }

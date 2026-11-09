@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4944140900967753314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -5888970235730777167, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_Name
+      value: SUV
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627874856211641453, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -5888970235730777167, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2369258206617126451}
+  m_SourcePrefab: {fileID: -917883039276117170, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+--- !u!1 &7699802077794569683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5888970235730777167, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  m_PrefabInstance: {fileID: 4944140900967753314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2369258206617126451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699802077794569683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db67e10bfcb342ca943ae4ee8e62c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.Vehicles.CityTrafficVehicle
+  path: []
+  speed: 18
+  distance: 0
+  modelForward: {x: -1, y: 0, z: 0}
+  clips:
+  - {fileID: 3924127873145898840, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  - {fileID: -3784162925047856520, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  - {fileID: -4803760700232421864, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  - {fileID: -1487787909106053845, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  - {fileID: 8712608233195327349, guid: 37bfe575eaf17451281670a65735fd25, type: 3}
+  modelRollSpeed: 2.84

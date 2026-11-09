@@ -1,0 +1,1 @@
+/Users/arieljerickogacilo/mindscape-3d/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2w3p714g/obj/arm64-v8a

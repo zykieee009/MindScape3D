@@ -1,0 +1,243 @@
+.quest-hud-root {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    color: rgb(54, 43, 32);
+}
+
+.quest-shortcut {
+    position: absolute;
+    right: 24px; top: 22px;
+    min-height: 44px;
+    max-width: 45%;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(229, 214, 183, 0.96);
+    border-left-width: 3px;
+    border-left-color: rgb(156, 118, 62);
+    border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;
+    border-top-color: rgb(184, 158, 113);
+    border-right-color: rgb(184, 158, 113);
+    border-bottom-color: rgb(184, 158, 113);
+    border-radius: 4px;
+    padding-left: 8px; padding-right: 12px;
+    opacity: 1;
+    transition-property: opacity, translate;
+    transition-duration: 0.16s;
+    transition-timing-function: ease-out;
+}
+.quest-shortcut.is-hidden { display: none; }
+.shortcut-key, .footer-key {
+    min-width: 22px; height: 22px;
+    background-color: rgb(75, 60, 44);
+    color: rgb(239, 226, 198);
+    border-radius: 3px;
+    font-size: 12px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.shortcut-label {
+    color: rgb(64, 49, 34);
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    -unity-font-style: bold;
+}
+
+.quest-drawer {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgb(235, 222, 194);
+    padding-left: 20px; padding-right: 20px;
+    padding-top: 18px; padding-bottom: 14px;
+    opacity: 1; translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+.quest-drawer.is-hidden { display: none; }
+.drawer-accent {
+    position: absolute; left: 0; top: 0;
+    width: 6px; height: 100%;
+    background-color: rgb(113, 82, 46);
+}
+.drawer-header {
+    width: 100%; max-width: 960px; align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 12px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(181, 153, 105);
+}
+.header-copy { flex-grow: 1; }
+.eyebrow {
+    color: rgb(127, 91, 49);
+    font-size: 10px; letter-spacing: 2px;
+    -unity-font-style: bold; margin-bottom: 3px;
+}
+.drawer-title {
+    color: rgb(54, 41, 28);
+    font-size: 26px; letter-spacing: 0.5px;
+    -unity-font-style: bold;
+}
+.close-button {
+    width: 44px; height: 44px; margin-top: 2px; padding: 0;
+    border-width: 1px; border-color: rgb(160, 130, 87);
+    border-radius: 4px; background-color: rgb(222, 202, 165);
+    color: rgb(69, 51, 35); font-size: 14px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+}
+.close-button:hover {
+    background-color: rgb(93, 68, 43);
+    color: rgb(247, 232, 204);
+    border-color: rgb(93, 68, 43);
+}
+.quest-summary {
+    color: rgb(103, 80, 53);
+    font-size: 12px;
+    margin-top: 10px; margin-bottom: 10px;
+}
+.quest-summary-row {
+    flex-direction: row; justify-content: space-between; align-items: center;
+    width: 100%; max-width: 960px; align-self: center;
+}
+.episode-timer {
+    color: rgb(133, 89, 34);
+    font-size: 13px; -unity-font-style: bold; letter-spacing: 1px;
+}
+.episode-timer.is-warning { color: rgb(149, 58, 43); }
+
+.episode-modal {
+    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center; justify-content: center;
+    background-color: rgba(36, 26, 18, 0.82);
+}
+.episode-modal.is-hidden { display: none; }
+.episode-modal-card {
+    width: 430px; max-width: 90%; max-height: 90%; padding: 24px 28px;
+    background-color: rgb(235, 222, 194);
+    border-width: 1px; border-color: rgb(181, 153, 105);
+    border-left-width: 5px; border-left-color: rgb(156, 118, 62);
+    border-radius: 4px;
+}
+.episode-modal-eyebrow {
+    color: rgb(127, 91, 49);
+    font-size: 10px; letter-spacing: 2px; -unity-font-style: bold;
+}
+.episode-modal-title {
+    color: rgb(54, 41, 28);
+    font-size: 26px; -unity-font-style: bold;
+    margin-top: 4px; margin-bottom: 10px;
+}
+.episode-modal-message {
+    color: rgb(89, 69, 46);
+    font-size: 14px; white-space: normal; margin-bottom: 20px;
+}
+.episode-modal-actions {
+    flex-direction: row; justify-content: flex-end; flex-wrap: wrap;
+}
+.modal-primary, .modal-secondary {
+    height: 38px; margin-left: 8px; margin-top: 4px; padding-left: 14px; padding-right: 14px;
+    border-width: 1px; border-radius: 3px;
+    -unity-font-style: bold; font-size: 11px;
+}
+.modal-primary {
+    color: rgb(247, 232, 204);
+    background-color: rgb(93, 68, 43);
+    border-color: rgb(93, 68, 43);
+}
+.modal-secondary {
+    color: rgb(69, 51, 35);
+    background-color: rgb(222, 202, 165);
+    border-color: rgb(160, 130, 87);
+}
+
+.quest-list {
+    flex-grow: 1;
+    width: 100%; max-width: 960px; align-self: center;
+    padding-right: 8px;
+}
+.quest-block {
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    background-color: rgb(246, 235, 211);
+    border-width: 1px;
+    border-color: rgb(205, 181, 140);
+    border-left-width: 3px;
+    border-left-color: rgb(156, 118, 62);
+    border-radius: 4px;
+}
+.quest-block-header {
+    flex-direction: row; align-items: center;
+    justify-content: space-between; margin-bottom: 6px;
+}
+.quest-name {
+    color: rgb(54, 41, 28);
+    font-size: 17px; -unity-font-style: bold;
+    white-space: normal; flex-grow: 1;
+}
+.quest-status {
+    color: rgb(127, 91, 49);
+    font-size: 9px; letter-spacing: 1.2px;
+    -unity-font-style: bold; margin-left: 10px; flex-shrink: 0;
+}
+.quest-status.complete { color: rgb(75, 107, 73); }
+.quest-description {
+    color: rgb(99, 75, 49);
+    font-size: 12px; white-space: normal; margin-bottom: 8px;
+}
+.criterion-row {
+    min-height: 48px; flex-direction: row; align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(219, 201, 167);
+    padding-top: 6px; padding-bottom: 6px;
+}
+.criterion-mark {
+    width: 20px; height: 20px;
+    border-width: 1px; border-color: rgb(149, 126, 91);
+    border-radius: 10px;
+    color: rgb(103, 80, 53);
+    font-size: 11px; -unity-text-align: middle-center;
+    margin-right: 10px; flex-shrink: 0;
+}
+.criterion-row.complete .criterion-mark {
+    background-color: rgb(93, 123, 86);
+    border-color: rgb(93, 123, 86);
+    color: rgb(248, 241, 221);
+}
+.criterion-copy { flex-grow: 1; }
+.criterion-type {
+    color: rgb(127, 91, 49);
+    font-size: 9px; letter-spacing: 1.1px;
+    -unity-font-style: bold; margin-bottom: 2px;
+}
+.criterion-label {
+    color: rgb(67, 51, 35);
+    font-size: 13px; white-space: normal;
+}
+.criterion-row.complete .criterion-label { color: rgb(75, 107, 73); }
+.criterion-progress {
+    min-width: 60px;
+    color: rgb(91, 69, 46);
+    font-size: 11px; -unity-font-style: bold;
+    -unity-text-align: middle-right; margin-left: 8px; flex-shrink: 0;
+}
+.empty-state {
+    color: rgb(103, 80, 53);
+    font-size: 13px; white-space: normal;
+    padding-top: 16px; padding-bottom: 16px;
+}
+.drawer-footer {
+    height: 36px; flex-direction: row; align-items: center;
+    justify-content: flex-end;
+    width: 100%; max-width: 960px; align-self: center;
+    border-top-width: 1px; border-top-color: rgb(181, 153, 105);
+    margin-top: 6px; padding-top: 8px;
+}
+.footer-key { min-width: 19px; height: 19px; font-size: 10px; margin-right: 6px; }
+.footer-copy {
+    color: rgb(103, 80, 53);
+    font-size: 9px; letter-spacing: 1.2px; -unity-font-style: bold;
+}

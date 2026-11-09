@@ -1,0 +1,96 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss?fileID=7433441132597879392&amp;guid=20c0b526399a34f99b6bd226dae343e6&amp;type=3#MainMenu"/>
+    <ui:VisualElement name="root" enabled="true" class="root" style="background-image: resource(&quot;MenuArt/Background3D&quot;);">
+        <ui:VisualElement name="page-main" enabled="true" class="page page-main">
+            <ui:Image class="title-image" style="background-image: resource(&quot;MenuArt/title&quot;);"/>
+            <ui:VisualElement name="root-buttons" class="button-column">
+                <ui:Button name="btn-new-game" text="New Game" class="menu-button compact"/>
+                <ui:Button name="btn-continue" text="Continue" class="menu-button compact"/>
+                <ui:Button name="btn-journal" text="Journal" class="menu-button compact"/>
+                <ui:Button name="btn-options" text="Options" class="menu-button compact"/>
+                <ui:Button name="btn-how-to-play" text="How to Play" class="menu-button compact"/>
+                <ui:Button name="btn-resources" text="Resources" class="menu-button compact"/>
+                <ui:Button name="btn-about-us" text="About Us" class="menu-button compact"/>
+                <ui:Button name="btn-quit" text="Quit Game" class="menu-button compact"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-settings" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-settings-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="OPTIONS" class="page-title"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="setting-row">
+                <ui:Label text="Music" class="setting-label"/>
+                <ui:Slider name="slider-music" low-value="0" high-value="1" class="setting-slider"/>
+                <ui:Label name="label-music-value" text="65%" class="setting-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="setting-row">
+                <ui:Label text="SFX" class="setting-label"/>
+                <ui:Slider name="slider-sfx" low-value="0" high-value="1" class="setting-slider"/>
+                <ui:Label name="label-sfx-value" text="65%" class="setting-value"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="setting-row">
+                <ui:Label text="Mobile Controls" class="setting-label"/>
+                <ui:Toggle name="toggle-mobile" class="setting-toggle"/>
+            </ui:VisualElement>
+            <ui:Button name="btn-open-keybindings" text="Key Bindings" class="menu-button small"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-chapters" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-chapters-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="JOURNAL" class="page-title"/>
+            </ui:VisualElement>
+            <ui:Label text="Choose a gentle next step" class="subtitle"/>
+            <ui:VisualElement name="chapter-list" class="list-column"/>
+            <ui:Label name="chapter-notice" text="Every small step counts." class="notice"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-episodes" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-episodes-back" text="‹ Back" class="back-button"/>
+                <ui:Label name="episodes-title" text="CHAPTER" class="page-title"/>
+            </ui:VisualElement>
+            <ui:Label text="Choose an episode" class="subtitle"/>
+            <ui:VisualElement name="episode-list" class="list-column"/>
+            <ui:Label name="episode-notice" text="Every small step counts." class="notice"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-keybindings" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-keybindings-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="KEY BINDINGS" class="page-title"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="keybind-columns">
+                <ui:VisualElement name="keybind-left" class="keybind-column"/>
+                <ui:VisualElement name="keybind-right" class="keybind-column"/>
+            </ui:VisualElement>
+            <ui:Button name="btn-reset-bindings" text="Reset to Defaults" class="menu-button small"/>
+            <ui:Label text="Click a key to rebind it, then press the new key. Esc cancels." class="notice"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-how-to-play" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-how-to-play-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="HOW TO PLAY" class="page-title"/>
+            </ui:VisualElement>
+            <ui:ScrollView class="content-scroll">
+                <ui:Label text="Move with WASD (or the on-screen joystick on mobile).&#10;&#10;Press E to interact with objects and characters.&#10;&#10;Open the Journal from the main menu to revisit chapters and episodes you&apos;ve unlocked.&#10;&#10;Press Esc at any time to return to this menu.&#10;&#10;Take your time — there&apos;s no rush in Mindscape." class="body-text"/>
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-resources" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-resources-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="RESOURCES" class="page-title"/>
+            </ui:VisualElement>
+            <ui:ScrollView class="content-scroll">
+                <ui:Label text="If you&apos;re going through a hard time, you&apos;re not alone.&#10;&#10;This space is here to help you breathe — if you ever need more support, please reach out to a trusted friend, family member, or a local support line.&#10;&#10;(Add your region-specific helplines and links here.)" class="body-text"/>
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement name="page-about-us" class="page hidden">
+            <ui:VisualElement class="header-row">
+                <ui:Button name="btn-about-us-back" text="‹ Back" class="back-button"/>
+                <ui:Label text="ABOUT US" class="page-title"/>
+            </ui:VisualElement>
+            <ui:ScrollView class="content-scroll">
+                <ui:Label text="Mindscape is a little space to breathe and a new place to grow.&#10;&#10;(Add your team, credits, and contact info here.)" class="body-text"/>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

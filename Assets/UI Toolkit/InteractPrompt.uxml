@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Bottom-centre key prompt, shared by "[ E ]  Check your phone" (story episodes) and "[ E ]  Talk to Mom"
+         (NPCInteractionManager, every scene with talkable NPCs). The NPC one gets the .raised class so both can show at once.
+         The text is sample text for UI Builder. Elements with a name are looked up by code, so keep the names. -->
+    <Style src="InteractPrompt.uss"/>
+    <ui:VisualElement name="prompt" picking-mode="Ignore" class="prompt">
+        <ui:Label name="prompt-text" text="[ E ]  Check your phone" picking-mode="Ignore" class="prompt-text"/>
+    </ui:VisualElement>
+</ui:UXML>

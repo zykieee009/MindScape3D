@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="Dialogue_new.uss"/>
+    <!-- Alternate story dialogue. Named elements retain the existing episode bindings. -->
+    <ui:VisualElement name="dialogue" class="dialogue-new">
+        <ui:VisualElement class="dialogue-new-header" picking-mode="Ignore">
+            <ui:Label name="dialogue-speaker" text="BOKZ" class="dialogue-new-speaker"/>
+            <ui:VisualElement name="dialogue-context" class="dialogue-new-context">
+                <ui:VisualElement class="dialogue-new-divider"/>
+                <ui:Label name="dialogue-mode" text="INNER THOUGHT" class="dialogue-new-mode"/>
+            </ui:VisualElement>
+            <!-- Runtime replaces the sample dots with the actual sequence length, for all speakers. -->
+            <ui:VisualElement name="dialogue-progress" class="dialogue-new-progress" tooltip="Dialogue 1 of 2">
+                <ui:VisualElement name="dialogue-progress-dots" class="dialogue-new-dots">
+                    <ui:VisualElement class="dialogue-new-dot dialogue-new-dot-lit"/>
+                    <ui:VisualElement class="dialogue-new-dot"/>
+                </ui:VisualElement>
+                <ui:Label name="dialogue-progress-text" text="1 / 2" class="dialogue-new-progress-text"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement class="dialogue-new-body">
+            <ui:Label name="dialogue-speech" text="Morning already.&#10;Before anything else, I should check my phone." class="dialogue-new-speech" picking-mode="Ignore"/>
+            <ui:VisualElement class="dialogue-new-actions">
+                <ui:Button name="dialogue-continue" class="dialogue-new-continue" tooltip="Continue dialogue (Space or Enter)" focusable="false">
+                    <ui:Label text="Continue" picking-mode="Ignore"/>
+                    <ui:VisualElement class="dialogue-new-arrow" picking-mode="Ignore"/>
+                </ui:Button>
+                <ui:VisualElement class="dialogue-new-key-divider" picking-mode="Ignore"/>
+                <ui:Label text="SPACE" class="dialogue-new-key" picking-mode="Ignore"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

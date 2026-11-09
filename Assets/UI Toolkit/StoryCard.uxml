@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Full-screen story card (AcademicEpisode Card): episode title cards and moments like "Take a moment."
+         Clicking anywhere or pressing Space continues. The text is sample text for UI Builder; card-text uses rich
+         text (<size=60%> for the subtitle line). Elements with a name are looked up by code, so keep the names. -->
+    <Style src="StoryCard.uss"/>
+    <ui:VisualElement name="story-card" class="story-card">
+        <ui:Label name="card-text" text="CHAPTER 1  ·  ACADEMIC PRESSURE&#10;&lt;size=60%&gt;Episode 01  ·  Tomorrow Already?&lt;/size&gt;" class="card-text"/>
+        <ui:Label name="card-hint" text="Begin  [Space]" class="card-hint"/>
+    </ui:VisualElement>
+</ui:UXML>

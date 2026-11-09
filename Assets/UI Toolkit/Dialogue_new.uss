@@ -1,0 +1,118 @@
+/* Full-width, bottom-flush concept. Sizes use EpisodePanelSettings' 1280 x 720 reference.
+   Content can grow beyond the minimum height; long lines are never clipped to a fixed bar. */
+.dialogue-new {
+    --dialogue-paper: #F4ECD8;
+    --dialogue-gold: #E2B566;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 27%;
+    padding: 22px 3.3% 28px;
+    justify-content: center;
+    background-color: rgba(17, 23, 30, 0.96);
+    border-top-width: 1px;
+    border-top-color: var(--dialogue-gold);
+    color: var(--dialogue-paper);
+    -unity-font-definition: url("../TextMesh Pro/Fonts/LiberationSans.ttf");
+}
+
+.dialogue-new Label { margin: 0; padding: 0; }
+.dialogue-new.hidden, .dialogue-new .hidden { display: none; }
+
+.dialogue-new-header {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 21px;
+}
+.dialogue-new-speaker {
+    color: var(--dialogue-gold);
+    font-size: 16px;
+    letter-spacing: 3px;
+    white-space: normal;
+    flex-shrink: 1;
+}
+.dialogue-new-context { flex-direction: row; align-items: center; }
+.dialogue-new-divider {
+    width: 1px;
+    height: 17px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(226, 181, 102, 0.45);
+}
+.dialogue-new-mode { color: #B7AA8C; font-size: 14px; letter-spacing: 0.6px; }
+.dialogue-new-progress { flex-direction: row; align-items: center; margin-left: 24px; max-width: 90%; flex-shrink: 1; }
+.dialogue-new-dots { flex-direction: row; align-items: center; flex-wrap: wrap; flex-shrink: 1; }
+.dialogue-new .dialogue-new-progress-text { color: #B7AA8C; font-size: 12px; margin-left: 8px; white-space: nowrap; }
+.dialogue-new-dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 4px;
+    background-color: rgba(226, 181, 102, 0.15);
+}
+.dialogue-new-dot-complete { background-color: #9A7945; }
+.dialogue-new-dot-lit { background-color: #F1BB62; }
+
+.dialogue-new-body { flex-direction: row; align-items: center; }
+.dialogue-new .dialogue-new-speech {
+    flex-grow: 1;
+    flex-shrink: 1;
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 29px;
+    white-space: pre-wrap;
+    margin-right: 36px;
+}
+.dialogue-new-actions { flex-direction: row; align-items: center; flex-shrink: 0; }
+.dialogue-new-continue {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    min-width: 156px;
+    margin: 0;
+    padding: 0 23px;
+    border-width: 1px;
+    border-color: #CA9A4D;
+    border-radius: 25px;
+    background-color: rgba(143, 102, 38, 0.28);
+    color: var(--dialogue-paper);
+    font-size: 17px;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.12s;
+}
+.dialogue-new-continue:hover { background-color: rgba(172, 124, 47, 0.48); border-color: #F1C77E; }
+.dialogue-new-continue:active { background-color: rgba(172, 124, 47, 0.62); scale: 0.98; }
+.dialogue-new-arrow {
+    width: 9px;
+    height: 9px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-top-color: #F1BB62;
+    border-right-color: #F1BB62;
+    rotate: 45deg;
+    margin-left: 24px;
+    margin-right: 3px;
+}
+.dialogue-new-key-divider { width: 1px; height: 22px; margin: 0 18px; background-color: #5B5345; }
+.dialogue-new .dialogue-new-key {
+    border-width: 1px;
+    border-top-color: #A19D94;
+    border-right-color: #777971;
+    border-bottom-color: #777971;
+    border-left-color: #777971;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.035);
+    color: #D9D8D2;
+    font-size: 14px;
+    padding: 9px 11px;
+}
+
+/* Runtime adds compact for a narrow panel and touch for the project's mobile controls. */
+.dialogue-new.compact { padding: 18px 4% 22px; }
+.dialogue-new.compact .dialogue-new-header { margin-bottom: 14px; }
+.dialogue-new.compact .dialogue-new-body { flex-direction: column; align-items: stretch; }
+.dialogue-new.compact .dialogue-new-speech { font-size: 25px; margin-right: 0; margin-bottom: 18px; }
+.dialogue-new.compact .dialogue-new-actions { align-self: flex-end; }
+.dialogue-new.touch .dialogue-new-key, .dialogue-new.touch .dialogue-new-key-divider { display: none; }

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: f40d2a78c10fa4a8882a23a0be29e17f
+  - enabled: 1
+    path: Assets/Scenes/main_menu_new.unity
+    guid: 2b9b86ec0ce4a42b8a5b044b238fb10c
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: b01d662b5140b4a82985c44092ba0764
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1 - Episode 1.unity
+    guid: 921d31928ea7c4207bbd0c42eb9fdc2c
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1 - Episode 2.unity
+    guid: f15070d8166b443d5ba83717d95fec7b
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1 - Episode 3.unity
+    guid: 053a71795037a4a4e85e867f1780068a
+  - enabled: 1
+    path: Assets/Scenes/Chapter 1 - Episode 4.unity
+    guid: 2f558d89b88474db7b270dc601add52e
+  - enabled: 1
+    path: Assets/Scenes/Cutscene - Episode 1.unity
+    guid: b3e188a99286b4058968eea5439431b1
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2 - Episode 1.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2 - Episode 2.unity
+    guid: f7a70f46d43e8451ea7b246ee04bb798
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2 - Episode 3.unity
+    guid: 89b11d97e72e841589e97f303a69f788
+  - enabled: 1
+    path: Assets/Scenes/MinigameTestLab.unity
+    guid: 5d4bd5de56da244f3af2fa6a1f7629f7
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2 - Episode 4.unity
+    guid: a8713f03daedd4daca86c0410f090baa
+  - enabled: 1
+    path: Assets/Scenes/Chapter 2 - Episode 5.unity
+    guid: 70ebd6756c20c4e498052763f84232ad
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 1.unity
+    guid: cc57de4f2bc604c7a85d4d8934a50cbb
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 2.unity
+    guid: c987dd5ec7e0048bf957139326aae54a
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 3.unity
+    guid: 788e6739d7a324587915e3e469d761f2
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 4.unity
+    guid: 720056534b0234d6fb008baf2b16a09f
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 5.unity
+    guid: 6c652c640352741bda535d88e7bb8342
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 6.unity
+    guid: 939b4f9c6cb4c44f4837abbe189b2301
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 7.unity
+    guid: 2a56aabe4b85a40848adaddce39e70e8
+  - enabled: 1
+    path: Assets/Scenes/Chapter 3 - Episode 8.unity
+    guid: a5a607eb434234dcb8d5672a4275defa
+  m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 58955483786dd47bba31c8cab8d02a62, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3dfdba79c2b05437da148f1de263db53, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d1beab9e0195b496e8191118068fed32, type: 2}
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
+    com.unity.input.settings.actions: {fileID: 0}

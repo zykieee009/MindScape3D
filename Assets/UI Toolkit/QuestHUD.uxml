@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="QuestHUD.uss"/>
+    <ui:VisualElement name="quest-hud-root" class="quest-hud-root" picking-mode="Ignore">
+        <ui:VisualElement name="quest-shortcut" class="quest-shortcut" picking-mode="Position">
+            <ui:Label text="Q" class="shortcut-key"/>
+            <ui:Label text="QUESTS" class="shortcut-label"/>
+            <ui:Label name="episode-timer" text="" class="episode-timer"/>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="quest-drawer" class="quest-drawer is-hidden" picking-mode="Position">
+            <ui:VisualElement class="drawer-accent"/>
+            <ui:VisualElement class="drawer-header">
+                <ui:VisualElement class="header-copy">
+                    <ui:Label text="FIELD JOURNAL" class="eyebrow"/>
+                    <ui:Label text="QUESTS" class="drawer-title"/>
+                </ui:VisualElement>
+                <ui:Button name="quest-close" text="✕" class="close-button"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="quest-summary-row">
+                <ui:Label name="quest-summary" text="No active quests" class="quest-summary"/>
+                <ui:Label name="episode-timer-full" text="" class="episode-timer"/>
+            </ui:VisualElement>
+            <ui:ScrollView name="quest-list" mode="Vertical" class="quest-list"/>
+
+            <ui:VisualElement class="drawer-footer">
+                <ui:Label text="Q" class="footer-key"/>
+                <ui:Label text="CLOSE JOURNAL" class="footer-copy"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="episode-modal" class="episode-modal is-hidden">
+            <ui:VisualElement class="episode-modal-card">
+                <ui:Label name="episode-modal-eyebrow" text="TIME UP" class="episode-modal-eyebrow"/>
+                <ui:Label name="episode-modal-title" text="GAME OVER" class="episode-modal-title"/>
+                <ui:Label name="episode-modal-message" text="" class="episode-modal-message"/>
+                <ui:VisualElement class="episode-modal-actions">
+                    <ui:Button name="episode-modal-primary" text="RETRY EPISODE" class="modal-primary"/>
+                    <ui:Button name="episode-modal-secondary" text="RETURN TO MENU" class="modal-secondary"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

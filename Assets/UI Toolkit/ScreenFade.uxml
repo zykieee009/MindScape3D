@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- The full-screen black the story fades through (AcademicEpisode.Fade). It sits under every story panel; the
+         episode sets its opacity from code. Keep the name. -->
+    <ui:VisualElement name="fade" picking-mode="Ignore" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgb(10, 15, 17); opacity: 1;"/>
+</ui:UXML>

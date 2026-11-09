@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5220fb8d6e35e40eb815b9d4b4964988, type: 3}
+  m_Name: Chapter1_EveryoneAhead
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.Minigames.WorryCourtroomCase
+  chapterLabel: Chapter 1
+  caseName: Everyone seems ahead
+  worry: Everyone is ahead of me, so I'm not good enough.
+  evidence:
+  - text: I haven't finished my project yet.
+    isFact: 1
+    trap: 0
+  - text: Everyone else is ahead of me.
+    isFact: 0
+    trap: 3
+  - text: Two classmates said they finished their presentations.
+    isFact: 1
+    trap: 0
+  - text: They must think I'm slow.
+    isFact: 0
+    trap: 1
+  - text: I feel behind, so I must be behind.
+    isFact: 0
+    trap: 5
+  - text: Being behind means I'm not good enough.
+    isFact: 0
+    trap: 6
+  defence:
+  - text: I don't know how much the others have actually finished.
+    isGood: 1
+    whyNot: 
+  - text: I have already completed parts of my project.
+    isGood: 1
+    whyNot: 
+  - text: Classmates work at different speeds and in different orders.
+    isGood: 1
+    whyNot: 
+  - text: I can ask Sam or the teacher if I get stuck.
+    isGood: 1
+    whyNot: 
+  - text: I'm already behind, so there's no point continuing.
+    isGood: 0
+    whyNot: That keeps the thought in charge. It doesn't answer it.
+  - text: They probably had more help than I did.
+    isGood: 0
+    whyNot: That is a guess about others, and it doesn't help your own work.
+  friend:
+  - text: Everyone moves at their own pace. Look at what you've done so far, then
+      take the next small step.
+    isGood: 1
+    whyNot: 
+  - text: You're right, you're behind everyone.
+    isGood: 0
+    whyNot: A good friend wouldn't add weight to the thought.
+  - text: Just stop comparing yourself.
+    isGood: 0
+    whyNot: Comparing is a habit, not a switch. Noticing it is kinder.
+  verdict:
+  - text: Other students may be ahead, but I can still work on my project one step
+      at a time.
+    isGood: 1
+    whyNot: 
+  - text: I have to catch up with everyone tonight, or I'm not good enough.
+    isGood: 0
+    whyNot: All-or-nothing thinking. One step at a time is enough.
+  - text: I'm just not as capable as they are.
+    isGood: 0
+    whyNot: Labeling. One moment of comparison doesn't measure you.
+  - text: It doesn't matter, so I won't think about it.
+    isGood: 0
+    whyNot: Pushing the thought away skips what it's pointing to.
+  plan:
+  - text: Pick one part of the project to work on tonight.
+    isGood: 1
+    whyNot: 
+  - text: Ask Sam how they planned their slides.
+    isGood: 1
+    whyNot: 
+  - text: Do the whole project in one night.
+    isGood: 0
+    whyNot: That's a lot at once. One part is a real step.
+  - text: Wait until I feel ready.
+    isGood: 0
+    whyNot: Feeling ready often comes after starting, not before.
+  trapInfo:
+  - trap: 1
+    displayName: Mind reading
+    description: Assuming you know what other people think without checking.
+  - trap: 2
+    displayName: Fortune telling
+    description: Predicting the future as if it were already certain.
+  - trap: 3
+    displayName: All-or-nothing
+    description: Seeing things in extremes, like always, never, perfect, or ruined.
+  - trap: 4
+    displayName: Catastrophizing
+    description: Jumping to the worst possible outcome.
+  - trap: 5
+    displayName: Emotional reasoning
+    description: Treating a feeling as proof that something is true.
+  - trap: 6
+    displayName: Labeling
+    description: Calling yourself a harsh name because of one event.
+  introLead: 
+  defenceLead: 
+  friendPrompt: 
+  verdictPrompt: 
+  planPrompt: 

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5220fb8d6e35e40eb815b9d4b4964988, type: 3}
+  m_Name: Chapter1_Quiz
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.Minigames.WorryCourtroomCase
+  chapterLabel: Chapter 1
+  caseName: The quiz
+  worry: I failed this quiz. I'll never pass this class.
+  evidence:
+  - text: I got 5 out of 15 on the quiz.
+    isFact: 1
+    trap: 0
+  - text: The teacher thinks I'm dumb.
+    isFact: 0
+    trap: 1
+  - text: I'll fail every quiz from now on.
+    isFact: 0
+    trap: 2
+  - text: My stomach dropped when I saw the score, so it must be a disaster.
+    isFact: 0
+    trap: 5
+  - text: I only studied for twenty minutes.
+    isFact: 1
+    trap: 0
+  - text: I'm just a failure.
+    isFact: 0
+    trap: 6
+  defence:
+  - text: I passed the last two quizzes.
+    isGood: 1
+    whyNot: 
+  - text: I didn't have much time to review. That is something I can change.
+    isGood: 1
+    whyNot: 
+  - text: There are more quizzes and a final to bring my grade up.
+    isGood: 1
+    whyNot: 
+  - text: My teacher offers help after class.
+    isGood: 1
+    whyNot: 
+  - text: I'll just stop caring about grades.
+    isGood: 0
+    whyNot: That avoids the worry instead of weighing it. It isn't evidence.
+  - text: Everyone else probably failed too.
+    isGood: 0
+    whyNot: That is a guess about other people. It isn't a fact you can check.
+  friend:
+  - text: One quiz doesn't decide your grade. Let's look at what went wrong and fix
+      it.
+    isGood: 1
+    whyNot: 
+  - text: You should be ashamed. Try harder.
+    isGood: 0
+    whyNot: A good friend wouldn't shame you. Try being that kind to yourself.
+  - text: Forget it. Quizzes don't matter.
+    isGood: 0
+    whyNot: That brushes the worry aside instead of answering it.
+  verdict:
+  - text: One quiz doesn't define me. I can review my mistakes and ask for help.
+    isGood: 1
+    whyNot: 
+  - text: I must get every answer right from now on.
+    isGood: 0
+    whyNot: All-or-nothing thinking. It sets a standard nobody can meet.
+  - text: There's no point trying again.
+    isGood: 0
+    whyNot: That's the worry talking. It's a prediction, not a fact.
+  - text: Nothing is wrong. I shouldn't feel upset at all.
+    isGood: 0
+    whyNot: Ignoring feelings isn't balanced. It's okay to feel disappointed.
+  plan:
+  - text: Ask my teacher which topics to review.
+    isGood: 1
+    whyNot: 
+  - text: Make a 20-minute review plan for tonight.
+    isGood: 1
+    whyNot: 
+  - text: Try to forget about it.
+    isGood: 0
+    whyNot: That isn't a specific action, so it's hard to do.
+  - text: Study all night until I'm perfect.
+    isGood: 0
+    whyNot: Not realistic or kind. Pick something small.
+  trapInfo:
+  - trap: 1
+    displayName: Mind reading
+    description: Assuming you know what other people think without checking.
+  - trap: 2
+    displayName: Fortune telling
+    description: Predicting the future as if it were already certain.
+  - trap: 3
+    displayName: All-or-nothing
+    description: Seeing things in extremes, like always, never, perfect, or ruined.
+  - trap: 4
+    displayName: Catastrophizing
+    description: Jumping to the worst possible outcome.
+  - trap: 5
+    displayName: Emotional reasoning
+    description: Treating a feeling as proof that something is true.
+  - trap: 6
+    displayName: Labeling
+    description: Calling yourself a harsh name because of one event.
+  introLead: 
+  defenceLead: 
+  friendPrompt: 
+  verdictPrompt: 
+  planPrompt: 

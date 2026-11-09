@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="TextEntry.uss"/>
+    <ui:VisualElement name="entry-screen" class="entry-screen">
+        <ui:VisualElement name="entry" class="entry">
+            <ui:Label name="entry-title" text="Reflection Journal" class="entry-title"/>
+            <ui:Label name="entry-prompt" text="What name should the story use for you?" class="entry-prompt"/>
+            <ui:VisualElement class="entry-row">
+                <ui:TextField name="entry-field" max-length="24" class="entry-field"/>
+                <ui:Button name="entry-confirm" text="Start" class="entry-confirm"/>
+            </ui:VisualElement>
+            <ui:Label name="entry-hint" text="Type a name to continue." class="entry-hint"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

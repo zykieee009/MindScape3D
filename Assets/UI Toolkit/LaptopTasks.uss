@@ -1,0 +1,167 @@
+/* Laptop task list (LaptopTasks.uxml): a laptop lid with a menu bar, a desktop with a Tasks window, and a dock.
+   Colours and fonts come from EpisodeScreens.uss.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+/* The room dims behind the laptop. */
+#laptop-root { background-color: rgba(10, 15, 17, 0.6); }
+
+/* ---- The laptop: the lid with the base under it ---- */
+.laptop {
+    position: absolute;
+    left: 50%; top: 4%;
+    translate: -50% 0;
+    align-items: center;
+}
+.laptop-lid {
+    width: 900px; height: 596px;
+    padding: 16px 16px 20px 16px;
+    background-color: #2F353A;
+    border-top-left-radius: 22px; border-top-right-radius: 22px;
+    border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;
+    border-width: 2px; border-color: #4A5258;
+}
+/* The webcam. */
+.laptop-camera {
+    position: absolute;
+    left: 50%; top: 6px;
+    width: 6px; height: 6px;
+    margin-left: -3px;
+    border-radius: 50%;
+    background-color: #0E1214;
+}
+.laptop-display {
+    flex-grow: 1;
+    background-color: #28464B;      /* the wallpaper */
+    border-radius: 6px;
+    border-width: 2px; border-color: #0E1214;
+    overflow: hidden;
+}
+
+/* The keyboard half, edge-on: wider than the lid, with a groove at the front. */
+.laptop-base {
+    width: 1040px; height: 18px;
+    background-color: #A8AEAA;
+    border-top-left-radius: 2px; border-top-right-radius: 2px;
+    border-bottom-left-radius: 22px; border-bottom-right-radius: 22px;
+    align-items: center;
+}
+.laptop-groove {
+    width: 150px; height: 6px;
+    background-color: #868C88;
+    border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+}
+
+/* ---- Menu bar ---- */
+.menubar {
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+    padding: 0 14px 0 14px;
+    background-color: rgba(10, 15, 17, 0.55);
+}
+.menubar-logo { width: 11px; height: 11px; margin-right: 14px; border-radius: 50%; background-color: #F2E8D1; }
+.menubar-app { font-size: 13px; color: #F2E8D1; margin-right: 18px; -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold"); }
+.menubar-item { font-size: 13px; color: #D9D1BC; margin-right: 16px; }
+.menubar-spacer { flex-grow: 1; }
+.menubar-clock { font-size: 13px; color: #F2E8D1; }
+
+/* ---- Desktop and window ---- */
+.desktop { flex-grow: 1; align-items: center; justify-content: center; padding: 8px 40px 8px 40px; }
+.window {
+    width: 100%; max-width: 700px;
+    background-color: #F6F3EA;
+    border-radius: 8px;
+    border-width: 1px; border-color: #0E1214;
+    overflow: hidden;
+}
+.titlebar {
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px 0 12px;
+    background-color: #E2DED1;
+    border-bottom-width: 1px; border-bottom-color: #C9C4B5;
+}
+.light { width: 11px; height: 11px; margin-right: 7px; border-radius: 50%; }
+.light-close { background-color: #D9695F; }
+.light-min { background-color: #DDB34E; }
+.light-max { background-color: #6FB070; }
+/* The title sits in the middle of the bar whatever the lights take. */
+.titlebar-title { position: absolute; left: 0; right: 0; font-size: 14px; color: #4A4F4B; -unity-text-align: middle-center; }
+
+.window-body { padding: 18px 28px 16px 28px; color: #1D2B2F; }
+
+/* What the list replaces. */
+.removed { flex-direction: row; align-items: baseline; margin-bottom: 4px; }
+.removed-eyebrow { font-size: 12px; color: #6A726D; letter-spacing: 0.7px; margin-right: 10px; }
+.removed-text { font-size: 17px; color: #8A5A52; }
+.window-title { font-size: 25px; margin-bottom: 10px; color: #1D2B2F; }
+
+/* ---- Task rows ---- */
+.laptop-tasks { margin-bottom: 12px; }
+.task {
+    flex-direction: row;
+    align-items: center;
+    height: 38px;
+    margin: 0 0 6px 0;
+    padding: 0 12px 0 12px;
+    background-color: #ECE7D8;
+    border-width: 0;
+    border-radius: 6px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+.task:hover { background-color: #E4DEC9; }
+.task.picked { background-color: #F1DDAE; }
+.task.done { background-color: #D3E0C8; }
+.task:disabled { opacity: 0.55; }
+.task.done:disabled { opacity: 1; }   /* the finished task stays bright while the others are locked */
+.task-label { font-size: 17px; color: #1D2B2F; margin-left: 12px; -unity-text-align: middle-left; }
+.task.done .task-label { color: #4F5E4F; }
+
+/* The checkbox; the tick is two borders turned 45 degrees. */
+.check {
+    width: 18px; height: 18px;
+    border-width: 2px; border-color: #59615C;
+    border-radius: 4px;
+    background-color: #FBF9F3;
+    align-items: center; justify-content: center;
+}
+.task.picked .check { border-color: #8A6420; }
+.task.done .check { background-color: #3F7A58; border-color: #3F7A58; }
+/* The tick shows only on a finished task. */
+.tick {
+    display: none;
+    width: 5px; height: 10px;
+    margin-bottom: 2px;
+    border-right-width: 2px; border-bottom-width: 2px;
+    border-right-color: #FFFFFF; border-bottom-color: #FFFFFF;
+    rotate: 45deg;
+}
+.task.done .tick { display: flex; }
+
+/* ---- Progress and footer ---- */
+.progress-track { height: 10px; background-color: #D8D2C0; border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
+.progress-fill { width: 0; height: 100%; background-color: #416563; border-radius: 5px; }
+
+.window-footer { flex-direction: row; align-items: center; justify-content: space-between; }
+.laptop-status { font-size: 15px; color: #3B4742; flex-shrink: 1; width: 44%; }
+.laptop-start { width: 270px; height: 38px; font-size: 16px; border-radius: 6px; white-space: nowrap; }
+
+/* ---- Dock ---- */
+.dock {
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    height: 44px;
+    margin-bottom: 8px;
+    padding: 0 12px 0 12px;
+    background-color: rgba(246, 243, 234, 0.18);
+    border-radius: 12px;
+}
+.dock-icon { width: 28px; height: 28px; margin: 0 6px 0 6px; border-radius: 7px; }
+.dock-a { background-color: #6FB070; }
+.dock-b { background-color: #DDB34E; }
+.dock-c { background-color: #F2E8D1; }
+.dock-d { background-color: #D9695F; }
+.dock-open { border-width: 2px; border-color: #DBB36F; }

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/EpisodeObjective.uss?fileID=7433441132597879392&amp;guid=19a99d27950634894b03318cfd4fa0b8&amp;type=3#EpisodeObjective"/>
+    <ui:VisualElement name="objective" class="objective" style="top: 0; left: 0; height: 138px; background-color: rgba(29, 43, 47, 0);">
+        <ui:Label name="objective-chapter" text="CHAPTER 1  /  EPISODE 01" class="objective-chapter" style="-unity-font-style: bold; color: rgb(0, 0, 0);"/>
+        <ui:Label name="objective-title" text="Check your phone" class="objective-title" style="height: auto; font-size: 18px;"/>
+        <ui:Label name="objective-checklist" text="&lt;color=#DBB36F&gt;[  ]&lt;/color&gt;  Phone on the bedside table" class="objective-checklist" style="-unity-font-definition: resource(&quot;MinigameTheme/ComicNeue-Bold&quot;); font-size: 24px;"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2436070807552725735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7495828525505988843}
+  - component: {fileID: 348922095552610971}
+  m_Layer: 0
+  m_Name: WorryCourtroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7495828525505988843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436070807552725735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348922095552610971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436070807552725735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35166ece799e04e4fb74769fdaec7989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.Minigames.WorryCourtroomMinigame
+  questDisplayName: 
+  cases:
+  - {fileID: 11400000, guid: e0075069b18cc472ea5e3a63ec7c2ecb, type: 2}
+  startCase: 0
+  rules:
+    maxStrikes: 3
+    startingWorry: 100
+    gainPerEvidence: 3
+    gainPerDefence: 8
+    gainFriend: 14
+    gainVerdict: 30
+    gainPlan: 14
+    defencePicksRequired: 3
+    shuffleEvidence: 1
+    shuffleOptions: 1
+    twoColumnThreshold: 4
+    threeStarsMaxStrikes: 2
+    twoStarsMaxStrikes: 5
+    meterSpeed: 70
+    shakeSeconds: 0.35
+    shakeDistance: 7
+    smallestScale: 0.4
+    lowestOpacity: 0.6
+    moodWorriedAbove: 66
+    moodNeutralAbove: 33
+  texts:
+    stepNames:
+    - Charge
+    - Prosecution
+    - Defense
+    - Friend
+    - Verdict
+    - Plan
+    worryName: The Worry
+    prosecutorName: The Prosecutor
+    prosecutorLine: Your Honor, look at all this evidence. The worry is clearly
+      true!
+    defenderName: The Defender
+    defenderLine: Objection! Let us put the facts on the other side of the scale.
+    friendName: The Friend
+    friendLine: If I were your friend, here is what I would say to you.
+    judgeName: The Judge
+    judgeLine: The court will now give its verdict.
+    clerkName: The Clerk
+    clerkLine: 'One last thing: what small step will you take?'
+    worryFarewell: ...I was only a thought, after all.
+    meterFormat: WORRY LEVEL  {value}%
+    introHeading: 'Today''s case: {case}'
+    introLead: You are the judge. A worry has been brought to court. Weigh the evidence
+      for and against it, hear what a friend would say, and give a verdict.
+    introButton: Open the trial
+    sortHeading: 'Prosecution: evidence for the worry'
+    sortLead: Is this a fact the court can check, or a feeling or a guess? Only facts
+      are admitted.
+    evidenceCounter: EVIDENCE {n} OF {total}
+    factButton: Fact
+    guessButton: Feeling or guess
+    factAdmitted: Admitted. This is a fact. It can be checked.
+    guessNotAdmitted: Not admitted. This is {trap}. {description}
+    wrongSaidGuess: Look again. You could check this one, so it counts as a fact.
+    wrongSaidFact: Look again. Nobody can check this one. It is a thought or a feeling.
+    nextEvidenceButton: Next evidence
+    toDefenceButton: On to the defense
+    defenceHeading: 'Defense: evidence against the worry'
+    defenceLead: 'Pick {needed} facts that show the worry might not be true. Admitted:
+      {picked} of {needed}.'
+    defenceAdmitted: Admitted. This is a real fact that weighs against the worry.
+    toFriendButton: Call the Friend
+    friendHeading: The Friend takes the stand
+    friendPrompt: A friend has the same worry and asks for advice. What would you
+      tell them?
+    friendCorrect: Kind and realistic. You'd say this to a friend, and you can say
+      it to yourself.
+    toVerdictButton: To the verdict
+    verdictHeading: The Verdict
+    verdictPrompt: Pick the more balanced and helpful thought you can believe instead.
+    verdictCorrect: Balanced and believable. The court no longer accepts the worry as a fact.
+    toPlanButton: Make a plan
+    planHeading: The Plan
+    planPrompt: Choose one small action that supports the new thought, then say when
+      you'll do it.
+    planCorrect: Small, specific, and doable.
+    whenLabel: WHEN WILL YOU DO IT?
+    whenChoices:
+    - Today
+    - Tomorrow
+    - This week
+    closeCaseButton: Close the case
+    resultHeading: Case dismissed
+    starsFormat: '{n} of 3 stars'
+    caseFileFormat: 'THE WORRY ON TRIAL
+
+      "{worry}"
+
+
+      THE BALANCED THOUGHT
+
+      {balanced}
+
+
+      THE
+      PLAN
+
+      {plan} ({when})'
+    trapsHeading: THINKING TRAPS SPOTTED
+    trapLineFormat: '- {trap}: {description}'
+    strikesLabel: 'GAVEL STRIKES:'
+    nextCaseButton: Next case
+    replayButton: Replay this case
+    continueButton: Continue
+    exitButton: Exit
+    closeEarlyButton: Close
+    doneMark: ' (Done)'
+    recessHeading: Recess
+    recessBody: Three gavel strikes. The judge calls a short break. Breathe in for
+      four counts and out for six, then come back. The helpful answers will be outlined
+      from now on.
+    recessButton: Back to court
+  colors:
+    good: {r: 0.54901963, g: 0.7529412, b: 0.5411765, a: 1}
+    wrong: {r: 0.8784314, g: 0.5411765, b: 0.4627451, a: 1}
+    optionCorrect: {r: 0.54901963, g: 0.7529412, b: 0.5411765, a: 1}
+    optionWrong: {r: 0.75, g: 0.68, b: 0.6, a: 1}
+    optionNormal: {r: 0.8901961, g: 0.83137256, b: 0.7058824, a: 1}
+    tabActive: {r: 0.81960785, g: 0.65882355, b: 0.30980393, a: 1}
+    tabInactive: {r: 0.8901961, g: 0.83137256, b: 0.7058824, a: 1}
+    chipActive: {r: 0.81960785, g: 0.65882355, b: 0.30980393, a: 1}
+    chipInactive: {r: 0.8901961, g: 0.83137256, b: 0.7058824, a: 1}
+    stepNowFill: {r: 0.81960785, g: 0.65882355, b: 0.30980393, a: 1}
+    stepIdleFill: {r: 0.17, g: 0.12, b: 0.09, a: 1}
+    stepNowText: {r: 0.1882353, g: 0.1764706, b: 0.15686275, a: 1}
+    stepDoneText: {r: 0.54901963, g: 0.7529412, b: 0.5411765, a: 1}
+    stepIdleText: {r: 0.7372549, g: 0.67058825, b: 0.5529412, a: 1}
+    strikeOn: {r: 0.8784314, g: 0.5411765, b: 0.4627451, a: 1}
+    strikeOff: {r: 0.2901961, g: 0.23137255, b: 0.1764706, a: 1}
+    starOn: {r: 0.81960785, g: 0.65882355, b: 0.30980393, a: 1}
+    starOff: {r: 0.2901961, g: 0.23137255, b: 0.1764706, a: 1}
+  startOpen: 0
+  exitSceneName: 
+  sortingOrder: 10
+  onCaseDismissed:
+    m_PersistentCalls:
+      m_Calls: []
+  onExit:
+    m_PersistentCalls:
+      m_Calls: []

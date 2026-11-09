@@ -1,0 +1,51 @@
+/* Story dialogue bar (Dialogue.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* Full-width bar on the bottom 27% of the screen: text on the left, Continue on the right. */
+.dialogue {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 27%;
+    flex-direction: row;
+    padding: 14px 3.5% 0 4%;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* pre-wrap keeps the double spaces the story text uses as gaps ("BOKZ  /  THINKING"). */
+.dialogue Label { padding: 0; margin-left: 0; margin-right: 0; white-space: pre-wrap; }
+
+.dialogue-text { flex-grow: 1; flex-shrink: 1; margin-right: 32px; }
+
+.dialogue-speaker { color: var(--gold); font-size: 17px; letter-spacing: 0.5px; margin-bottom: 10px; }
+
+.dialogue-speech {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 27px;
+}
+
+.dialogue-continue {
+    width: 186px;
+    height: 66px;
+    margin: 0 0 35px 0; /* % margins resolve against width, so px: ~18% of the bar's height */
+    padding: 0;
+    align-self: flex-end;
+    background-color: var(--gold);
+    border-width: 0;
+    border-radius: 0;
+    color: #1D2B2F;
+    font-size: 17px;
+    white-space: pre-wrap;
+    -unity-text-align: middle-center;
+    transition-property: background-color, scale;
+    transition-duration: 0.1s;
+}
+
+.dialogue-continue:hover { background-color: #EBC583; }
+.dialogue-continue:active { background-color: #B39260; scale: 0.98; }

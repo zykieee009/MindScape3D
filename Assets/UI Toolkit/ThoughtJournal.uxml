@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Chapter 2 · Episode 1 · the thought journal: a small button in the corner, and the journal that opens from it
+         (J). FamilyAfterSchoolEpisode fills in the entries; keep the names. The text is sample text for UI Builder. -->
+    <Style src="EpisodeScreens.uss"/>
+    <Style src="ThoughtJournal.uss"/>
+    <ui:VisualElement name="journal-root" picking-mode="Ignore" class="screen">
+        <ui:Button name="journal-button" text="Journal  [J]" class="btn journal-button hidden"/>
+
+        <ui:VisualElement name="journal-screen" class="screen hidden">
+            <ui:VisualElement class="journal-card panel-ink">
+                <ui:Label text="Thought journal" class="serif journal-title"/>
+                <ui:ScrollView name="journal-scroll" class="journal-scroll">
+                    <ui:Label name="journal-text" text="EXAMINATION PAPER&#10;I remember watching the clock while I tried to answer.&#10;&#10;SCHOOL BAG&#10;Not examined yet." class="journal-text"/>
+                </ui:ScrollView>
+                <ui:Button name="journal-close" text="Return  [J]" class="btn journal-close"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

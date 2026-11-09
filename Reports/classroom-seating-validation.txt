@@ -1,0 +1,181 @@
+PASS: seated actors retain chair alignment throughout the loop.
+BEFORE Classmate (almost finished) modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-13.96, 72.70, 12.19) anchor=(-13.96, 0.92, -6.72)
+Classmate (almost finished) t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Classmate (almost finished) t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Classmate (almost finished) t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Classmate (almost finished) t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 2 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-12.44, 72.70, 12.19) anchor=(-12.44, 0.92, -6.72)
+Student at desk 2 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 2 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 2 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 2 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 3 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-8.96, 72.70, 16.19) anchor=(-8.96, 0.92, -2.72)
+Student at desk 3 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 3 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 3 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 3 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 4 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-8.96, 72.70, 12.19) anchor=(-8.96, 0.92, -6.72)
+Student at desk 4 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 4 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 4 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 4 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 5 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-7.44, 72.87, 16.24) anchor=(-7.44, 0.92, -2.72)
+Student at desk 5 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 5 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 5 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 5 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 6 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-7.44, 72.70, 12.19) anchor=(-7.44, 0.92, -6.72)
+Student at desk 6 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 6 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 6 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 6 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 7 modelScale=(1.26, 1.26, 1.26) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-13.96, 67.76, 6.89) anchor=(-13.96, 0.92, -10.72)
+Student at desk 7 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=66.8408, horizontalFromSeat=17.6143
+AFTER modelScale=(1.26, 1.26, 1.26) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 7 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=66.8408, horizontalFromSeat=17.6143
+AFTER modelScale=(1.26, 1.26, 1.26) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 7 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=66.8408, horizontalFromSeat=17.6143
+AFTER modelScale=(1.26, 1.26, 1.26) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 7 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=66.8408, horizontalFromSeat=17.6143
+AFTER modelScale=(1.26, 1.26, 1.26) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 8 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-12.44, 72.70, 8.19) anchor=(-12.44, 0.92, -10.72)
+Student at desk 8 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 8 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 8 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 8 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 9 modelScale=(1.31, 1.31, 1.31) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-8.96, 70.31, 7.56) anchor=(-8.96, 0.92, -10.72)
+Student at desk 9 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=69.3905, horizontalFromSeat=18.2840
+AFTER modelScale=(1.31, 1.31, 1.31) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 9 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=69.3905, horizontalFromSeat=18.2840
+AFTER modelScale=(1.31, 1.31, 1.31) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 9 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=69.3905, horizontalFromSeat=18.2840
+AFTER modelScale=(1.31, 1.31, 1.31) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 9 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=69.3905, horizontalFromSeat=18.2840
+AFTER modelScale=(1.31, 1.31, 1.31) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 10 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-3.96, 72.70, 16.19) anchor=(-3.96, 0.92, -2.72)
+Student at desk 10 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 10 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 10 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 10 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 11 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-7.44, 72.87, 8.24) anchor=(-7.44, 0.92, -10.72)
+Student at desk 11 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 11 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 11 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 11 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 12 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-3.96, 72.70, 12.19) anchor=(-3.96, 0.92, -6.72)
+Student at desk 12 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 12 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 12 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 12 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 13 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-2.44, 72.70, 16.19) anchor=(-2.44, 0.92, -2.72)
+Student at desk 13 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 13 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 13 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 13 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 14 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-13.96, 72.70, 4.19) anchor=(-13.96, 0.92, -14.72)
+Student at desk 14 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 14 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 14 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 14 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 15 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-12.44, 72.87, 4.24) anchor=(-12.44, 0.92, -14.72)
+Student at desk 15 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 15 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 15 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 15 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.9553, horizontalFromSeat=18.9577
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 16 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-2.44, 72.70, 12.19) anchor=(-2.44, 0.92, -6.72)
+Student at desk 16 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 16 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 16 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 16 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 17 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-3.96, 72.70, 8.19) anchor=(-3.96, 0.92, -10.72)
+Student at desk 17 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 17 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 17 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 17 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 18 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-8.96, 72.70, 4.19) anchor=(-8.96, 0.92, -14.72)
+Student at desk 18 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 18 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 18 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 18 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Student at desk 19 modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-7.44, 72.70, 4.19) anchor=(-7.44, 0.92, -14.72)
+Student at desk 19 t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 19 t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 19 t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Student at desk 19 t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+BEFORE Friend · Sam modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) hipsWorld=(-12.44, 72.70, 16.19) anchor=(-12.44, 0.92, -2.72)
+Friend · Sam t=0: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Friend · Sam t=0.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Friend · Sam t=1.5: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)
+Friend · Sam t=2.9: rigOffset=(0.0000, 0.0000, 0.0000), hipsAboveSeat=71.7849, horizontalFromSeat=18.9129
+AFTER modelScale=(1.36, 1.36, 1.36) rigScale=(100.00, 100.00, 100.00) hipsLocal=(0.00, 0.95, 0.00) root=(0.00, 0.14, -0.42) rootScale=(1.00, 1.00, 1.00)

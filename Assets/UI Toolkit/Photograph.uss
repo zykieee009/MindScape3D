@@ -1,0 +1,75 @@
+/* A photograph held up close (Photograph.uxml), e.g. the old group photo in Chapter 3. Code sets the picture on
+   #photo-image and the handwriting on #photo-caption.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* The room dims a little behind the print, which sits above the dialogue bar (bottom 27%). */
+.photo-screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(10, 14, 16, 0.55);
+}
+
+.photo-area {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 27%;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-print {
+    width: 470px;
+    height: 380px;
+    rotate: -3deg;
+}
+
+/* A soft dark offset behind the print in place of a drop shadow. */
+.photo-shadow {
+    position: absolute;
+    left: 10px; top: 12px; right: -10px; bottom: -12px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* The white border of an instant photo: narrow at the sides, wide at the bottom for the caption. */
+.photo-paper {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    padding: 16px 16px 0 16px;
+    background-color: #F7F2E6;
+}
+
+/* An old print: slightly warm and faded. */
+.photo-image {
+    flex-grow: 1;
+    background-color: #4A4038;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: #F3DFC0;
+}
+
+.photo-caption {
+    height: 62px;
+    padding: 0;
+    margin: 0;
+    color: #2E3B57;
+    font-size: 24px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold");
+    rotate: -1deg;
+}
+
+/* A strip of tape holding it to the corkboard. */
+.photo-tape {
+    position: absolute;
+    left: 185px; top: -14px;
+    width: 100px; height: 30px;
+    rotate: 4deg;
+    background-color: rgba(236, 226, 196, 0.75);
+}
+
+/* A keepsake held up close (ShowItem adds .item to #photo-screen): the same card, but a flat picture of the object,
+   with no sepia tint, no tape and no tilt. */
+.item .photo-print { rotate: 0deg; }
+.item .photo-tape { display: none; }
+.item .photo-image { -unity-background-image-tint-color: #FFFFFF; background-color: #5C4A3C; }
+.item .photo-caption { rotate: 0deg; }

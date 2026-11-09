@@ -1,0 +1,2 @@
+/Users/arieljerickogacilo/mindscape-3d/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/arieljerickogacilo/mindscape-3d/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt

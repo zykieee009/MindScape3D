@@ -1,0 +1,51 @@
+/* NPC conversation panel (NPCDialogue.uxml). Same look as the story dialogue bar and choice panel:
+   ink background, gold speaker, serif line, gold reply buttons.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* Full-width bar along the bottom; grows with the number of replies. */
+.npc-dialogue {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    min-height: 27%;
+    padding: 14px 4% 18px 4%;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* pre-wrap keeps any double spaces in NPC lines. */
+.npc-dialogue Label { padding: 0; margin-left: 0; margin-right: 0; white-space: pre-wrap; }
+
+.npc-speaker { color: var(--gold); font-size: 17px; letter-spacing: 0.5px; margin-bottom: 10px; }
+
+.npc-text {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+/* Replies stack under the line, like the story choice panel's options. */
+.npc-choices { flex-direction: column; }
+
+.npc-choice {
+    min-height: 34px;
+    margin: 0 0 6px 0;
+    padding: 4px 18px 4px 18px;
+    background-color: var(--gold);
+    border-width: 0;
+    border-radius: 0;
+    color: #1D2B2F;
+    font-size: 15px;
+    white-space: pre-wrap;
+    -unity-text-align: middle-left;
+    transition-property: background-color, translate;
+    transition-duration: 0.1s;
+}
+
+.npc-choice:hover { background-color: #EBC583; translate: 3px 0; }
+.npc-choice:active { background-color: #B39260; }

@@ -1,0 +1,61 @@
+/* The ink and gold look the story screens share: examination paper, thought journal, laptop task list, breathing
+   exercise and Worry Courtroom. Each screen's own .uss only adds layout.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* A full-view layer. The colours are variables so a screen can be re-themed in one place. */
+.screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    --ink: #1D2B2F;
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+    --teal: #416563;
+    --muted: #C4B8A0;
+    color: #F2E8D1;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+.serif { -unity-font-definition: resource("MainMenuNew/StorySerif"); }
+.bold { -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold"); }
+
+.panel-ink { background-color: rgba(29, 43, 47, 0.97); }
+.panel-paper { background-color: #F2E8D1; color: #1D2B2F; }
+
+/* Text defaults: no theme padding, and the double spaces the episodes use as gaps are kept. */
+/* Same weight as the theme's own .unity-label rule (and listed after it), so a screen's own class can still set a margin. */
+.unity-label { padding: 0; margin: 0; white-space: pre-wrap; }
+
+.eyebrow { color: var(--gold); font-size: 14px; letter-spacing: 0.7px; }
+
+/* The gold button every screen shares; the variants only change the colours. */
+.btn {
+    height: 42px;
+    margin: 0;
+    padding: 0 14px 0 14px;
+    background-color: var(--gold);
+    color: #1D2B2F;
+    border-width: 0;
+    border-radius: 0;
+    font-size: 17px;
+    -unity-text-align: middle-center;
+    white-space: pre-wrap;
+    transition-property: background-color, scale, opacity;
+    transition-duration: 0.1s;
+}
+
+.btn:hover { background-color: #EBC583; }
+.btn:active { background-color: #B39260; scale: 0.98; }
+.btn:disabled { opacity: 0.45; }
+
+/* A pale button for answers and options, gold once chosen. */
+.btn.pale { background-color: #E2D6BD; }
+.btn.pale:hover { background-color: #EBE0C8; }
+.btn.pale.selected { background-color: var(--gold); }
+.btn.pale.done { background-color: #A0BA96; }
+
+/* A dark teal button on an ink panel, gold when it is the current one. */
+.btn.teal { background-color: var(--teal); color: #F2E8D1; }
+.btn.teal:hover { background-color: #4E7774; }
+.btn.teal.selected { background-color: var(--gold); color: #1D2B2F; }

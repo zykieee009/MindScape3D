@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="Photograph.uss"/>
+    <ui:VisualElement name="photo-screen" class="photo-screen">
+        <ui:VisualElement class="photo-area">
+        <ui:VisualElement name="photo-print" class="photo-print">
+            <ui:VisualElement class="photo-shadow"/>
+            <ui:VisualElement class="photo-paper">
+                <ui:VisualElement name="photo-image" class="photo-image"/>
+                <ui:Label name="photo-caption" text="Us, after class" class="photo-caption"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="photo-tape"/>
+        </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

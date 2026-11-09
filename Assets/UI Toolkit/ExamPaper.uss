@@ -1,0 +1,59 @@
+/* Examination paper (ExamPaper.uxml). Colours and fonts come from EpisodeScreens.uss.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+/* The room dims a little behind the paper. */
+.exam-screen { background-color: rgba(10, 15, 17, 0.35); }
+
+/* The top bar: a thought on the left, the clock on the right. */
+.exam-status {
+    position: absolute;
+    left: 6%; top: 2%; width: 89%; height: 10%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 24px;
+}
+.exam-thought { flex-shrink: 1; width: 62%; font-size: 14px; color: var(--muted); }
+.exam-clock { font-size: 21px; -unity-text-align: middle-right; color: var(--paper); }
+
+/* The rail of questions. */
+.exam-rail {
+    position: absolute;
+    left: 7%; top: 13%; width: 17.5%; height: 75%;
+    padding: 16px 14px 14px 14px;
+}
+.rail-title { color: var(--gold); font-size: 15px; letter-spacing: 0.7px; margin-bottom: 12px; }
+.rail-btn { height: 40px; margin-bottom: 9px; font-size: 15px; -unity-text-align: middle-left; }
+.rail-legend { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+/* The paper itself. */
+.exam-sheet {
+    position: absolute;
+    left: 27%; top: 13%; width: 61%; height: 75%;
+    padding: 24px 34px 18px 34px;
+}
+.sheet-title { font-size: 28px; margin-bottom: 4px; }
+.sheet-progress { font-size: 14px; color: #416563; margin-bottom: 14px; letter-spacing: 0.5px; }
+.sheet-question { font-size: 22px; margin-bottom: 20px; min-height: 110px; }
+.answer { height: 46px; margin-bottom: 10px; font-size: 17px; -unity-text-align: middle-left; }
+.sheet-hint { font-size: 12px; color: #6B6150; margin-top: auto; }
+
+/* Under the paper: three buttons in a row. */
+.exam-actions {
+    position: absolute;
+    left: 27%; bottom: 3.5%; width: 61%; height: 6%;
+    flex-direction: row;
+}
+.action { flex-grow: 1; flex-basis: 0; height: 100%; margin-right: 12px; font-size: 16px; }
+.action.last { margin-right: 0; }
+
+/* The grounding break and the hand-in prompt: a centred card. */
+.centered { align-items: center; justify-content: center; }
+.dialog { width: 46%; padding: 28px 34px 24px 34px; }
+.dialog-title { font-size: 26px; margin-top: 8px; margin-bottom: 22px; }
+.dialog-body { font-size: 20px; margin-bottom: 30px; color: var(--paper); }
+.dialog-button { height: 50px; margin-bottom: 14px; }
+.dialog-note { font-size: 13px; color: var(--muted); }
+.dialog-row { flex-direction: row; }
+.dialog-half { flex-grow: 1; flex-basis: 0; height: 48px; margin-right: 14px; }
+.dialog-half.last { margin-right: 0; }

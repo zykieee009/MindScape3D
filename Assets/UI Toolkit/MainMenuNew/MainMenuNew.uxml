@@ -1,0 +1,802 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuNew/MainMenuNew.uss?fileID=7433441132597879392&amp;guid=a0dfa975e8e7341c3a69a4f0eb0f2bd4&amp;type=3#MainMenuNew"/>
+    <ui:VisualElement name="menu-root" class="menu-root" style="background-image: resource(&quot;MenuArt/Background3D&quot;);">
+        <ui:VisualElement name="veil" picking-mode="Ignore" class="veil home-veil"/>
+        <ui:VisualElement name="stage" class="stage">
+            <ui:VisualElement name="page-login" class="page auth-page hidden">
+                <ui:VisualElement class="logo login-logo"/>
+                <ui:VisualElement class="paper login-paper auth-card auth-login-card">
+                    <PaperGrain/>
+                    <ui:ScrollView mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="auth-scroll">
+                    <ui:Label text="Welcome" class="paper-title"/>
+                    <ui:Label text="Log in, or create an account to keep your journal and progress. Playing offline saves them on this device only." class="body"/>
+                    <ui:TextField name="login-username" label="Username or email" max-length="120" class="login-field"/>
+                    <ui:VisualElement class="password-row">
+                        <ui:TextField name="login-password" label="Password" max-length="72" password="true" class="login-field"/>
+                        <ui:Button name="login-password-eye" class="password-eye" tooltip="Show password"><MenuLineArt kind="eye" dark="true" class="password-eye-icon"/></ui:Button>
+                    </ui:VisualElement>
+                    <ui:Button name="login-forgot" text="Forgot password?" class="link-button"/>
+                    <ui:Button name="login-recover" text="Recover a deleted account" class="link-button"/>
+                    <ui:VisualElement class="auth-divider">
+                        <ui:VisualElement class="auth-divider-line"/>
+                        <ui:Label text="or" class="auth-divider-text"/>
+                        <ui:VisualElement class="auth-divider-line"/>
+                    </ui:VisualElement>
+                    <ui:Button name="login-google" class="google-button" tooltip="Sign in or create an account with Google">
+                        <ui:Label text="G" picking-mode="Ignore" class="google-mark"/>
+                        <ui:Label text="Continue with Google" picking-mode="Ignore" class="google-text"/>
+                    </ui:Button>
+                    <ui:Label name="login-status" class="journal-status login-status"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="actions auth-actions">
+                        <ui:Button name="login-offline" text="Play offline" class="auth-secondary"/>
+                        <ui:Button name="login-register" text="Create account" class="auth-secondary"/>
+                        <ui:Button name="login-submit" text="Log in" class="auth-primary login-submit"><ui:VisualElement name="login-spinner" picking-mode="Ignore" class="auth-spinner hidden"/></ui:Button>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-register" class="page auth-page hidden">
+                <ui:VisualElement class="logo login-logo"/>
+                <ui:VisualElement class="paper login-paper auth-card auth-register-card">
+                    <PaperGrain/>
+                    <ui:ScrollView mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="auth-scroll">
+                    <ui:Label text="Create account" class="paper-title"/>
+                    <ui:Label text="Choose a username, a Gmail or Yahoo email, and a strong password. We email you a code to confirm your address." class="body"/>
+                    <ui:TextField name="register-username" label="Username" max-length="24" class="login-field"/>
+                    <ui:Label name="register-username-status" class="field-status"/>
+                    <ui:TextField name="register-email" label="Email (Gmail or Yahoo)" max-length="120" class="login-field"/>
+                    <ui:Label name="register-email-status" class="field-status"/>
+                    <ui:VisualElement class="password-row">
+                        <ui:TextField name="register-password" label="Password" max-length="72" password="true" class="login-field"/>
+                        <ui:Button name="register-password-eye" class="password-eye" tooltip="Show password"><MenuLineArt kind="eye" dark="true" class="password-eye-icon"/></ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="register-strength" class="strength">
+                        <ui:VisualElement class="strength-track"><ui:VisualElement name="register-strength-fill" picking-mode="Ignore" class="strength-fill"/></ui:VisualElement>
+                        <ui:Label name="register-strength-label" class="strength-label"/>
+                    </ui:VisualElement>
+                    <!-- Send code stays disabled until the player opens the Data Privacy Notice and agrees (privacy-modal). -->
+                    <ui:Toggle name="register-consent" text="I have read and agree to the Data Privacy Notice" class="consent-toggle"/>
+                    <ui:Label name="register-status" class="journal-status login-status"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="actions auth-actions">
+                        <ui:Button name="register-back" text="Back" class="auth-secondary"/>
+                        <ui:Button name="register-submit" text="Send code" class="auth-primary"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-home" class="page home">
+                <ui:VisualElement class="title">
+                    <ui:VisualElement picking-mode="Ignore" class="logo-glow"/>
+                    <ui:VisualElement class="logo title-art"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="home-buttons">
+                    <ui:VisualElement class="play-row">
+                        <MenuLineArt kind="leaf" class="play-sprig"/>
+                        <ui:Button name="open-chapters" class="home-button primary">
+                            <MenuLineArt kind="play" dark="true" class="icon"/>
+                            <ui:Label text="Play Game"/>
+                        </ui:Button>
+                        <MenuLineArt kind="leaf" class="play-sprig mirrored"/>
+                    </ui:VisualElement>
+                    <ui:Button name="open-continue" class="home-button">
+                        <MenuLineArt kind="refresh" class="icon"/>
+                        <ui:Label text="Continue"/>
+                    </ui:Button>
+                    <ui:Button name="open-journal" class="home-button">
+                        <MenuLineArt kind="book" class="icon"/>
+                        <ui:Label text="Journal"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Label text="A little space to breathe. A new place to grow." class="home-caption"/>
+                <MenuLineArt kind="sprig" dark="true" class="caption-flourish"/>
+                <ui:VisualElement name="home-rail-left" class="home-rail left">
+                    <ui:Button name="open-options" class="rail-button">
+                        <ui:VisualElement class="rail-tile">
+                            <MenuLineArt kind="settings" class="rail-icon"/>
+                        </ui:VisualElement>
+                        <ui:Label text="Options" picking-mode="Ignore" class="rail-label"/>
+                    </ui:Button>
+                    <ui:Button name="open-guide" class="rail-button">
+                        <ui:VisualElement class="rail-tile">
+                            <MenuLineArt kind="help" class="rail-icon"/>
+                        </ui:VisualElement>
+                        <ui:Label text="How to Play" picking-mode="Ignore" class="rail-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="home-rail-right" class="home-rail right">
+                    <ui:Button name="open-resources" class="rail-button">
+                        <ui:VisualElement class="rail-tile">
+                            <MenuLineArt kind="phone" class="rail-icon"/>
+                        </ui:VisualElement>
+                        <ui:Label text="Resources" picking-mode="Ignore" class="rail-label"/>
+                    </ui:Button>
+                    <ui:Button name="open-about" class="rail-button">
+                        <ui:VisualElement class="rail-tile">
+                            <MenuLineArt kind="people" class="rail-icon"/>
+                        </ui:VisualElement>
+                        <ui:Label text="About Us" picking-mode="Ignore" class="rail-label"/>
+                    </ui:Button>
+                    <ui:Button name="open-quit" class="rail-button">
+                        <ui:VisualElement class="rail-tile">
+                            <MenuLineArt kind="power" class="rail-icon"/>
+                        </ui:VisualElement>
+                        <ui:Label text="Quit Game" picking-mode="Ignore" class="rail-label"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="home-disclaimer" class="footer-note footer-left">
+                    <ui:Label text="ONE STEP AT A TIME" class="footer-title"/>
+                    <ui:Label text="An educational, reflective experience. This game is not a substitute for professional care. If you start to feel pressure while playing, we advise you to pause and rest." class="footer-copy"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="home-support" class="footer-note footer-right">
+                    <ui:Label text="YOU ARE NOT ALONE" class="footer-title"/>
+                    <ui:Label text="If you need someone to talk to, support is here.&#10;NCMH Crisis Hotline: 1553" class="footer-copy"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-chapters" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-chapters" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="CHAPTER SELECT" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:Label text="Every story begins with a small step." class="subtitle"/>
+                <ui:VisualElement class="chapter-row">
+                    <ui:Button name="chapter-1" class="chapter-card">
+                        <ui:VisualElement class="chapter-art" style="background-image: resource(&quot;EpisodeThumbnails/Chapter1_Episode1&quot;);"/>
+                        <ui:Label text="CHAPTER 1" class="chapter-heading"/>
+                        <ui:Label text="Academic Pressure" class="chapter-sub"/>
+                        <ui:Label name="chapter-1-state" text="0 / 4 episodes complete" class="chapter-bottom"/>
+                    </ui:Button>
+                    <ui:Button name="chapter-2" class="chapter-card">
+                        <ui:VisualElement class="chapter-art" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode1&quot;);"/>
+                        <ui:Label text="CHAPTER 2" class="chapter-heading"/>
+                        <ui:Label text="Family Expectations" class="chapter-sub"/>
+                        <ui:Label name="chapter-2-state" text="LOCKED  ·  finish Chapter 1" class="chapter-bottom"/>
+                    </ui:Button>
+                    <ui:Button name="chapter-3" class="chapter-card">
+                        <ui:VisualElement class="chapter-art" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode2&quot;);"/>
+                        <ui:Label text="CHAPTER 3" class="chapter-heading"/>
+                        <ui:Label text="Social Dynamics" class="chapter-sub"/>
+                        <ui:Label name="chapter-3-state" text="LOCKED  ·  finish Chapter 2" class="chapter-bottom"/>
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Label name="progress-caption" text="0 of 17 story episodes complete" class="progress-caption"/>
+                <ui:VisualElement class="progress-track">
+                    <ui:VisualElement name="progress-fill" class="progress-fill"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-episodes-1" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-episodes-1" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="CHAPTER 1" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:Label text="Academic Pressure" class="subtitle"/>
+                <ui:VisualElement class="book episode-book">
+                    <ui:VisualElement class="paper episode-paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" style="flex-grow: 1;">
+                            <ui:Button name="academic-episode-1" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter1_Episode1&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 1  ·  HOUSE" class="episode-index"/>
+                                    <ui:Label text="Tomorrow Already?" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="academic-episode-1-state" text="PLAY  ›" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="academic-episode-2" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter1_Episode2&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 2  ·  CLASSROOM" class="episode-index"/>
+                                    <ui:Label text="The Announcement" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="academic-episode-2-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="academic-episode-3" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter1_Episode3&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 3  ·  CAFETERIA" class="episode-index"/>
+                                    <ui:Label text="Everyone Seems Ahead" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="academic-episode-3-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="academic-episode-4" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter1_Episode4&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 4  ·  DORMITORY" class="episode-index"/>
+                                    <ui:Label text="One Step at a Time" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="academic-episode-4-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="play-tutorial-1" text="New here?  Play the tutorial  ›"/>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-episodes-2" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-episodes-2" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="CHAPTER 2" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:Label text="Family Expectations" class="subtitle"/>
+                <ui:VisualElement class="book episode-book">
+                    <ui:VisualElement class="paper episode-paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" style="flex-grow: 1;">
+                            <ui:Button name="episode-1" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode1&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 1" class="episode-index"/>
+                                    <ui:Label text="The Paper on the Desk" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="episode-1-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="episode-2" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode2&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 2" class="episode-index"/>
+                                    <ui:Label text="Before the Bell" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="episode-2-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="episode-3" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode3&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 3" class="episode-index"/>
+                                    <ui:Label text="Running Out of Time" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="episode-3-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="episode-4" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode4&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 4" class="episode-index"/>
+                                    <ui:Label text="The Weight Behind the Worry" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="episode-4-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="episode-5" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter2_Episode5&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 5" class="episode-index"/>
+                                    <ui:Label text="What I Left Behind" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="episode-5-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="play-tutorial" text="New here?  Play the tutorial  ›"/>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-episodes-3" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-episodes-3" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="CHAPTER 3" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:Label text="Social Dynamics" class="subtitle"/>
+                <ui:VisualElement class="book episode-book">
+                    <ui:VisualElement class="paper episode-paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" style="flex-grow: 1;">
+                            <ui:Button name="social-episode-1" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode1&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 1" class="episode-index"/>
+                                    <ui:Label text="The Invitation" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-1-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-2" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode2&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 2" class="episode-index"/>
+                                    <ui:Label text="Arriving at the Reunion" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-2-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-3" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode3&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 3" class="episode-index"/>
+                                    <ui:Label text="Everyone Seems to Be Moving Forward" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-3-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-4" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode4&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 4" class="episode-index"/>
+                                    <ui:Label text="The Corner of the Room" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-4-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-5" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode5&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 5" class="episode-index"/>
+                                    <ui:Label text="A Friend Checks In" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-5-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-6" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode6&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 6" class="episode-index"/>
+                                    <ui:Label text="Choosing to Rejoin the Group" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-6-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-7" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode7&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 7" class="episode-index"/>
+                                    <ui:Label text="The Walk Home" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-7-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                            <ui:Button name="social-episode-8" class="episode-row">
+                                <ui:VisualElement class="thumbnail" style="background-image: resource(&quot;EpisodeThumbnails/Chapter3_Episode8&quot;);"/>
+                                <ui:VisualElement class="grow">
+                                    <ui:Label text="EPISODE 8" class="episode-index"/>
+                                    <ui:Label text="The Mirror" class="episode-name"/>
+                                </ui:VisualElement>
+                                <ui:Label name="social-episode-8-state" text="LOCKED" class="episode-state"/>
+                            </ui:Button>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-continue" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-continue" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="CONTINUE GAME" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="row">
+                    <ui:VisualElement class="book save-list">
+                        <ui:VisualElement name="save-content" class="paper"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="aside">
+                        <MenuLineArt kind="book" class="large-icon"/>
+                        <ui:Label text="Pick up where your story left off.&#10;&#10;Return to your most recently started episode, and take the next step at your own pace."/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-journal" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-journal" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="JOURNAL" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="book">
+                    <ui:ScrollView mode="Vertical" class="sidebar">
+                        <ui:Button name="journal-tab-self" text="SELF-REFLECTION&#10;Assessment &amp; check-ins" class="tab"/>
+                        <!-- One tab per story episode, under a heading per chapter, is added here by MainMenuNewController. -->
+                        <ui:VisualElement name="journal-episode-tabs"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="paper">
+                        <PaperGrain/>
+                        <ui:Label name="journal-title" text="Chapter 1 · Episode 1  ·  Tomorrow Already?" class="paper-title"/>
+                        <ui:Label name="journal-prompt" text="What did you notice about your thoughts and feelings in this episode?" class="small"/>
+                        <ui:TextField name="reflection-text" multiline="true" max-length="3000" class="journal-input"/>
+                        <ui:ScrollView name="journal-summary" mode="Vertical" class="paper-scroll hidden">
+                            <ui:Label name="journal-summary-text" class="body"/>
+                        </ui:ScrollView>
+                        <ui:Label name="journal-status" class="journal-status"/>
+                        <ui:VisualElement name="journal-actions" class="actions">
+                            <ui:Button name="journal-clear" text="Clear entry"/>
+                            <ui:Button name="save-reflection" text="Save reflection"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-options" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-options" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="OPTIONS" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="book">
+                    <ui:ScrollView mode="Vertical" class="sidebar">
+                        <ui:Button name="page-options-tab-0" text="GENERAL" class="tab selected"/>
+                        <ui:Button name="page-options-tab-1" text="GRAPHICS" class="tab"/>
+                        <ui:Button name="page-options-tab-2" text="AUDIO" class="tab"/>
+                        <ui:Button name="page-options-tab-3" text="CONTROLS" class="tab"/>
+                        <ui:Button name="page-options-tab-4" text="LANGUAGE" class="tab"/>
+                        <ui:Button name="page-options-tab-5" text="ACCOUNT" class="tab"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" class="paper-scroll">
+                            <ui:VisualElement name="page-options-panel-0">
+                                <ui:Label text="Make yourself comfortable" class="paper-title"/>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Master volume" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.Master" low-value="0" high-value="1"/>
+                                    <ui:Label text="80%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Music volume" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.Music" low-value="0" high-value="1"/>
+                                    <ui:Label text="65%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Sound effects" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.SFX" low-value="0" high-value="1"/>
+                                    <ui:Label text="65%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Mobile controls" class="setting-label"/>
+                                    <ui:Toggle name="Mindscape.MobileControls"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="First-person view" class="setting-label"/>
+                                    <ui:Toggle name="Mindscape.FirstPerson"/>
+                                </ui:VisualElement>
+                                <ui:Label text="Changes are saved automatically on this device." class="small margin-top"/>
+                                <ui:VisualElement class="actions">
+                                    <ui:Button name="reset-audio-general" text="Reset audio to default"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-options-panel-1" class="hidden">
+                                <ui:Label text="Graphics" class="paper-title"/>
+                                <ui:Label text="Choose the quality that feels best on your device." class="body"/>
+                                <ui:DropdownField name="quality" label="Quality"/>
+                                <ui:DropdownField name="texture-quality" label="Texture quality"/>
+                                <ui:DropdownField name="frame-rate" label="Frame rate limit"/>
+                                <ui:DropdownField name="display-mode" label="Display (F11)" tooltip="Windowed or fullscreen. F11 switches at any time."/>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Prevent screen tearing (V-Sync)" class="setting-label"/>
+                                    <ui:Toggle name="Mindscape.VSync"/>
+                                </ui:VisualElement>
+                                <ui:Label text="Lower texture quality or a 30 FPS limit helps slower devices and saves battery. With V-Sync on, the game matches your screen's refresh rate and the frame rate limit is not used." class="small"/>
+                                <ui:Label text="Your device controls display brightness. For a softer menu, adjust the shade below." class="body margin-top"/>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Menu shade" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.MenuShade" low-value="0" high-value="1"/>
+                                    <ui:Label text="0%" class="setting-value"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-options-panel-2" class="hidden">
+                                <ui:Label text="Sound &amp; atmosphere" class="paper-title"/>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Master volume" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.Master" low-value="0" high-value="1"/>
+                                    <ui:Label text="80%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Music volume" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.Music" low-value="0" high-value="1"/>
+                                    <ui:Label text="65%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Sound effects" class="setting-label"/>
+                                    <ui:Slider name="Mindscape.SFX" low-value="0" high-value="1"/>
+                                    <ui:Label text="65%" class="setting-value"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Music" class="setting-label"/>
+                                    <ui:Label name="music-title" text="Track title" class="now-playing"/>
+                                    <ui:Button name="music-next" text="Next  ›" class="music-button"/>
+                                    <ui:Button name="music-toggle" text="Stop" class="music-button"/>
+                                </ui:VisualElement>
+                                <ui:Label text="Additional music by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0." class="small margin-top"/>
+                                <ui:VisualElement class="actions">
+                                    <ui:Button name="reset-audio" text="Reset audio to default"/>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-options-panel-3" class="hidden">
+                                <ui:Label text="Make the controls your own" class="paper-title"/>
+                                <ui:Label text="Select a key, then press its replacement. Esc cancels." class="small"/>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Move forward" class="setting-label"/>
+                                    <ui:Button name="key-0" text="W"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Move backward" class="setting-label"/>
+                                    <ui:Button name="key-1" text="S"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Move left" class="setting-label"/>
+                                    <ui:Button name="key-2" text="A"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Move right" class="setting-label"/>
+                                    <ui:Button name="key-3" text="D"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Run" class="setting-label"/>
+                                    <ui:Button name="key-4" text="Left Shift"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Free look" class="setting-label"/>
+                                    <ui:Button name="key-5" text="Left Alt"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Open tasks" class="setting-label"/>
+                                    <ui:Button name="key-6" text="T"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="setting-row">
+                                    <ui:Label text="Pause menu" class="setting-label"/>
+                                    <ui:Button name="key-7" text="Esc"/>
+                                </ui:VisualElement>
+                                <ui:Button name="keys-reset" text="Reset key bindings" class="margin-top"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-options-panel-4" class="hidden">
+                                <ui:Label text="Language" class="paper-title"/>
+                                <ui:Label text="English" class="body"/>
+                                <ui:Label text="This prototype is currently available in English." class="small"/>
+                            </ui:VisualElement>
+                            <!-- Filled in by MainMenuNewController.RefreshAccountPanel: signed in, or playing offline. -->
+                            <ui:VisualElement name="page-options-panel-5" class="hidden">
+                                <ui:Label text="Your account" class="paper-title"/>
+                                <ui:Label name="options-account-name" text="Playing offline · saved on this device" class="body"/>
+                                <ui:VisualElement name="options-account-online">
+                                    <ui:Label text="Signing out keeps your account and everything saved with it. Log in again any time." class="small margin-top"/>
+                                    <ui:VisualElement class="actions">
+                                        <ui:Button name="options-sign-out" text="Sign out"/>
+                                    </ui:VisualElement>
+                                    <ui:Label text="Delete account" class="paper-subtitle margin-top"/>
+                                    <ui:Label text="Deleting your account signs you out and emails you. Your account, journal and progress are kept for 30 days, so you can recover them from the login screen with &quot;Recover a deleted account&quot;. After 30 days they are permanently deleted." class="small"/>
+                                    <ui:VisualElement class="actions">
+                                        <ui:Button name="options-delete" text="Delete account" class="danger-button"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:VisualElement name="options-account-offline">
+                                    <ui:Label text="Log in to keep your journal and progress in an online account." class="small margin-top"/>
+                                    <ui:VisualElement class="actions">
+                                        <ui:Button name="options-log-in" text="Log in"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-guide" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-guide" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="HOW TO PLAY" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="book">
+                    <ui:ScrollView mode="Vertical" class="sidebar">
+                        <ui:Button name="page-guide-tab-0" text="CONTROLS" class="tab selected"/>
+                        <ui:Button name="page-guide-tab-1" text="MECHANICS" class="tab"/>
+                        <ui:Button name="page-guide-tab-2" text="GAMEPLAY" class="tab"/>
+                        <ui:Button name="page-guide-tab-3" text="TIPS" class="tab"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" class="paper-scroll">
+                            <ui:VisualElement name="page-guide-panel-0">
+                                <ui:Label text="Find your way" class="paper-title"/>
+                                <ui:VisualElement class="key-grid">
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="W A S D" class="keycap"/>
+                                        <ui:Label text="Move" class="small"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="Alt + Mouse" class="keycap"/>
+                                        <ui:Label text="Look around" class="small"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="E / F" class="keycap"/>
+                                        <ui:Label text="Door / talk" class="small"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="Shift" class="keycap"/>
+                                        <ui:Label text="Run" class="small"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="T" class="keycap"/>
+                                        <ui:Label text="Tasks" class="small"/>
+                                    </ui:VisualElement>
+                                    <ui:VisualElement class="key-tile">
+                                        <ui:Label text="Esc" class="keycap"/>
+                                        <ui:Label text="Pause menu" class="small"/>
+                                    </ui:VisualElement>
+                                </ui:VisualElement>
+                                <ui:Label text="Explore, talk to characters, make choices, and reflect on your journey. Controls can be changed in Options." class="callout"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-guide-panel-1" class="hidden">
+                                <ui:Label text="Small actions, meaningful moments" class="paper-title"/>
+                                <ui:Label text="EXPLORE&#10;Move through familiar places and look for people and objects to interact with.&#10;&#10;STAY CURIOUS&#10;Open your tasks to see what comes next.&#10;&#10;PAUSE &amp; REFLECT&#10;Use the journal to write down what stood out to you." class="body"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-guide-panel-2" class="hidden">
+                                <ui:Label text="Your story unfolds" class="paper-title"/>
+                                <ui:Label text="Begin with the tutorial, or choose Chapter 1 to meet your first challenge.&#10;&#10;The prototype includes the tutorial, Chapter 1 · Academic Pressure (four episodes), and Chapter 2 · Family Expectations (five episodes). More chapters will become available as the story grows." class="body"/>
+                                <ui:Button name="guide-play-tutorial" text="Play the tutorial  ›"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-guide-panel-3" class="hidden">
+                                <ui:Label text="Take it at your own pace" class="paper-title"/>
+                                <ui:Label text="There is no need to rush.&#10;&#10;Listen to the people you meet. Notice how each situation makes you feel.&#10;&#10;You can pause whenever you need a break. Your next small step will still be here.&#10;&#10;If a story feels difficult, talk to someone you trust. The Resources page can help you find support." class="body"/>
+                            </ui:VisualElement>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-resources" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-resources" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="RESOURCES" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="book">
+                    <ui:ScrollView mode="Vertical" class="sidebar">
+                        <ui:Button name="page-resources-tab-0" text="CRISIS HOTLINES" class="tab selected"/>
+                        <ui:Button name="page-resources-tab-1" text="EMOTIONAL SUPPORT" class="tab"/>
+                        <ui:Button name="page-resources-tab-2" text="COUNSELING" class="tab"/>
+                        <ui:Button name="page-resources-tab-3" text="SELF-HELP TOOLS" class="tab"/>
+                        <ui:Button name="page-resources-tab-4" text="PROVIDER BOARD" class="tab"/>
+                    </ui:ScrollView>
+                    <ui:VisualElement class="paper">
+                        <PaperGrain/>
+                        <ui:ScrollView mode="Vertical" class="paper-scroll">
+                            <ui:VisualElement name="page-resources-panel-0">
+                                <ui:Label text="Support in the Philippines" class="paper-title"/>
+                                <ui:Label text="NATIONAL CENTER FOR MENTAL HEALTH" class="eyebrow"/>
+                                <ui:Label text="Crisis Hotline" class="body"/>
+                                <ui:Label text="1553" class="hotline"/>
+                                <ui:Label text="You can also call 1800-1888-1553.&#10;If you are in immediate danger, contact local emergency services." class="body"/>
+                                <ui:Button name="link-hotline" text="Official hotline information  ↗" tooltip="https://quezoncity.gov.ph/national-suicide-prevention-week-4/"/>
+                                <ui:Label text="Source: Quezon City Government · 7 September 2026" class="small margin-top"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-resources-panel-1" class="hidden">
+                                <ui:Label text="You do not have to carry it alone" class="paper-title"/>
+                                <ui:Label text="A trusted friend, family member, teacher, or counselor can be a place to start.&#10;&#10;You can simply say: “I’m having a hard time and could use someone to listen.”" class="body"/>
+                                <ui:Button name="link-helpline" text="Find support services  ↗" tooltip="https://findahelpline.com/countries/ph"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-resources-panel-2" class="hidden">
+                                <ui:Label text="Find someone to talk to" class="paper-title"/>
+                                <ui:Label text="Reach out to your school guidance office or a licensed mental health professional.&#10;&#10;For public services and referrals, visit the National Center for Mental Health." class="body"/>
+                                <ui:Button name="link-ncmh" text="Visit NCMH  ↗" tooltip="https://ncmh.gov.ph/"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-resources-panel-3" class="hidden">
+                                <ui:Label text="A moment for yourself" class="paper-title"/>
+                                <ui:Label text="Use your journal to put a thought into words. You can take a break from the game at any time.&#10;&#10;These reflective activities are for education and personal reflection, and do not replace professional care." class="body"/>
+                                <ui:Button name="resources-journal" text="Open your journal"/>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="page-resources-panel-4" class="hidden">
+                                <ui:Label text="Mental health service providers" class="paper-title"/>
+                                <ui:Label text="Philippines · Save a number or open a provider's page for current details." class="body"/>
+                                <ui:VisualElement class="provider-card">
+                                    <ui:Label text="24/7 CRISIS SUPPORT" class="eyebrow"/>
+                                    <ui:Label text="National Center for Mental Health" class="provider-name"/>
+                                    <ui:Label text="Dial 1553 · 1800-1888-1553 (Smart/TNT)&#10;0917-899-8727 · 0966-351-4518" class="provider-contact"/>
+                                    <ui:Button name="link-provider-ncmh" text="Visit NCMH  ↗" tooltip="https://ncmh.gov.ph/"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="provider-card">
+                                    <ui:Label text="FREE, ANONYMOUS 24/7 CRISIS LINE" class="eyebrow"/>
+                                    <ui:Label text="In Touch Community Services" class="provider-name"/>
+                                    <ui:Label text="+63 2 8893 7603 · +63 919 056 0709&#10;+63 917 800 1123 · +63 917 108 5412" class="provider-contact"/>
+                                    <ui:Button name="link-provider-intouch" text="Visit In Touch  ↗" tooltip="https://in-touch.org/contact-us-form/"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="provider-card">
+                                    <ui:Label text="TAGUIG RESIDENTS · TELECONSULTATION" class="eyebrow"/>
+                                    <ui:Label text="Taguig Mental Health Service" class="provider-name"/>
+                                    <ui:Label text="0929-521-8373 · 6:00 AM–6:00 PM&#10;0967-039-3456 · 6:00 PM–6:00 AM" class="provider-contact"/>
+                                    <ui:Button name="link-provider-taguig" text="Visit Taguig City services  ↗" tooltip="https://sites.google.com/view/taguigcity/caring/health/free-medical-services"/>
+                                </ui:VisualElement>
+                                <ui:VisualElement class="provider-card">
+                                    <ui:Label text="PSYCHOSOCIAL SUPPORT" class="eyebrow"/>
+                                    <ui:Label text="Philippine Mental Health Association" class="provider-name"/>
+                                    <ui:Label text="Check PMHA's current remote support schedule and contact options on its official site." class="provider-contact"/>
+                                    <ui:Button name="link-provider-pmha" text="Visit PMHA  ↗" tooltip="https://www.pmha.org.ph/"/>
+                                </ui:VisualElement>
+                                <ui:Label text="Availability and charges may change. If you are in immediate danger, contact local emergency services." class="small margin-top"/>
+                            </ui:VisualElement>
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-about" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-about" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="ABOUT US" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="book">
+                    <ui:VisualElement name="about-art" class="art-panel" style="background-image: resource(&quot;MenuArt/Background3D&quot;);">
+                        <ui:Label text="Face your fear.&#10;Find your strength." class="art-caption"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="paper about-paper">
+                        <PaperGrain/>
+                        <ui:Label text="A little space to grow" class="paper-title"/>
+                        <ui:Label text="MindScape 3D is a student capstone project exploring mental health awareness and emotional well-being through interactive storytelling.&#10;&#10;At its heart is a simple belief: understanding ourselves is a first step toward growth.&#10;&#10;We hope this journey helps you find a moment of reflection, a little courage, and a reminder that you matter." class="body"/>
+                        <ui:Label text="Thank you for being part of the story." class="small"/>
+                        <MenuLineArt kind="leaf" dark="true" class="leaf-decoration"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-quit" class="page hidden">
+                <ui:VisualElement class="header">
+                    <ui:Button name="back-quit" text="‹ Back" class="back"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                    <ui:Label text="QUIT GAME" class="page-title"/>
+                    <MenuLineArt kind="sprig" class="flourish"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="paper quit-paper">
+                    <PaperGrain/>
+                    <MenuLineArt kind="power" dark="true" class="large-icon"/>
+                    <ui:Label text="Leave for now?" class="paper-title"/>
+                    <ui:Label text="Your settings and saved reflections will be here when you return." class="body"/>
+                    <ui:VisualElement class="actions">
+                        <ui:Button name="quit-cancel" text="Back to menu"/>
+                        <ui:Button name="quit-confirm" text="Exit game"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label text="v1.0  /  PROTOTYPE" class="version"/>
+        <ui:VisualElement name="account" class="account">
+            <ui:Label name="account-name" text="Playing offline · saved on this device" class="account-name"/>
+            <ui:Button name="sign-out" text="Log in"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="account-modal" class="modal-backdrop hidden">
+            <ui:VisualElement class="paper quit-paper login-paper">
+                <PaperGrain/>
+                <ui:Label name="modal-title" class="paper-title"/>
+                <ui:Label name="modal-body" class="body"/>
+                <ui:TextField name="modal-identifier" label="Username or email" max-length="120" class="login-field"/>
+                <ui:TextField name="modal-code" label="Code from your email" max-length="10" class="login-field"/>
+                <ui:VisualElement name="modal-password-row" class="password-row">
+                    <ui:TextField name="modal-password" label="New password" max-length="72" password="true" class="login-field"/>
+                    <ui:Button name="modal-password-eye" class="password-eye" tooltip="Show password"><MenuLineArt kind="eye" dark="true" class="password-eye-icon"/></ui:Button>
+                </ui:VisualElement>
+                <ui:VisualElement name="modal-strength" class="strength">
+                    <ui:VisualElement class="strength-track"><ui:VisualElement name="modal-strength-fill" picking-mode="Ignore" class="strength-fill"/></ui:VisualElement>
+                    <ui:Label name="modal-strength-label" class="strength-label"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="modal-password2-row" class="password-row">
+                    <ui:TextField name="modal-password2" label="Confirm new password" max-length="72" password="true" class="login-field"/>
+                    <ui:Button name="modal-password2-eye" class="password-eye" tooltip="Show password"><MenuLineArt kind="eye" dark="true" class="password-eye-icon"/></ui:Button>
+                </ui:VisualElement>
+                <ui:Label name="modal-status" class="journal-status login-status"/>
+                <ui:VisualElement class="actions">
+                    <ui:Button name="modal-cancel" text="Cancel"/>
+                    <ui:Button name="modal-resend" text="Send again"/>
+                    <ui:Button name="modal-submit" text="Verify"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="login-error-modal" class="modal-backdrop hidden">
+            <ui:VisualElement class="paper login-error-paper">
+                <PaperGrain/>
+                <ui:Label text="Could not log in" class="paper-title"/>
+                <ui:Label name="login-error-body" class="body"/>
+                <ui:VisualElement class="actions login-error-actions">
+                    <ui:Button name="login-error-reset" text="Reset password" class="auth-secondary"/>
+                    <ui:Button name="login-error-close" text="Try again" class="auth-primary"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="privacy-modal" class="modal-backdrop hidden">
+            <ui:VisualElement class="paper quit-paper login-paper">
+                <PaperGrain/>
+                <ui:Label text="Data Privacy Notice" class="paper-title"/>
+                <ui:ScrollView class="privacy-notice privacy-notice-full" mode="Vertical" horizontal-scroller-visibility="Hidden">
+                    <ui:Label text="Your username, email, and password are used for a Supabase account; Supabase Auth handles the password and sends email verification or reset codes. While signed in, journal entries, episode progress and records, and assessment answers you choose to submit are stored in Supabase. The game also saves your player name, story choices, settings, and session on this device. Offline play stores journals, progress, and any assessment answers on this device. Signing out clears the session on this device; it does not delete your account or saved data. You can delete your account in Options &gt; Account: it is signed out, you are emailed, and your account and its cloud data are kept for 30 days so you can recover them from the login screen. After 30 days they are permanently deleted." class="privacy-body"/>
+                </ui:ScrollView>
+                <ui:Label text="Agree to create an account. If you do not agree, you can still play offline; nothing is sent to the server." class="body privacy-choice"/>
+                <ui:VisualElement class="actions">
+                    <ui:Button name="privacy-decline" text="I do not agree"/>
+                    <ui:Button name="privacy-accept" text="I agree"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label name="toast" picking-mode="Ignore" class="toast hidden"/>
+        <ui:VisualElement name="brightness" picking-mode="Ignore" class="brightness-shade"/>
+    </ui:VisualElement>
+</ui:UXML>

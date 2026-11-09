@@ -1,0 +1,62 @@
+/* Flashback indicator (FlashbackIndicator.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings.
+   Code sets the tint's opacity to follow the episode's screen fade, hides the badge while an episode's own
+   full-screen panel is open (the examination paper), and adds .mobile in mobile mode. */
+
+.hidden { display: none; }
+
+.flashback {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+}
+
+/* A faded, warm edge around the screen, like an old photograph. */
+.flashback-tint {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(150, 112, 62, 0.10);
+    border-width: 16px;
+    border-color: rgba(22, 16, 9, 0.50);
+}
+
+/* A thin gold line just inside the edge. */
+.flashback-line {
+    position: absolute;
+    left: 6px; top: 6px; right: 6px; bottom: 6px;
+    border-width: 1px;
+    border-color: rgba(219, 179, 111, 0.55);
+}
+
+/* Top-right corner, clear of the objective (top-left) and the time / stress status (top centre). */
+.flashback-badge {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    padding: 8px 17px 9px 14px;
+    border-left-width: 3px;
+    border-left-color: var(--gold);
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* Mobile mode has a pause button in the top-right corner, so the badge sits to its left. */
+.flashback-badge.mobile { right: 100px; }
+
+.flashback-badge Label { padding: 0; margin: 0; white-space: pre-wrap; }
+
+.flashback-label {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    -unity-font-style: bold;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 2.4px;
+}
+
+.flashback-when { font-size: 14px; margin-top: 2px; }
+
+.mobile .flashback-label { font-size: 21px; }
+.mobile .flashback-when { font-size: 16px; }

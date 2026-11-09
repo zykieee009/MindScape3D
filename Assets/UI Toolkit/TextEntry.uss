@@ -1,0 +1,102 @@
+/* Typed answers (TextEntry.uxml): the player's name (one line, button beside it) and the reflection journal
+   (.multiline: a title, a taller box, the button below).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+.entry-screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(6, 9, 11, 0.55);
+}
+
+.entry {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+    --ink: #1D2B2F;
+
+    width: 640px;
+    padding: 22px 24px 20px 24px;
+    border-radius: 22px;
+    background-color: rgba(29, 43, 47, 0.97);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+.entry Label { padding: 0; margin: 0; white-space: normal; }
+
+/* The title only appears for the journal; a one-line answer needs just the question. */
+.entry-title { display: none; }
+
+.entry .entry-prompt { color: var(--gold); font-size: 17px; margin: 0 4px 12px 4px; }
+
+.entry-row { flex-direction: row; align-items: stretch; }
+
+/* The text box (TextField's inner input is .unity-base-text-field__input). */
+.entry-field { flex-grow: 1; margin: 0 12px 0 0; }
+
+.entry-field > .unity-base-text-field__input {
+    height: 56px;
+    padding: 0 18px;
+    border-width: 2px;
+    border-radius: 14px;
+    border-color: rgba(219, 179, 111, 0);
+    background-color: #FAF4E6;
+    color: var(--ink);
+    font-size: 22px;
+    -unity-text-align: middle-left;
+    --unity-cursor-color: var(--ink);
+    --unity-selection-color: rgba(219, 179, 111, 0.55);
+}
+
+.entry-field:focus > .unity-base-text-field__input { border-color: var(--gold); }
+
+/* The placeholder (an example answer), shown faded while the box is empty. */
+.entry-field > .unity-base-text-field__input--placeholder,
+.entry-field > .unity-base-text-field__input--placeholder > TextElement { color: rgba(29, 43, 47, 0.38); -unity-font-style: italic; }
+
+.entry-confirm {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 14px;
+    background-color: var(--gold);
+    color: var(--ink);
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-property: background-color, scale;
+    transition-duration: 0.1s;
+}
+
+.entry-confirm:hover { background-color: #EBC583; }
+.entry-confirm:active { background-color: #B39260; scale: 0.98; }
+
+.entry .entry-hint { color: #E8A07A; font-size: 15px; margin: 10px 4px 0 4px; }
+
+/* Reflection journal: a title, a taller box, the button underneath on the right. */
+.entry.multiline { width: 760px; padding: 28px 32px 24px 32px; }
+
+.entry.multiline .entry-title {
+    display: flex;
+    color: var(--paper);
+    font-size: 30px;
+    margin: 0 0 8px 0;
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+}
+
+.entry.multiline .entry-prompt { color: var(--paper); font-size: 18px; margin: 0 0 16px 0; }
+.entry.multiline .entry-row { flex-direction: column; }
+.entry.multiline .entry-field { margin: 0 0 14px 0; }
+
+.entry.multiline .entry-field > .unity-base-text-field__input {
+    height: 220px;
+    padding: 14px 18px;
+    font-size: 19px;
+    -unity-text-align: upper-left;
+    white-space: normal;
+}
+
+.entry.multiline .entry-confirm { align-self: flex-end; height: 54px; width: 200px; }

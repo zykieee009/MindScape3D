@@ -1,0 +1,18 @@
+Models/clips=344, episodes=17, animators=273, prefabs=21, errors=0
+SCENE Assets/Scenes/Chapter 1 - Episode 1.unity: players=1
+SCENE Assets/Scenes/Chapter 1 - Episode 2.unity: players=1
+SCENE Assets/Scenes/Chapter 1 - Episode 3.unity: players=1
+SCENE Assets/Scenes/Chapter 1 - Episode 4.unity: players=1
+SCENE Assets/Scenes/Chapter 2 - Episode 1.unity: players=1
+SCENE Assets/Scenes/Chapter 2 - Episode 2.unity: players=1
+SCENE Assets/Scenes/Chapter 2 - Episode 3.unity: players=1
+SCENE Assets/Scenes/Chapter 2 - Episode 4.unity: players=1
+SCENE Assets/Scenes/Chapter 2 - Episode 5.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 1.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 2.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 3.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 4.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 5.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 6.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 7.unity: players=1
+SCENE Assets/Scenes/Chapter 3 - Episode 8.unity: players=1

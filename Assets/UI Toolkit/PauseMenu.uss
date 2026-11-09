@@ -1,0 +1,442 @@
+/* ==========================================================================
+   MINDSCAPE: Storybook Pause Menu Stylesheet
+   Ink, paper, gold, and teal match the story dialogue and popup panels.
+   Responsive for Desktop and Mobile Touchscreens.
+   ========================================================================== */
+
+.pause-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 12, 16, 0.86);
+    align-items: center;
+    justify-content: center;
+}
+
+.pause-overlay.hidden { display: none; }
+.hidden { display: none; }
+
+/* Main Card Wrapper */
+.pause-panel {
+    width: 460px;
+    max-width: 90%;
+    max-height: 92%;
+    background-color: #162126;
+    border-width: 3px;
+    border-bottom-width: 8px;
+    border-color: #DBB36F;
+    border-radius: 10px;
+    padding: 8px;
+    align-items: center;
+}
+
+/* Ink page inside the gold frame */
+.page {
+    width: 100%;
+    min-height: 0;
+    max-height: 100%;
+    padding: 22px 24px;
+    background-color: #1D2B2F;
+    border-width: 1.5px;
+    border-color: #495054;
+    border-radius: 6px;
+}
+
+/* Header & Close Button */
+.pause-header {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.header-spacer {
+    width: 36px;
+    height: 36px;
+}
+
+.pause-title {
+    font-size: 28px;
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    color: #F2E8D1;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.btn-close {
+    width: 36px;
+    height: 36px;
+    background-color: #202A30;
+    border-width: 2px;
+    border-color: #DBB36F;
+    border-radius: 18px;
+    color: #DBB36F;
+    font-size: 16px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.12s;
+}
+
+.btn-close:hover {
+    background-color: #363F3F;
+    border-color: #EBC583;
+    scale: 1.06;
+}
+
+.btn-close:active {
+    background-color: #162126;
+    scale: 0.96;
+}
+
+/* Decorative gold flourish */
+.flourish-container {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    margin-bottom: 6px;
+}
+
+.flourish-line {
+    width: 48px;
+    height: 1.5px;
+    background-color: #DBB36F;
+}
+
+.flourish-icon {
+    font-size: 11px;
+    color: #DBB36F;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* Subtitle */
+.pause-subtitle {
+    width: 100%;
+    font-size: 13.5px;
+    color: #C4B8A0;
+    white-space: normal;
+    -unity-font-style: italic;
+    -unity-text-align: middle-center;
+    margin-bottom: 12px;
+}
+
+/* Chapter / Episode Bookmark Ribbon */
+.chapter-ribbon {
+    width: 100%;
+    background-color: #283A3E;
+    border-width: 1px;
+    border-color: #416563;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ribbon-text {
+    font-size: 12px;
+    color: #F2E8D1;
+    letter-spacing: 0.5px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+/* Optional hint under the ribbon */
+.pause-hint {
+    width: 100%;
+    font-size: 14px;
+    color: #F2E8D1;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    margin-top: -6px;
+    margin-bottom: 14px;
+}
+
+/* Buttons Stack */
+.button-column {
+    width: 100%;
+    flex-direction: column;
+}
+
+.menu-button {
+    min-height: 46px;
+    max-height: 52px;
+    height: auto;
+    margin: 4.5px 0;
+    padding: 8px 16px;
+    background-color: #202A30;
+    border-width: 1.5px;
+    border-bottom-width: 4px;
+    border-color: #495054;
+    border-radius: 5px;
+    color: #F2E8D1;
+    font-size: 15px;
+    letter-spacing: 1px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-property: background-color, border-color, translate;
+    transition-duration: 0.1s;
+}
+
+.menu-button:hover {
+    background-color: #2F4446;
+    border-color: #DBB36F;
+}
+
+.menu-button:active {
+    background-color: #162126;
+    border-bottom-width: 2px;
+    translate: 0 2px;
+}
+
+/* Primary Button (Resume Game) */
+.menu-button.primary {
+    background-color: #DBB36F;
+    border-color: #EBC583;
+    border-width: 2px;
+    border-bottom-width: 4.5px;
+    color: #1D2B2F;
+    font-size: 15.5px;
+}
+
+.menu-button.primary:hover {
+    background-color: #EBC583;
+    border-color: #F2E8D1;
+}
+
+.menu-button.primary:active {
+    background-color: #B39260;
+    border-bottom-width: 2px;
+    translate: 0 2px;
+}
+
+/* Danger / Main Menu Button */
+.menu-button.danger {
+    background-color: #202A30;
+    border-color: #495054;
+    color: #C4B8A0;
+}
+
+.menu-button.danger:hover {
+    background-color: #2F4446;
+    border-color: #DBB36F;
+}
+
+/* Settings Sub-Page */
+.back-button {
+    width: 80px;
+    height: 36px;
+    background-color: #202A30;
+    border-width: 1.5px;
+    border-color: #DBB36F;
+    border-radius: 4px;
+    color: #F2E8D1;
+    font-size: 13px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.back-button:hover {
+    background-color: #2F4446;
+    border-color: #EBC583;
+}
+
+.settings-box {
+    width: 100%;
+    background-color: #202A30;
+    border-width: 1px;
+    border-color: #416563;
+    border-radius: 5px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+}
+
+.setting-row {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.setting-label {
+    width: 72px;
+    font-size: 15px;
+    color: #F2E8D1;
+    -unity-font-style: bold;
+}
+
+.setting-slider {
+    flex-grow: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.setting-value {
+    width: 46px;
+    font-size: 14px;
+    color: #C4B8A0;
+    -unity-font-style: bold;
+    -unity-text-align: middle-right;
+}
+
+.unity-base-slider__tracker {
+    height: 6px;
+    background-color: #416563;
+    border-width: 0;
+    border-radius: 3px;
+}
+
+.unity-base-slider__dragger {
+    width: 20px;
+    height: 20px;
+    margin-top: -7px;
+    border-radius: 10px;
+    background-color: #DBB36F;
+    border-width: 2.5px;
+    border-color: #F2E8D1;
+}
+
+.settings-done-btn {
+    margin-top: 8px;
+}
+
+/* Bottom Desktop Keyboard Prompt Bar */
+.pause-footer {
+    margin-top: 14px;
+    background-color: rgba(29, 43, 47, 0.97);
+    border-width: 1px;
+    border-color: #416563;
+    border-radius: 4px;
+    padding: 5px 16px;
+}
+
+.prompt-text {
+    font-size: 12px;
+    color: #C4B8A0;
+    letter-spacing: 1px;
+    -unity-text-align: middle-center;
+}
+
+/* Save slots: two lines each (slot and episode, then when it was saved). */
+.save-help {
+    flex-shrink: 1;
+}
+
+.menu-button.save-slot {
+    max-height: none;
+    min-height: 58px;
+    padding: 8px 12px;
+    white-space: normal;
+    -unity-font-style: normal;
+    letter-spacing: 0;
+}
+
+/* Compact pause page: title, episode, and an icon action row. */
+.pause-panel {
+    width: 420px;
+    max-width: 94%;
+    padding: 0;
+    border-width: 1px;
+    border-color: #4A5B5D;
+    border-radius: 8px;
+    align-items: stretch;
+}
+
+#page-pause {
+    align-items: center;
+    padding: 26px 22px 28px 22px;
+    border-width: 0;
+    border-radius: 8px;
+}
+
+#page-pause .pause-title {
+    margin: 0 0 4px 0;
+    font-size: 32px;
+    letter-spacing: 0;
+}
+
+#page-pause .ribbon-text {
+    margin-bottom: 22px;
+    color: #C4B8A0;
+    font-size: 14px;
+    letter-spacing: 0;
+    -unity-font-style: normal;
+}
+
+.action-row {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button {
+    width: 56px;
+    height: 56px;
+    margin: 0 4px;
+    padding: 0;
+    flex-shrink: 1;
+    background-color: #253438;
+    border-width: 1px;
+    border-color: #4A5B5D;
+    border-radius: 7px;
+    color: #F2E8D1;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.12s;
+}
+
+.icon-button:hover,
+.icon-button:focus {
+    background-color: #345054;
+    border-color: #93A7A4;
+}
+
+.icon-button:active {
+    background-color: #1D2B2F;
+    scale: 0.96;
+}
+
+.icon-button.primary {
+    background-color: #DBB36F;
+    border-color: #DBB36F;
+    color: #1D2B2F;
+}
+
+.icon-button.primary:hover,
+.icon-button.primary:focus {
+    background-color: #EBC583;
+    border-color: #EBC583;
+}
+
+.back-button {
+    width: 44px;
+    height: 44px;
+    background-color: #253438;
+    border-width: 1px;
+    border-color: #4A5B5D;
+    border-radius: 7px;
+    color: #F2E8D1;
+}
+
+.back-button:hover,
+.back-button:focus {
+    background-color: #345054;
+    border-color: #93A7A4;
+}
+
+.back-button:active { scale: 0.96; }
+
+.header-spacer {
+    width: 44px;
+    height: 44px;
+}

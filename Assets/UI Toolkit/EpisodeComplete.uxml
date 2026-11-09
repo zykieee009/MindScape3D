@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- End-of-episode screens every story episode shares: Episode complete, and Out of time (hidden here; toggle the
+         "hidden" class in UI Builder to preview it). The text is sample text; the episode fills in the real text.
+         Elements with a name are looked up by code (AcademicEpisode.BuildScreens), so keep the names when editing. -->
+    <Style src="EpisodeComplete.uss"/>
+
+    <!-- Episode complete -->
+    <ui:VisualElement name="complete-screen" picking-mode="Ignore" class="screen">
+        <ui:VisualElement class="card complete-card">
+            <ui:Label name="complete-heading" text="CHAPTER 1  /  EPISODE 01 COMPLETE" class="eyebrow"/>
+            <ui:Label name="complete-title" text="Tomorrow already?" class="title"/>
+            <ui:Label name="complete-body" text="The reminder, the unfinished introduction, and a full morning.&#10;&#10;You decided to finish everything tonight.&#10;You named a feeling: Worried.&#10;&#10;Your choices are saved." class="body"/>
+            <ui:Label name="complete-stats" text="Stress check-in  1 / 5  →  1 / 5      Time left  10:08" class="stats"/>
+            <ui:Label name="complete-next" text="NEXT: EPISODE 02  •  THE ANNOUNCEMENT" class="eyebrow small"/>
+            <ui:VisualElement class="button-row">
+                <ui:Button name="complete-replay" text="Replay episode" class="gold-button"/>
+                <ui:Button name="complete-menu" text="Main menu" class="gold-button"/>
+                <ui:Button name="complete-continue" text="Continue" class="gold-button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Closing screen after the last episode of the story (Chapter 3 · Episode 8): fades in over the scene, then the
+         title and the Main menu button fade in. Hidden until the episode's Continue button is pressed. -->
+    <ui:VisualElement name="finale-screen" class="screen finale-screen hidden">
+        <ui:VisualElement name="finale-content" class="finale-content">
+            <ui:Label name="finale-heading" text="THE END" class="eyebrow"/>
+            <ui:Label name="finale-title" text="Thanks for playing with Mindscape" class="title finale-title"/>
+            <ui:Label name="finale-body" text="Thank you for walking through these stories with us." class="body finale-body"/>
+            <ui:Button name="finale-menu" text="Main menu" class="gold-button finale-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Out of time -->
+    <ui:VisualElement name="failed-screen" picking-mode="Ignore" class="screen hidden">
+        <ui:VisualElement class="card failed-card">
+            <ui:Label name="failed-heading" text="CHAPTER 1  /  EPISODE 01" class="eyebrow"/>
+            <ui:Label text="Out of time" class="title"/>
+            <ui:Label text="The clock ran out before the episode was finished.&#10;You can replay it from the start whenever you are ready." class="body"/>
+            <ui:VisualElement class="button-row">
+                <ui:Button name="failed-replay" text="Replay episode" class="gold-button"/>
+                <ui:Button name="failed-menu" text="Main menu" class="gold-button"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

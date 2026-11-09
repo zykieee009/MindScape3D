@@ -1,0 +1,96 @@
+/* Episode complete and out-of-time screens (EpisodeComplete.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* Each screen covers the whole view and centres its card. */
+.screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    padding: 43px 59px 32px 59px;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+.complete-card { width: 64%; }
+.failed-card { width: 50%; }
+
+/* pre-wrap keeps the double spaces the episode text uses as gaps ("1 / 5      Time left").
+   Top/bottom margins are left to the text classes below: ".card Label" outranks a single class, so setting them here would win. */
+.card Label { padding: 0; margin-left: 0; margin-right: 0; white-space: pre-wrap; }
+
+/* Text */
+.eyebrow {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    margin-bottom: 17px;
+}
+
+.eyebrow.small { font-size: 12px; margin-top: 12px; margin-bottom: 5px; }
+
+.title {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+
+.body { font-size: 17px; margin-bottom: 17px; }
+
+.stats { color: var(--gold); font-size: 17px; margin-bottom: 9px; }
+
+/* Buttons: 22px gaps, edges flush with the text (USS has no :first-child, so the row's negative margin absorbs the outer halves). */
+.button-row {
+    flex-direction: row;
+    margin: 27px -11px 0 -11px;
+}
+
+.gold-button {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 51px;
+    margin: 0 11px 0 11px;
+    padding: 0;
+    background-color: var(--gold);
+    border-width: 0;
+    border-radius: 0;
+    color: #1D2B2F;
+    font-size: 16px;
+    white-space: pre-wrap;
+    -unity-text-align: middle-center;
+    transition-property: background-color, scale;
+    transition-duration: 0.1s;
+}
+
+.gold-button:hover { background-color: #EBC583; }
+.gold-button:active { background-color: #B39260; scale: 0.98; }
+
+/* Closing screen (finale-screen): an opaque ink backdrop and centred text. Opacity is animated from code. */
+.finale-screen {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+    background-color: rgb(10, 15, 17);
+    opacity: 0;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+    color: #F2E8D1;
+}
+
+.finale-content { width: 56%; align-items: center; opacity: 0; }
+
+.finale-content Label { white-space: pre-wrap; -unity-text-align: upper-center; padding: 0; margin-left: 0; margin-right: 0; }
+
+.finale-title { font-size: 44px; margin-bottom: 22px; }
+
+.finale-body { font-size: 18px; margin-bottom: 30px; }
+
+/* .gold-button's flex-basis: 0 is for the Complete screen's row; in this column it would collapse the height. */
+.finale-button { flex-grow: 0; flex-basis: auto; width: 220px; height: 51px; margin: 0; }

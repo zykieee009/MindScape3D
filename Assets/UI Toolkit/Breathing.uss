@@ -1,0 +1,91 @@
+/* Breathing exercise (Breathing.uxml). Colours and fonts come from EpisodeScreens.uss; the circle's size and colours
+   are set from code while it breathes.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+/* No picture behind it: one quiet, deep blue. */
+#breathing-root { background-color: #172431; }
+
+/* Everything below is centred on its own middle: left 50% plus translate -50%. */
+.breathing-eyebrow, .breathing-title, .breathing-phase, .breathing-hint {
+    position: absolute;
+    left: 50%;
+    width: 900px;
+    translate: -50% -50%;
+    -unity-text-align: middle-center;
+}
+.breathing-eyebrow { top: 7%; font-size: 15px; color: #8DB6DB; letter-spacing: 1px; }
+.breathing-title { top: 14%; font-size: 44px; color: #E8F1F8; }
+.breathing-phase { top: 80%; font-size: 39px; color: #E8F1F8; }
+.breathing-hint { top: 86%; font-size: 20px; color: #A0B8CC; }
+
+.disc { border-radius: 50%; }
+
+.breathing-ring {
+    position: absolute;
+    left: 50%; top: 48%;
+    width: 400px; height: 400px;
+    translate: -50% -50%;
+    background-color: rgba(122, 170, 212, 0.24);
+}
+.breathing-circle {
+    position: absolute;
+    left: 50%; top: 48%;
+    width: 320px; height: 320px;
+    translate: -50% -50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #7AAAD4;
+}
+.breathing-core {
+    width: 220px; height: 220px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 36, 49, 0.92);
+}
+.breathing-count { font-size: 82px; color: #E8F1F8; -unity-text-align: middle-center; }
+
+.breathing-ready-count {
+    position: absolute;
+    left: 50%; top: 48%;
+    width: 180px;
+    translate: -50% -50%;
+    font-size: 96px;
+    color: #E8F1F8;
+    -unity-text-align: middle-center;
+}
+
+/* The time left: a dark track with a soft blue fill, and the clock beside it. */
+.breathing-track {
+    position: absolute;
+    left: 50%; top: 92%;
+    width: 506px; height: 9px;
+    translate: -50% -50%;
+    background-color: rgb(9, 16, 23);
+    border-radius: 5px;
+}
+.breathing-fill { width: 100%; height: 100%; background-color: #7AAAD4; border-radius: 5px; }
+.breathing-timer {
+    position: absolute;
+    left: 50%; top: 92%;
+    margin-left: 270px;
+    width: 90px;
+    translate: 0 -50%;
+    font-size: 16px; color: #A0B8CC;
+}
+
+.breathing-close {
+    position: absolute;
+    left: 50%; bottom: 1.5%;
+    width: 160px; height: 38px;
+    margin: 0;
+    translate: -50% 0;
+    background-color: rgb(52, 84, 112);
+    color: rgb(232, 241, 248);
+    border-width: 2px;
+    border-color: rgba(142, 182, 219, 0.55);
+    border-radius: 0;
+    font-size: 16px;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold");
+}
+.breathing-close:hover { background-color: rgb(66, 102, 134); }
+.breathing-close:active { background-color: rgb(40, 66, 90); }

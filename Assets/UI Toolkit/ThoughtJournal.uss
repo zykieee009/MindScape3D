@@ -1,0 +1,25 @@
+/* Thought journal (ThoughtJournal.uxml). Colours and fonts come from EpisodeScreens.uss.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+/* Top right, left of the mobile pause button. */
+.journal-button {
+    position: absolute;
+    right: 8%; top: 4.5%;
+    width: 14%; height: 5.5%;
+    min-width: 150px; min-height: 36px;
+    font-size: 16px;
+}
+
+.journal-card {
+    position: absolute;
+    left: 15%; top: 12%; width: 70%; height: 76%;
+    padding: 28px 38px 24px 38px;
+}
+
+.journal-title { font-size: 40px; margin-bottom: 14px; }
+
+.journal-scroll { flex-grow: 1; margin-bottom: 14px; }
+
+.journal-text { font-size: 19px; color: var(--paper); }
+
+.journal-close { align-self: flex-end; width: 220px; height: 46px; }

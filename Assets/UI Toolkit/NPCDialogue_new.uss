@@ -1,0 +1,75 @@
+/* Chapter 1 Episode 1 preview: full-width, flush-bottom NPC conversation. */
+.hidden { display: none; }
+.npc-dialogue-new {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    max-height: 55%;
+    padding: 20px 3.5% 18px;
+    background-color: rgba(22, 30, 35, 0.98);
+    border-top-width: 2px;
+    border-top-color: #DBB36F;
+    color: #F2E8D1;
+    -unity-font-definition: url("../TextMesh Pro/Fonts/LiberationSans.ttf");
+}
+.npc-dialogue-new .npc-scroll { flex-shrink: 1; }
+.npc-dialogue-new Label { margin: 0; padding: 0; white-space: normal; }
+.npc-dialogue-new .npc-speaker {
+    color: #DBB36F;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+.npc-dialogue-new .npc-text {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.npc-dialogue-new .npc-choice {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 46px;
+    margin: 0 0 8px;
+    padding: 7px 16px;
+    background-color: #202A30;
+    border-width: 1px;
+    border-color: #586064;
+    border-radius: 5px;
+    color: #F2E8D1;
+    -unity-text-align: middle-left;
+    white-space: normal;
+    transition-property: background-color, border-color;
+    transition-duration: 0.12s;
+}
+.npc-dialogue-new .npc-choice:hover, .npc-dialogue-new .npc-choice:focus {
+    background-color: #36332C;
+    border-color: #DBB36F;
+}
+.npc-dialogue-new .npc-choice:active { background-color: #494032; }
+.npc-dialogue-new .npc-key {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    margin-right: 22px;
+    border-width: 1px;
+    border-color: #858980;
+    border-radius: 4px;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+.npc-dialogue-new .npc-reply-text { flex-grow: 1; flex-shrink: 1; font-size: 18px; }
+.npc-dialogue-new .npc-arrow {
+    width: 20px;
+    margin-left: 12px;
+    color: #DBB36F;
+    font-size: 28px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.12s;
+}
+.npc-dialogue-new .npc-choice:hover .npc-arrow, .npc-dialogue-new .npc-choice:focus .npc-arrow { opacity: 1; }
+.npc-dialogue-new .npc-hint { color: #ABAFA9; font-size: 12px; margin-top: 4px; }
+.npc-dialogue-new.compact { max-height: 65%; padding: 12px 3% 12px; }
+.npc-dialogue-new.compact .npc-text { font-size: 24px; margin-bottom: 12px; }
+.npc-dialogue-new.compact .npc-reply-text { font-size: 16px; }
+.npc-dialogue-new.compact .npc-key { margin-right: 12px; }

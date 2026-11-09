@@ -1,0 +1,142 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- The Worry Courtroom minigame (WorryCourtroomMinigame): the stage with the Worry, the judge's bubble, the worry
+         meter and gavel strikes; the six steps; and one panel per round (charge, prosecution, defence, friend / verdict /
+         plan, case dismissed, recess). The minigame fills in the text, the answers and the colours from its settings;
+         keep the names. The text is sample text for UI Builder. -->
+    <Style src="EpisodeScreens.uss"/>
+    <Style src="WorryCourtroom.uss"/>
+    <ui:VisualElement name="court-root" class="screen hidden">
+        <ui:VisualElement name="court-art" picking-mode="Ignore" class="court-art"/>
+        <ui:VisualElement picking-mode="Ignore" class="court-shade"/>
+
+        <ui:VisualElement class="court-content">
+            <!-- Header: title, case tabs (only with more than one case), Exit / Close -->
+            <ui:VisualElement class="court-header">
+                <ui:VisualElement class="court-titles">
+                    <ui:Label text="MINDSCAPE / WORRY COURTROOM" class="court-eyebrow"/>
+                    <ui:Label text="Worry Courtroom" class="bold court-title"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="court-tabs" class="court-tabs"/>
+                <ui:Button name="court-exit" text="Close" class="btn pale court-exit"/>
+            </ui:VisualElement>
+
+            <!-- Stage: the Worry, the speech bubble, the meter and the gavel strikes -->
+            <ui:VisualElement name="court-stage" class="court-stage">
+                <ui:VisualElement class="court-figure-slot">
+                    <ui:VisualElement name="court-figure" class="court-figure">
+                        <ui:VisualElement class="court-body"/>
+                        <ui:VisualElement class="court-eye court-eye-l"><ui:VisualElement class="court-pupil"/></ui:VisualElement>
+                        <ui:VisualElement class="court-eye court-eye-r"><ui:VisualElement class="court-pupil"/></ui:VisualElement>
+                        <ui:VisualElement name="court-brow-l" class="court-brow court-brow-l"/>
+                        <ui:VisualElement name="court-brow-r" class="court-brow court-brow-r"/>
+                        <ui:VisualElement name="court-mouth-l" class="court-mouth court-mouth-l"/>
+                        <ui:VisualElement name="court-mouth-r" class="court-mouth court-mouth-r"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="court-stage-right">
+                    <ui:VisualElement class="court-bubble">
+                        <ui:Label name="court-speaker" text="THE WORRY" class="bold court-speaker"/>
+                        <ui:Label name="court-speech" text="&quot;Everyone is ahead of me, so I'm not good enough.&quot;" class="court-speech"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="court-meter-row">
+                        <ui:VisualElement class="court-meter">
+                            <ui:Label name="court-meter-label" text="WORRY LEVEL  100%" class="court-muted"/>
+                            <ui:VisualElement class="court-meter-track"><ui:VisualElement name="court-meter-fill" class="court-meter-fill"/></ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement class="court-strikes-box">
+                            <ui:Label text="GAVEL STRIKES" class="court-muted"/>
+                            <ui:VisualElement name="court-strikes" class="court-strikes"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label text="A worry is a thought, not a fact. You can check it." class="court-muted court-tagline"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- The six steps -->
+            <ui:VisualElement name="court-steps" class="court-steps">
+                <ui:VisualElement name="court-step-0" class="court-step"><ui:Label text="Charge" class="court-step-label"/></ui:VisualElement>
+                <ui:VisualElement name="court-step-1" class="court-step"><ui:Label text="Prosecution" class="court-step-label"/></ui:VisualElement>
+                <ui:VisualElement name="court-step-2" class="court-step"><ui:Label text="Defense" class="court-step-label"/></ui:VisualElement>
+                <ui:VisualElement name="court-step-3" class="court-step"><ui:Label text="Friend" class="court-step-label"/></ui:VisualElement>
+                <ui:VisualElement name="court-step-4" class="court-step"><ui:Label text="Verdict" class="court-step-label"/></ui:VisualElement>
+                <ui:VisualElement name="court-step-5" class="court-step"><ui:Label text="Plan" class="court-step-label"/></ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- The round: one panel at a time -->
+            <ui:VisualElement class="court-round">
+                <!-- Charge -->
+                <ui:VisualElement name="p-intro" class="court-panel">
+                    <ui:Label name="intro-heading" text="Today's case: Everyone seems ahead" class="bold court-heading"/>
+                    <ui:Label name="intro-lead" text="You are the judge. A worry has been brought to court." class="court-lead"/>
+                    <ui:VisualElement class="court-card"><ui:Label name="intro-worry" text="&quot;Everyone is ahead of me, so I'm not good enough.&quot;" class="court-card-text"/></ui:VisualElement>
+                    <ui:Button name="intro-start" text="Open the trial" class="btn pale court-btn"/>
+                </ui:VisualElement>
+
+                <!-- Prosecution -->
+                <ui:VisualElement name="p-sort" class="court-panel hidden">
+                    <ui:Label name="sort-heading" text="Prosecution: evidence for the worry" class="bold court-heading"/>
+                    <ui:Label name="sort-lead" text="Is this a fact the court can check, or a feeling or a guess?" class="court-lead"/>
+                    <ui:Label name="sort-counter" text="EVIDENCE 1 OF 6" class="court-counter"/>
+                    <ui:VisualElement class="court-card"><ui:Label name="sort-card" text="They must think I'm slow." class="court-card-text"/></ui:VisualElement>
+                    <ui:VisualElement class="court-row">
+                        <ui:Button name="sort-fact" text="Fact" class="btn pale court-btn court-hintable"/>
+                        <ui:Button name="sort-guess" text="Feeling or guess" class="btn pale court-btn court-hintable"/>
+                    </ui:VisualElement>
+                    <ui:Label name="sort-feedback" text="" class="court-feedback"/>
+                    <ui:Button name="sort-next" text="Next evidence" class="btn pale court-btn"/>
+                </ui:VisualElement>
+
+                <!-- Defence -->
+                <ui:VisualElement name="p-defence" class="court-panel hidden">
+                    <ui:Label name="defence-heading" text="Defense: evidence against the worry" class="bold court-heading"/>
+                    <ui:Label name="defence-lead" text="Pick 3 facts that show the worry might not be true." class="court-lead"/>
+                    <ui:VisualElement name="defence-options" class="court-options"/>
+                    <ui:Label name="defence-feedback" text="" class="court-feedback"/>
+                    <ui:Button name="defence-continue" text="Call the Friend" class="btn pale court-btn"/>
+                </ui:VisualElement>
+
+                <!-- Friend / Verdict / Plan -->
+                <ui:VisualElement name="p-choice" class="court-panel hidden">
+                    <ui:Label name="choice-heading" text="The Friend takes the stand" class="bold court-heading"/>
+                    <ui:Label name="choice-lead" text="What would you tell them?" class="court-lead"/>
+                    <ui:VisualElement name="choice-options" class="court-options"/>
+                    <ui:Label name="choice-feedback" text="" class="court-feedback"/>
+                    <ui:Label name="choice-when" text="WHEN WILL YOU DO IT?" class="court-counter"/>
+                    <ui:VisualElement name="choice-times" class="court-row"/>
+                    <ui:Button name="choice-continue" text="To the verdict" class="btn pale court-btn"/>
+                </ui:VisualElement>
+
+                <!-- Case dismissed -->
+                <ui:VisualElement name="p-result" class="court-panel hidden">
+                    <ui:VisualElement class="court-result-head">
+                        <ui:Label name="result-heading" text="Case dismissed" class="bold court-heading"/>
+                        <ui:Label name="result-stars-text" text="3 of 3 stars" class="bold court-stars-text"/>
+                        <ui:VisualElement class="court-stars">
+                            <ui:VisualElement name="result-star-0" class="court-star"/>
+                            <ui:VisualElement name="result-star-1" class="court-star"/>
+                            <ui:VisualElement name="result-star-2" class="court-star"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="court-file">
+                        <ui:Label name="result-file" text="THE WORRY ON TRIAL" class="court-file-left"/>
+                        <ui:Label name="result-traps" text="THINKING TRAPS SPOTTED" class="court-file-right"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="court-row">
+                        <ui:Button name="result-next" text="Next case" class="btn pale court-btn"/>
+                        <ui:Button name="result-replay" text="Replay this case" class="btn pale court-btn"/>
+                        <ui:Button name="result-continue" text="Continue" class="btn pale court-btn"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Recess -->
+                <ui:VisualElement name="p-recess" class="court-panel hidden">
+                    <ui:Label name="recess-heading" text="Recess" class="bold court-heading"/>
+                    <ui:Label name="recess-body" text="Three gavel strikes. The judge calls a short break." class="court-recess-body"/>
+                    <ui:Button name="recess-continue" text="Back to court" class="btn pale court-btn"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:Label text="For learning and reflection, not a replacement for professional care. NCMH Crisis Hotline: 1553" class="court-muted court-footer"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="Choice_new.uss" />
+    <ui:VisualElement name="choice-screen" class="choice-new">
+        <ui:VisualElement name="choice-card" class="choice-card">
+            <ui:ScrollView name="choice-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" class="choice-scroll">
+                <ui:Label name="choice-title" text="DECISION" class="choice-title" />
+                <ui:Label name="choice-question" text="What will you do?" class="choice-question" />
+                <ui:VisualElement name="choice-options" class="choice-options">
+                    <ui:Button class="choice-option" focusable="false">
+                        <ui:Label text="1" picking-mode="Ignore" class="choice-key" />
+                        <ui:Label text="I'll finish everything tonight." picking-mode="Ignore" class="choice-text" />
+                        <ui:Label text="›" picking-mode="Ignore" class="choice-arrow" />
+                    </ui:Button>
+                    <ui:Button class="choice-option" focusable="false">
+                        <ui:Label text="2" picking-mode="Ignore" class="choice-key" />
+                        <ui:Label text="I'll start with one task first." picking-mode="Ignore" class="choice-text" />
+                        <ui:Label text="›" picking-mode="Ignore" class="choice-arrow" />
+                    </ui:Button>
+                </ui:VisualElement>
+                <ui:Label name="choice-hint" text="Click an option or press its number" class="choice-hint" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,66 @@
+/* Story choice panel (Choice.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+.choice-screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-card {
+    --paper: #F2E8D1;
+    --gold: #DBB36F;
+
+    width: 56%;
+    padding: 28px 50px 14px 50px;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: var(--paper);
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* pre-wrap keeps the double spaces the story text uses as gaps ("STRESS CHECK-IN  ·  BEFORE"). */
+.choice-card Label { padding: 0; margin-left: 0; margin-right: 0; white-space: pre-wrap; }
+
+.choice-title { color: var(--gold); font-size: 12px; letter-spacing: 0.5px; margin-bottom: 16px; }
+
+.choice-question {
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+/* One button per answer: the number key, then the answer. */
+.choice-option {
+    flex-direction: row;
+    align-items: center;
+    min-height: 44px;
+    margin: 0 0 7px 0;
+    padding: 6px 20px 6px 20px;
+    background-color: var(--gold);
+    border-width: 0;
+    border-radius: 0;
+    color: #1D2B2F;
+    -unity-text-align: middle-left;
+    transition-property: background-color, translate;
+    transition-duration: 0.1s;
+}
+
+.choice-option:hover { background-color: #EBC583; translate: 3px 0; }
+.choice-option:active { background-color: #B39260; }
+
+.choice-key {
+    width: 26px;
+    font-size: 17px;
+    color: rgba(29, 43, 47, 0.55);
+    -unity-font-style: bold;
+}
+
+.choice-text { flex-grow: 1; flex-shrink: 1; font-size: 17px; }
+
+.choice-hint { color: #C4B8A0; font-size: 11px; margin-top: 8px; }
+.assessment-privacy-notice { color: #F2E8D1; font-size: 16px; margin-bottom: 18px; white-space: normal; }
+.assessment-consent { color: #F2E8D1; font-size: 17px; margin-bottom: 16px; }
+.choice-option:disabled { opacity: 0.5; }

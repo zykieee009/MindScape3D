@@ -1,0 +1,256 @@
+/* Phone chat (PhoneChat.uxml): a text conversation shown up close, e.g. Justin's invitation in Chapter 3.
+   Code adds .phone-row.incoming / .phone-row.outgoing bubbles to #phone-messages (newest at the bottom).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* The phone fills 90% of the screen height in the middle, over a dark overlay. */
+.phone-screen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(4, 6, 8, 0.88);
+}
+
+.phone {
+    width: 318px;
+    height: 90%;
+    padding: 11px;
+    border-radius: 50px;
+    background-color: #15191C;
+    border-width: 2px;
+    border-color: #3A4247;
+}
+
+.phone-display {
+    flex-grow: 1;
+    border-radius: 41px;
+    overflow: hidden;
+    background-color: #E9E4DA;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* Labels start without padding or margins; the rules below that set margins are written as
+   ".phone-display .x" so they outrank this one. */
+.phone-display Label { padding: 0; margin: 0; white-space: normal; }
+
+/* Status bar with the camera notch. */
+.phone-statusbar {
+    height: 38px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 26px;
+    background-color: #1D2B2F;
+}
+
+.phone-statusbar-text { color: #F2E8D1; font-size: 13px; -unity-font-style: bold; width: 60px; }
+.phone-statusbar-right { -unity-text-align: middle-right; }
+.phone-notch { width: 92px; height: 22px; border-radius: 11px; background-color: #0B0D0E; }
+
+/* The chat fills the display below the status bar. */
+.phone-chat { flex-grow: 1; }
+
+/* Lock screen: the big clock with the date, then notification cards. */
+.phone-lock {
+    flex-grow: 1;
+    align-items: center;
+    padding: 34px 14px 12px 14px;
+    background-color: #22363C;
+}
+
+.phone-lock.dim { background-color: #0B1113; }
+.phone-lock.dim Label { opacity: 0.55; }
+
+.phone-display .phone-lock-date { color: #DCE6E2; font-size: 17px; letter-spacing: 0.5px; }
+.phone-display .phone-lock-time { color: #F2E8D1; font-size: 84px; -unity-font-style: bold; margin-top: -4px; margin-bottom: 26px; }
+
+.phone-notifications { align-self: stretch; flex-grow: 1; }
+
+.phone-notification {
+    margin-bottom: 10px;
+    padding: 12px 14px 14px 14px;
+    border-radius: 20px;
+    background-color: rgba(242, 232, 209, 0.95);
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.phone-notification.arriving { opacity: 0; translate: 0 -12px; }
+
+.phone-notification-app { flex-direction: row; align-items: center; margin-bottom: 7px; }
+
+.phone-display .phone-notification-icon {
+    width: 22px; height: 22px;
+    border-radius: 6px;
+    margin-right: 8px;
+    background-color: #1D2B2F;
+    color: #DBB36F;
+    font-size: 12px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.phone-notification-name { flex-grow: 1; color: #2A7A7A; font-size: 12px; -unity-font-style: bold; letter-spacing: 1px; }
+.phone-notification-when { color: #7A8587; font-size: 12px; }
+.phone-notification-title { color: #1D2B2F; font-size: 19px; -unity-font-style: bold; }
+.phone-display .phone-notification-body { color: #34454A; font-size: 16px; margin-top: 3px; }
+
+.phone-display .phone-lock-empty { color: #A7B6B2; font-size: 15px; margin-bottom: 18px; }
+
+.phone-lock-bar { width: 120px; height: 5px; border-radius: 3px; background-color: rgba(242, 232, 209, 0.6); }
+
+/* Contact header. */
+.phone-header {
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 16px 0 10px;
+    background-color: #1D2B2F;
+    border-bottom-width: 1px;
+    border-color: rgba(219, 179, 111, 0.35);
+}
+
+.phone-display .phone-back { color: #DBB36F; font-size: 32px; width: 22px; -unity-text-align: middle-center; margin-right: 4px; }
+
+.phone-display .phone-avatar {
+    width: 46px; height: 46px;
+    border-radius: 23px;
+    background-color: #DBB36F;
+    color: #1D2B2F;
+    font-size: 21px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-right: 12px;
+}
+
+.phone-name { color: #F2E8D1; font-size: 19px; -unity-font-style: bold; }
+.phone-display .phone-status { color: #9FC7B9; font-size: 13px; margin-top: 1px; }
+
+/* Messages, newest at the bottom; older ones scroll off the top. */
+.phone-messages {
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 12px 12px 6px 12px;
+}
+
+.phone-display .phone-day {
+    align-self: center;
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    border-radius: 9px;
+    background-color: rgba(29, 43, 47, 0.12);
+    color: #5B6A6E;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.phone-row {
+    flex-direction: row;
+    margin-bottom: 9px;
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.phone-row.arriving { opacity: 0; translate: 0 14px; }
+.phone-row.incoming { justify-content: flex-start; }
+.phone-row.outgoing { justify-content: flex-end; }
+
+.phone-bubble {
+    max-width: 82%;
+    padding: 10px 13px 6px 13px;
+    border-radius: 18px;
+}
+
+.incoming .phone-bubble { background-color: #FFFFFF; border-bottom-left-radius: 4px; }
+.outgoing .phone-bubble { background-color: #DBB36F; border-bottom-right-radius: 4px; }
+
+.phone-bubble-text { color: #1D2B2F; font-size: 17px; }
+.phone-display .phone-bubble-time { color: rgba(29, 43, 47, 0.5); font-size: 11px; -unity-text-align: middle-right; margin-top: 4px; }
+
+/* "Justin is typing…" bubble, shown before an incoming message. */
+.phone-typing { margin: 0 12px 8px 12px; }
+.phone-typing-dots { color: #8A979A; font-size: 19px; -unity-font-style: bold; }
+
+/* Reply suggestions: the player's choices, picked by click or number key (PhoneChoose). The sample buttons in the
+   UXML are replaced by code. */
+.phone-replies {
+    padding: 10px 12px 4px 12px;
+    border-top-width: 1px;
+    border-color: rgba(29, 43, 47, 0.12);
+    background-color: #DED7C9;
+}
+
+.phone-reply {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 8px 0;
+    padding: 9px 12px 9px 9px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-color: rgba(29, 43, 47, 0.18);
+    background-color: #FFFFFF;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.1s;
+}
+
+.phone-reply:hover { background-color: #FFF4DE; border-color: #DBB36F; }
+.phone-reply:active { scale: 0.98; }
+
+.phone-display .phone-reply-key {
+    width: 26px; height: 26px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 13px;
+    background-color: #1D2B2F;
+    color: #DBB36F;
+    font-size: 14px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
+
+.phone-display .phone-reply-text { flex-shrink: 1; color: #1D2B2F; font-size: 15px; -unity-text-align: middle-left; }
+
+/* The (decorative) message box. */
+.phone-input {
+    height: 54px;
+    flex-direction: row;
+    align-items: center;
+    margin: 4px 10px 14px 10px;
+    padding: 0 7px 0 18px;
+    border-radius: 27px;
+    background-color: #FFFFFF;
+}
+
+.phone-input-text { flex-grow: 1; color: #9AA4A6; font-size: 15px; }
+
+.phone-send {
+    width: 40px; height: 40px;
+    border-radius: 20px;
+    background-color: #1D2B2F;
+    color: #DBB36F;
+    font-size: 16px;
+    -unity-text-align: middle-center;
+}
+
+/* Shown below the phone while a message waits to be read. */
+.phone-hint {
+    position: absolute;
+    bottom: 0.6%;
+    padding: 4px 14px;
+    border-radius: 14px;
+    background-color: rgba(29, 43, 47, 0.9);
+    color: #DBB36F;
+    font-size: 13px;
+    white-space: pre-wrap;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}

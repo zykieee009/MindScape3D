@@ -1,0 +1,29 @@
+/* Key prompt (InteractPrompt.uxml), used for both [ E ] interact and [ E ] talk.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.hidden { display: none; }
+
+/* Bottom centre on any screen size: left 50% + translate -50% centres it whatever its width. */
+.prompt {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    translate: -50% 0;
+    min-width: 373px;
+    height: 39px;
+    padding: 0 20px 0 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(29, 43, 47, 0.97);
+    color: #F2E8D1;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* The NPC talk prompt sits a row higher, so it never covers an interact prompt shown at the same time. */
+.prompt.raised { bottom: 70px; }
+
+/* The door prompt sits another row up, so the interact, talk and door prompts can all show at once. */
+.prompt.doors { bottom: 116px; }
+
+/* pre-wrap keeps the double space after the key ("[ E ]  Check your phone"). */
+.prompt-text { padding: 0; margin: 0; white-space: pre-wrap; font-size: 17px; -unity-text-align: middle-center; }

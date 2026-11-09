@@ -1,0 +1,32 @@
+/* Full-screen story card (StoryCard.uxml).
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings.
+   Its opacity is set by code to follow the episode's screen fade, so a fading-in story fades the card in too. */
+
+.hidden { display: none; }
+
+.story-card {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(9, 11, 13, 0.96);
+    color: #F2E8D1;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Regular");
+}
+
+/* pre-wrap keeps the double spaces the story text uses as gaps ("CHAPTER 1  ·  ACADEMIC PRESSURE"). */
+.story-card Label { padding: 0; margin: 0; white-space: pre-wrap; -unity-text-align: middle-center; }
+
+.card-text {
+    width: 76%;
+    -unity-font-definition: resource("MainMenuNew/StorySerif");
+    font-size: 39px;
+}
+
+/* Below the text, near the bottom. */
+.card-hint {
+    position: absolute;
+    left: 0; right: 0; bottom: 20%;
+    color: #DBB36F;
+    font-size: 13px;
+}

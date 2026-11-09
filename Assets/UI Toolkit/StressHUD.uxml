@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Style src="project://database/Assets/UI%20Toolkit/StressHUD.uss?fileID=7433441132597879392&amp;guid=6d95fce2d3e34468a5fb7d084a3c1e6b&amp;type=3#StressHUD"/>
+    <ui:VisualElement name="stress-hud" class="stress-hud">
+        <ui:VisualElement class="stress-topline">
+            <ui:Label text="STRESS LEVEL" class="stress-title"/>
+            <ui:Label text="STEADY" name="stress-state" class="stress-state"/>
+        </ui:VisualElement>
+        <ui:Label text="CRITICAL  10s" name="stress-critical-timer" class="stress-critical-timer hidden"/>
+        <ui:VisualElement class="stress-track">
+            <ui:VisualElement name="stress-fill" class="stress-fill"/>
+            <ui:VisualElement class="stress-tick tick-mid"/>
+            <ui:VisualElement class="stress-tick tick-high"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="stress-bottomline">
+            <ui:Label text="PRESSURE" class="stress-caption"/>
+            <ui:Label text="10 / 100" name="stress-value" class="stress-value"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

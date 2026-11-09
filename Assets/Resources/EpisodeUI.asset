@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c50c4f3d47a4da38bb97c72f6381a7, type: 3}
+  m_Name: EpisodeUI
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.AcademicPressure.EpisodeUI
+  panelSettings: {fileID: 11400000, guid: df8eb866d6d15470bb3f1cc3250d0a4e, type: 2}
+  objective: {fileID: 9197481963319205126, guid: a86057d395b5c4368905ad09a0285648, type: 3}
+  status: {fileID: 9197481963319205126, guid: 4e2b47961ef974127ad125363e3bdb74, type: 3}
+  dialogue: {fileID: 9197481963319205126, guid: 2f9dbe0f63ee94929aeac1091a2bbc28, type: 3}
+  choice: {fileID: 9197481963319205126, guid: 6eea35a53caa14ceb8a7114901efb325, type: 3}
+  storyCard: {fileID: 9197481963319205126, guid: b9c69641a9b4d461a8e138b89e20fe8d, type: 3}
+  complete: {fileID: 9197481963319205126, guid: f6bc91fdceef84ca6bd3474b462a2025, type: 3}
+  pauseMenu: {fileID: 9197481963319205126, guid: 80fda6b8177904763868eb8ae1954380, type: 3}
+  npcDialogue: {fileID: 9197481963319205126, guid: bdd26611b905c401aa36f995d2ea083d, type: 3}
+  interactPrompt: {fileID: 9197481963319205126, guid: 569f317db6ebc41d59e036aae70b873f, type: 3}
+  flashback: {fileID: 9197481963319205126, guid: 804c6c0331e744a1884f0152dea87773, type: 3}
+  phoneChat: {fileID: 9197481963319205126, guid: bfe33d08c571147719a8210a22d6b6f7, type: 3}
+  photograph: {fileID: 9197481963319205126, guid: 941e1c13614644c3fa95f5aebf974258, type: 3}
+  textEntry: {fileID: 9197481963319205126, guid: 9682d9abe7e814ab98b5883446577570, type: 3}
+  screenFade: {fileID: 9197481963319205126, guid: 342ee197adb034110a7bed4beab02612, type: 3}
+  examPaper: {fileID: 9197481963319205126, guid: 98b5ba791a2d24a2c9710c3f16403e9a, type: 3}
+  thoughtJournal: {fileID: 9197481963319205126, guid: a69544a1e72434f0285302917b29102c, type: 3}
+  laptopTasks: {fileID: 9197481963319205126, guid: 71c1b3cb97865415cb900416fcab890a, type: 3}
+  breathing: {fileID: 9197481963319205126, guid: aee434c5c00514d1a82c2e82ee93f6b6, type: 3}
+  worryCourtroom: {fileID: 9197481963319205126, guid: b6d89a3944e8a4162a47f67bb0c04fe6, type: 3}
+  crosshair: {fileID: 9197481963319205126, guid: 2f641481783de494d870978fb463cc46, type: 3}

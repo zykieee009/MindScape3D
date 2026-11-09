@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- The guided breathing exercise (BreathingMinigame): a ring, a circle that opens on the in-breath and settles on
+         the out-breath, the phase and a hint, the time left and a Close button. BreathingMinigame sets the text, the
+         circle's size and colours and the progress bar from code; keep the names. The text is sample text for UI Builder. -->
+    <Style src="EpisodeScreens.uss"/>
+    <Style src="Breathing.uss"/>
+    <ui:VisualElement name="breathing-root" class="screen hidden">
+        <ui:Label name="breathing-eyebrow" text="MINDSCAPE / BREATHING EXERCISE" class="breathing-eyebrow"/>
+        <ui:Label name="breathing-title" text="BREATHE" class="serif breathing-title"/>
+
+        <ui:Label name="breathing-ready-count" text="5" class="serif breathing-ready-count hidden"/>
+        <ui:VisualElement name="breathing-ring" picking-mode="Ignore" class="disc breathing-ring"/>
+        <ui:VisualElement name="breathing-circle" picking-mode="Ignore" class="disc breathing-circle">
+            <ui:VisualElement name="breathing-core" picking-mode="Ignore" class="disc breathing-core">
+                <ui:Label name="breathing-count" text="4" class="serif breathing-count"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Label name="breathing-phase" text="Breathe in" class="serif breathing-phase"/>
+        <ui:Label name="breathing-hint" text="Let the air arrive." class="breathing-hint"/>
+
+        <ui:VisualElement class="breathing-track">
+            <ui:VisualElement name="breathing-fill" class="breathing-fill"/>
+        </ui:VisualElement>
+        <ui:Label name="breathing-timer" text="00:30" class="breathing-timer"/>
+
+        <ui:Button name="breathing-close" text="Close" class="breathing-close"/>
+    </ui:VisualElement>
+</ui:UXML>

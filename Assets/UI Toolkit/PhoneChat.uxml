@@ -1,0 +1,66 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="PhoneChat.uss"/>
+    <ui:VisualElement name="phone-screen" class="phone-screen">
+        <ui:VisualElement name="phone" class="phone">
+            <ui:VisualElement class="phone-display">
+                <ui:VisualElement class="phone-statusbar">
+                    <ui:Label name="phone-clock" text="7:42" class="phone-statusbar-text"/>
+                    <ui:VisualElement class="phone-notch"/>
+                    <ui:Label text="5G  ▮▮▮" class="phone-statusbar-text phone-statusbar-right"/>
+                </ui:VisualElement>
+                <!-- Lock screen: the time, the date and notifications (OpenPhoneLock / PhoneNotification). -->
+                <ui:VisualElement name="phone-lock" class="phone-lock">
+                    <ui:Label name="phone-lock-date" text="Monday" class="phone-lock-date"/>
+                    <ui:Label name="phone-lock-time" text="7:12" class="phone-lock-time"/>
+                    <ui:Label name="phone-lock-empty" text="No new notifications" class="phone-lock-empty"/>
+                    <ui:VisualElement name="phone-notifications" class="phone-notifications">
+                        <ui:VisualElement class="phone-notification">
+                            <ui:VisualElement class="phone-notification-app">
+                                <ui:Label text="R" class="phone-notification-icon"/>
+                                <ui:Label text="REMINDER" class="phone-notification-name"/>
+                                <ui:Label text="now" class="phone-notification-when"/>
+                            </ui:VisualElement>
+                            <ui:Label text="Research Project Submission" class="phone-notification-title"/>
+                            <ui:Label text="Tomorrow  —  11:59 PM" class="phone-notification-body"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="phone-lock-bar"/>
+                </ui:VisualElement>
+                <!-- Chat: a conversation with one contact (OpenPhone / PhoneMessage / PhoneChoose). -->
+                <ui:VisualElement name="phone-chat" class="phone-chat">
+                    <ui:VisualElement class="phone-header">
+                        <ui:Label text="‹" class="phone-back"/>
+                        <ui:Label name="phone-avatar" text="J" class="phone-avatar"/>
+                        <ui:VisualElement class="phone-contact">
+                            <ui:Label name="phone-name" text="Justin" class="phone-name"/>
+                            <ui:Label name="phone-status" text="online" class="phone-status"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="phone-messages" class="phone-messages">
+                        <ui:Label text="TODAY" class="phone-day"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="phone-typing" class="phone-row incoming phone-typing">
+                        <ui:VisualElement class="phone-bubble">
+                            <ui:Label text="•  •  •" class="phone-typing-dots"/>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="phone-replies" class="phone-replies">
+                        <ui:Button class="phone-reply">
+                            <ui:Label text="1" class="phone-reply-key"/>
+                            <ui:Label text="Sure! I'll try to come." class="phone-reply-text"/>
+                        </ui:Button>
+                        <ui:Button class="phone-reply">
+                            <ui:Label text="2" class="phone-reply-key"/>
+                            <ui:Label text="I'm not sure yet. I have a few things to think about." class="phone-reply-text"/>
+                        </ui:Button>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="phone-input">
+                        <ui:Label name="phone-input-text" text="Message" class="phone-input-text"/>
+                        <ui:Label text="➤" class="phone-send"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:Label name="phone-hint" text="Continue  [Space]" class="phone-hint"/>
+    </ui:VisualElement>
+</ui:UXML>

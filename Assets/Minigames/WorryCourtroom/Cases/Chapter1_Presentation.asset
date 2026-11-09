@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5220fb8d6e35e40eb815b9d4b4964988, type: 3}
+  m_Name: Chapter1_Presentation
+  m_EditorClassIdentifier: Assembly-CSharp::Mindscape.Minigames.WorryCourtroomCase
+  chapterLabel: Chapter 1
+  caseName: The presentation
+  worry: I'll mess up my presentation and everyone will laugh.
+  evidence:
+  - text: I stumbled over a word during practice.
+    isFact: 1
+    trap: 0
+  - text: Everyone will laugh at me.
+    isFact: 0
+    trap: 2
+  - text: My voice shook a little during rehearsal.
+    isFact: 1
+    trap: 0
+  - text: One mistake will ruin everything.
+    isFact: 0
+    trap: 4
+  - text: I feel like I'm going to freeze, so I will.
+    isFact: 0
+    trap: 5
+  - text: I'm terrible at speaking.
+    isFact: 0
+    trap: 6
+  defence:
+  - text: I practiced twice, and the second run went better.
+    isGood: 1
+    whyNot: 
+  - text: Classmates have made small mistakes before and moved on.
+    isGood: 1
+    whyNot: 
+  - text: I can bring note cards to help me.
+    isGood: 1
+    whyNot: 
+  - text: Slow breathing before I start helps me stay calm.
+    isGood: 1
+    whyNot: 
+  - text: I'll tell the teacher I'm sick and skip it.
+    isGood: 0
+    whyNot: That avoids the fear and doesn't test the worry.
+  - text: Nobody will really be listening anyway.
+    isGood: 0
+    whyNot: That is a guess, and it doesn't help you feel ready.
+  friend:
+  - text: Feeling nervous is normal. Practice once more and take it one slide at
+      a time.
+    isGood: 1
+    whyNot: 
+  - text: Don't bother. You'll embarrass yourself.
+    isGood: 0
+    whyNot: A good friend wouldn't predict the worst for you.
+  - text: Just don't be nervous.
+    isGood: 0
+    whyNot: Nobody can switch nerves off. Normal and okay is kinder.
+  verdict:
+  - text: I might feel nervous and still do a good enough job. Small mistakes are
+      okay.
+    isGood: 1
+    whyNot: 
+  - text: It has to be perfect or I fail.
+    isGood: 0
+    whyNot: All-or-nothing thinking. Good enough is the goal.
+  - text: I should avoid the presentation entirely.
+    isGood: 0
+    whyNot: Avoiding keeps the worry alive. It doesn't answer it.
+  - text: I'm not nervous at all, so I don't need to prepare.
+    isGood: 0
+    whyNot: Pretending skips the real feeling and the real preparation.
+  plan:
+  - text: Practice in front of a mirror or a friend tonight.
+    isGood: 1
+    whyNot: 
+  - text: Write my key points on note cards.
+    isGood: 1
+    whyNot: 
+  - text: Memorize every word perfectly.
+    isGood: 0
+    whyNot: Perfect is a trap. Aim for good enough.
+  - text: Hope it goes fine.
+    isGood: 0
+    whyNot: Hope isn't an action. Pick something you can do.
+  trapInfo:
+  - trap: 1
+    displayName: Mind reading
+    description: Assuming you know what other people think without checking.
+  - trap: 2
+    displayName: Fortune telling
+    description: Predicting the future as if it were already certain.
+  - trap: 3
+    displayName: All-or-nothing
+    description: Seeing things in extremes, like always, never, perfect, or ruined.
+  - trap: 4
+    displayName: Catastrophizing
+    description: Jumping to the worst possible outcome.
+  - trap: 5
+    displayName: Emotional reasoning
+    description: Treating a feeling as proof that something is true.
+  - trap: 6
+    displayName: Labeling
+    description: Calling yourself a harsh name because of one event.
+  introLead: 
+  defenceLead: 
+  friendPrompt: 
+  verdictPrompt: 
+  planPrompt: 

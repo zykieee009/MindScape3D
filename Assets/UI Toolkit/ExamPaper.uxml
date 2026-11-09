@@ -1,0 +1,65 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Chapter 2 · Episode 3 · the examination: the paper with its question rail, the grounding break, and the
+         "hand it in?" prompt. FamilyExamEpisode fills in the text and hooks up the buttons; keep the names.
+         The text is sample text for UI Builder. -->
+    <Style src="EpisodeScreens.uss"/>
+    <Style src="ExamPaper.uss"/>
+    <ui:VisualElement name="exam-root" picking-mode="Ignore" class="screen hidden">
+
+        <!-- The paper -->
+        <ui:VisualElement name="exam-screen" class="screen exam-screen">
+            <ui:VisualElement class="exam-status panel-ink">
+                <ui:Label name="exam-thought" text="What if I can't finish?  ·  Press B for a 5-4-3-2-1 grounding break." class="exam-thought"/>
+                <ui:Label name="exam-clock" text="03:00  REMAINING" class="exam-clock"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="exam-rail panel-ink">
+                <ui:Label text="YOUR PAPER" class="rail-title"/>
+                <ui:Button name="exam-q-0" text="01  —" class="btn teal rail-btn selected"/>
+                <ui:Button name="exam-q-1" text="02  —" class="btn teal rail-btn"/>
+                <ui:Button name="exam-q-2" text="03  —" class="btn teal rail-btn"/>
+                <ui:Button name="exam-q-3" text="04  —" class="btn teal rail-btn"/>
+                <ui:Button name="exam-q-4" text="05  —" class="btn teal rail-btn"/>
+                <ui:Label text="DONE  Answered&#10;•  Review later&#10;&#10;Start anywhere." class="rail-legend"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="exam-sheet panel-paper">
+                <ui:Label text="GENERAL STUDIES" class="serif sheet-title"/>
+                <ui:Label name="exam-progress" text="QUESTION 01   /   0 OF 5 ANSWERED" class="sheet-progress"/>
+                <ui:Label name="exam-question" text="A notebook costs 24 pesos. How much do three notebooks cost?" class="serif sheet-question"/>
+                <ui:Button name="exam-a-0" text="1   48 pesos" class="btn pale answer"/>
+                <ui:Button name="exam-a-1" text="2   72 pesos" class="btn pale answer"/>
+                <ui:Button name="exam-a-2" text="3   96 pesos" class="btn pale answer"/>
+                <ui:Label text="Choose 1–3  ·  ← → change question  ·  Answers can be revised" class="sheet-hint"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="exam-actions">
+                <ui:Button name="exam-flag" text="Mark for review" class="btn pale action"/>
+                <ui:Button name="exam-ground" text="Grounding  [B]" class="btn pale action"/>
+                <ui:Button name="exam-submit" text="Hand in paper" class="btn action last"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- A short 5-4-3-2-1 grounding break -->
+        <ui:VisualElement name="grounding-screen" class="screen centered hidden">
+            <ui:VisualElement class="dialog panel-ink">
+                <ui:Label name="ground-count" text="5-4-3-2-1 GROUNDING  /  5  ·  SEE  /  STEP 1 OF 5" class="eyebrow"/>
+                <ui:Label name="ground-text" text="Look around and find five things you can see." class="serif dialog-title"/>
+                <ui:Button name="ground-button" text="I see five things  [Space]" class="btn dialog-button"/>
+                <ui:Label text="The examination clock pauses while you take this moment." class="dialog-note"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Hand it in? -->
+        <ui:VisualElement name="confirm-screen" class="screen centered hidden">
+            <ui:VisualElement class="dialog panel-ink">
+                <ui:Label text="Ready to hand it in?" class="serif dialog-title"/>
+                <ui:Label name="confirm-text" text="3 of 5 questions answered." class="dialog-body"/>
+                <ui:VisualElement class="dialog-row">
+                    <ui:Button name="confirm-back" text="Return to paper" class="btn pale dialog-half"/>
+                    <ui:Button name="confirm-ok" text="Hand it in" class="btn dialog-half last"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

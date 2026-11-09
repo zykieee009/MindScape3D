@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Dialogue.uss?fileID=7433441132597879392&amp;guid=c2134a4ec5f9949729ebdb8ba041cb9d&amp;type=3#Dialogue"/>
+    <ui:VisualElement name="dialogue" class="dialogue" style="background-color: rgba(0, 0, 0, 0.97);">
+        <ui:VisualElement class="dialogue-text">
+            <ui:Label name="dialogue-speaker" text="BOKZ  /  THINKING" class="dialogue-speaker"/>
+            <ui:Label name="dialogue-speech" text="Morning already.&#10;Before anything else, I should check my phone." class="dialogue-speech"/>
+        </ui:VisualElement>
+        <ui:Button name="dialogue-continue" text="Continue  [Space]" class="dialogue-continue" style="border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px;"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/EpisodeStatus.uss?fileID=7433441132597879392&amp;guid=653a9b8c454364795984090968257194&amp;type=3#EpisodeStatus"/>
+    <ui:VisualElement name="status" class="status" style="top: 21px;">
+        <ui:Label name="status-timer" text="TIME LEFT  11:50" class="status-timer"/>
+        <ui:VisualElement class="status-row">
+            <ui:VisualElement name="status-track" class="status-track">
+                <ui:VisualElement name="status-fill" class="status-fill" style="background-color: rgb(255, 246, 0);"/>
+            </ui:VisualElement>
+            <ui:Label name="status-stress" text="STRESS  25" class="status-stress"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

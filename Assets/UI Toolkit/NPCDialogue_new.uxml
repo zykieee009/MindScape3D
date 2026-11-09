@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="NPCDialogue_new.uss" />
+    <!-- Preview content for UI Builder; NPCInteractionManager supplies the live dialogue and replies. -->
+    <ui:VisualElement name="npc-dialogue" class="npc-dialogue-new">
+        <ui:ScrollView name="npc-scroll" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Auto" class="npc-scroll">
+            <ui:Label name="npc-speaker" text="DAD" class="npc-speaker" />
+            <ui:Label name="npc-text" text="Hey, kiddo. I'm just reading for a bit." class="npc-text" />
+            <ui:VisualElement name="npc-choices" class="npc-choices">
+                <ui:Button class="npc-choice" focusable="false">
+                    <ui:Label text="1" picking-mode="Ignore" class="npc-key" />
+                    <ui:Label text="What are you reading?" picking-mode="Ignore" class="npc-reply-text" />
+                    <ui:Label text="›" picking-mode="Ignore" class="npc-arrow" />
+                </ui:Button>
+                <ui:Button class="npc-choice" focusable="false">
+                    <ui:Label text="2" picking-mode="Ignore" class="npc-key" />
+                    <ui:Label text="See you later." picking-mode="Ignore" class="npc-reply-text" />
+                    <ui:Label text="›" picking-mode="Ignore" class="npc-arrow" />
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:Label name="npc-hint" text="Choose a reply · Click or press its number" class="npc-hint" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

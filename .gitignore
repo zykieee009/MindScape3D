@@ -1,0 +1,72 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Unity generated files
+*.csproj
+*.sln
+*.slnx
+*.pidb
+*.booproj
+*.svd
+*.user
+*.userprefs
+*.unityproj
+*.tmp
+*.pidb.meta
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.agents
+
+
+# Unity crash and memory captures
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Cc]rash[Rr]eports/
+sysinfo.txt
+
+# Unity asset store tools
+/[Aa]ssets/AssetStoreTools*
+
+# Visual Studio / Rider / VS Code
+/.vs/
+/.idea/
+/.vscode/
+*.csproj.DotSettings
+*.csproj.DotSettings.user
+/docs
+
+# OS generated files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local environment files
+.env
+.env.*
+!.env.example
+/GeneratedAssets
+/Assets/TextMesh Pro/Examples & Extras/
+/Assets/TextMesh Pro/Examples & Extras.meta
+/scripts
+.claude
+.vscode
+/UI
+/exports
+/Captures
+/Documentations
+/Blender Files
+video-introduction.mp4
+.changes
+/fix-list
+
+# WebGL build staged for `vercel --prod`
+/webgl-play

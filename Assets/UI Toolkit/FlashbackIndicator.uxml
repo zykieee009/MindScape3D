@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- Flashback indicator (AcademicEpisode): a warm frame over the scene and a "FLASHBACK" badge in the top-right
+         corner. Shown for a whole flashback episode (Chapter 2 Episodes 2-3) and for short memory moments inside
+         others. The text is sample text for UI Builder. Elements with a name are looked up by code, so keep the names. -->
+    <Style src="FlashbackIndicator.uss"/>
+    <ui:VisualElement name="flashback" picking-mode="Ignore" class="flashback">
+        <ui:VisualElement name="flashback-tint" picking-mode="Ignore" class="flashback-tint">
+            <ui:VisualElement picking-mode="Ignore" class="flashback-line"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="flashback-badge" picking-mode="Ignore" class="flashback-badge">
+            <ui:Label name="flashback-label" text="FLASHBACK" picking-mode="Ignore" class="flashback-label"/>
+            <ui:Label name="flashback-when" text="Examination morning" picking-mode="Ignore" class="flashback-when"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

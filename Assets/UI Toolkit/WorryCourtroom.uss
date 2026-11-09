@@ -1,0 +1,171 @@
+/* Worry Courtroom (WorryCourtroom.uxml). Colours and fonts come from EpisodeScreens.uss; the minigame sets the
+   status colours (answers, steps, strikes, stars) from the CourtColors on its component.
+   Sizes are in pixels at the 1280x720 reference resolution of EpisodePanelSettings. */
+
+.court-art {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+/* The woodland under a warm ink veil, like the other minigames. */
+.court-shade {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(48, 45, 40, 0.93);
+}
+
+.court-content {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    padding: 10px 30px 8px 30px;
+}
+
+.court-muted { color: #BCAB8D; font-size: 15px; }
+
+/* ---- Header ---- */
+.court-header { flex-direction: row; align-items: center; height: 60px; margin-bottom: 6px; }
+.court-titles { flex-grow: 0; width: 330px; }
+.court-eyebrow { font-size: 14px; color: #D1A84F; letter-spacing: 0.7px; }
+.court-title { font-size: 34px; color: #F0E4CC; }
+.court-tabs { flex-direction: row; flex-grow: 1; align-items: center; }
+.court-tab { height: 40px; width: 190px; margin-right: 8px; font-size: 15px; }
+.court-exit { margin-left: auto; width: 110px; height: 42px; font-size: 17px; -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold"); }
+
+/* ---- Stage ---- */
+.court-stage {
+    flex-direction: row;
+    height: 188px;
+    padding: 10px 14px 8px 14px;
+    background-color: rgba(44, 31, 23, 0.94);
+}
+.court-figure-slot { width: 190px; align-items: center; justify-content: flex-end; }
+.court-figure { width: 150px; height: 150px; transform-origin: 50% 100%; }
+.court-body {
+    position: absolute; left: 4px; top: 4px; width: 142px; height: 146px;
+    border-radius: 50%;
+    background-color: rgb(122, 106, 160);
+}
+.court-eye {
+    position: absolute; top: 50px; width: 28px; height: 28px;
+    border-radius: 50%;
+    background-color: rgb(246, 239, 224);
+    align-items: center; justify-content: center;
+}
+.court-eye-l { left: 37px; }
+.court-eye-r { left: 85px; }
+.court-pupil { width: 12px; height: 12px; border-radius: 50%; background-color: rgb(34, 26, 20); margin-top: 2px; }
+.court-brow { position: absolute; top: 42px; width: 33px; height: 6px; background-color: rgb(34, 26, 20); }
+.court-brow-l { left: 34px; }
+.court-brow-r { left: 82px; }
+.court-mouth { position: absolute; top: 106px; width: 25px; height: 5px; background-color: rgb(34, 26, 20); }
+.court-mouth-l { left: 50px; }
+.court-mouth-r { left: 75px; }
+
+.court-stage-right { flex-grow: 1; }
+.court-bubble {
+    height: 72px;
+    padding: 5px 14px 4px 14px;
+    background-color: rgb(236, 223, 194);
+    border-radius: 6px;
+    margin-bottom: 9px;
+}
+.court-speaker { font-size: 13px; color: rgb(107, 79, 31); }
+.court-speech { font-size: 20px; color: rgb(48, 45, 40); }
+
+.court-meter-row { flex-direction: row; margin-bottom: 6px; }
+.court-meter { width: 56%; }
+.court-meter-track { height: 12px; margin-top: 4px; background-color: rgb(18, 13, 10); border-radius: 6px; }
+.court-meter-fill { width: 100%; height: 100%; background-color: rgb(122, 106, 160); border-radius: 6px; }
+.court-strikes-box { flex-direction: row; flex-grow: 1; justify-content: flex-end; align-items: flex-start; }
+.court-strikes { flex-direction: row; margin-left: 14px; }
+.court-strike { width: 20px; height: 20px; margin-left: 8px; border-radius: 50%; background-color: rgb(74, 59, 45); }
+.court-tagline { margin-top: 2px; }
+
+/* ---- Steps ---- */
+.court-steps { flex-direction: row; height: 28px; margin-top: 8px; margin-bottom: 8px; }
+.court-step {
+    width: 120px; height: 26px; margin-right: 8px;
+    border-radius: 6px;
+    background-color: rgb(43, 31, 23);
+    align-items: center; justify-content: center;
+}
+.court-step-label { font-size: 15px; color: #BCAB8D; }
+
+/* ---- The round ---- */
+.court-round {
+    flex-grow: 1;
+    padding: 12px 18px 8px 18px;
+    background-color: rgba(44, 31, 23, 0.94);
+}
+.court-panel { flex-grow: 1; }
+.court-heading { font-size: 26px; color: #D1A84F; margin-bottom: 8px; }
+.court-lead { font-size: 16px; color: #BCAB8D; margin-bottom: 16px; }
+.court-counter { font-size: 14px; color: #D1A84F; margin-bottom: 6px; }
+
+.court-card {
+    padding: 8px 16px 8px 16px;
+    margin-bottom: 12px;
+    background-color: rgb(236, 223, 194);
+    border-radius: 6px;
+    justify-content: center;
+    min-height: 62px;
+}
+.court-card-text { font-size: 24px; color: rgb(48, 45, 40); }
+
+.court-row { flex-direction: row; margin-bottom: 8px; }
+.court-btn {
+    min-width: 170px; height: 46px; margin-right: 12px;
+    border-radius: 6px;
+    background-color: rgb(227, 212, 180);
+    color: rgb(48, 45, 40);
+    font-size: 18px;
+    -unity-font-definition: resource("MinigameTheme/ComicNeue-Bold");
+}
+.court-btn:hover { background-color: rgb(238, 226, 198); }
+/* A button on its own line keeps its width instead of stretching across the panel. */
+.court-panel > .court-btn { align-self: flex-start; min-width: 240px; }
+.court-hintable.hint { border-width: 3px; border-color: #D1A84F; }
+
+.court-feedback { font-size: 17px; margin-bottom: 8px; min-height: 24px; color: #F0E4CC; }
+
+/* Answers: two columns when there are enough of them, one otherwise. */
+.court-options { flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-bottom: 4px; }
+.court-opt {
+    height: 52px; margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: rgb(227, 212, 180);
+    color: rgb(48, 45, 40);
+    font-size: 16px;
+    padding: 0 14px 0 14px;
+    border-width: 0;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+.court-opt.two { width: 49.3%; }
+.court-opt.one { width: 100%; }
+.court-opt:hover { background-color: rgb(238, 226, 198); }
+.court-opt.hint { border-width: 3px; border-color: #D1A84F; }
+
+.court-chip { height: 36px; min-width: 120px; margin-right: 10px; font-size: 17px; border-radius: 6px; }
+
+/* ---- Case dismissed ---- */
+.court-result-head { flex-direction: row; align-items: center; margin-bottom: 8px; }
+.court-result-head .court-heading { flex-grow: 1; margin-bottom: 0; }
+.court-stars-text { font-size: 19px; color: #D1A84F; margin-right: 14px; }
+.court-stars { flex-direction: row; }
+.court-star { width: 22px; height: 22px; margin-left: 14px; rotate: 45deg; background-color: rgb(74, 59, 45); }
+.court-file {
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 12px 16px 8px 16px;
+    margin-bottom: 12px;
+    max-height: 232px;
+    background-color: rgb(236, 223, 194);
+    border-radius: 6px;
+}
+.court-file-left { width: 50%; font-size: 17px; color: rgb(48, 45, 40); }
+.court-file-right { width: 50%; font-size: 15px; color: rgb(48, 45, 40); }
+
+.court-recess-body { font-size: 19px; color: #BCAB8D; margin-bottom: 14px; }
+
+.court-footer { position: absolute; left: 40px; bottom: 6px; font-size: 12px; }
